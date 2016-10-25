@@ -1,0 +1,67 @@
+* { 
+    margin:0;
+    padding:0;
+    }
+body{
+    
+    background:#ffffff url(../im/fona.jpg);
+}
+.menuconte{
+	width: 100%;
+	display: flex;
+    margin-top: 25%;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+.menuconte .info-proye{
+	margin:20px;
+    max-width: 230px;
+	color: white;
+    font-family: 'Baloo Bhaina', cursive;
+    background:#ffffff url(../im/manui.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    transition: 0.5s;
+    -webkit-box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+}
+.menuconte .info-proye .imapro{
+	max-width: 230px;
+	height: 170px;
+    margin-top: 40px;
+	overflow: hidden;
+    transition: 0.5s;
+}
+
+.menuconte .imapro  img{
+	width: 150px;
+	height: 150px;
+	border: 35px solid rgba(0,0,0,0.0);
+	transition: all 0.5s;
+}
+.info-proye:hover{
+     max-width: 238px;
+}
+.info-proye:hover .imapro{
+    height: 180px;
+}
+.info-proye:hover .imapro img{
+   width: 170px;
+	height: 170px;
+    max-width: 238px;
+}
+
+@media (min-width:490px){
+    .menuconte{
+    margin-top: 12%;
+}
+@media (min-width:864px){
+    .menuconte{
+    margin-top: 10%;
+}
+
+
+
