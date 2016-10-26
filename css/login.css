@@ -1,0 +1,38 @@
+.modal-content{
+	color: #f94;
+	background:rgba(220,1,20,0.9);
+}
+.modal-content h1{
+	font-family: cursive;
+	background-size: 25px;
+	text-align: center;
+	color: white;
+		
+}
+.entrar{
+	background-color:;
+	
+}
+h4{
+	color: black;
+	text-align: center;
+	font-size: 21px;
+}
+.registrar{
+	color: white;
+	background-color: #000000;
+}
+.entrar{
+	background-color: #000000;
+	color: white;
+	margin-left: 35%;
+}
+.form-control{
+	width: 60%;
+	height: 40px;
+	margin-left: 20%;
+}
+a{
+	margin-left: 35%;
+	color: white;
+}

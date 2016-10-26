@@ -3,9 +3,9 @@
 	padding: 0;
 }
 body{
-	background-image: url(../im/f.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	/*background-image: url(../im/fona.jpg);
+	background-size: cover;*/
+	background-color: ;
 }
 .btn{
 	margin-left: 10px;
@@ -103,80 +103,11 @@ body{
 	border-radius: 50%;
 }
 
-/*---------menu------------*/
 
 
-header{
-	width: 100%;
-	height: 50px;
-	background: #000000;
-	color: #fff;
-	position: fixed;  /**para que se quede pegado*/
-	top: 0;
-	left: 0;
-	z-index: 100;
-}
-#logo{
-	width: 120px;
-}
-.contenedor{
-	width: 98%;
-	margin: auto;	
-}
-header .contenedor{
-	display: table;
-}
-#menu-bar{
-	display: none;
-}
-header label {
-	float: right;
-	font-size: 28px;
-	margin: 6px 0;
-	cursor: pointer;
-}
-.menu{
-	position: absolute;
-	top:50px;
-	width: 100%;
-	height: 100vh;
-	background: rgba(0,0,0,0.8);
-	transition: all 0.5s;
-	transform:translateX(-100%);
-}
-.menu a{
-	display: block;
-	color: #fff;
-	height: 50px;
-	text-decoration: none;
-	padding: 15px;
-	border-bottom: 1px solid rgba(255,255,255,0.5);
-}
-.menu a:hover{
-	background: rgba(255,255,255,0.3);
-}
-#menu-bar:checked ~ .menu{
-	transform:translateX(0%);
-}
+
+
 @media(min-width:590px){
-	
-	.menu{
-		position:static;
-		width: auto;
-		height: auto;
-		transform:translateX(0%);
-		float:right;
-		display:flex;
-	}
-	.menu a{
-		border:none;
-	}
-	header label{
-		display:none;
-	}
-	.menu a:hover{
-	background: #ff8000;
-	}
 	
 	
 	.filtro,.section{
