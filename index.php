@@ -30,27 +30,26 @@
 <div class="container-fluid">
 		<div class="main row cont">
 			<div class="contgra">
-			<a href="listalogin.php">
-				<img src="im/logo.png" id="logo"></a>
+				<img src="im/logo.png" id="logo"><
 				<br>
 				<div class="col-sm-12 formu">
 				
 				<!--FORMULARIO-->
 				
-<form action="listalogin.php" method="post">
+<form action="" method="post">
 	<div class="form-group">
-		<input name="oficio" type="text"   placeholder="¿Qué buscas?" />
+		<input name="oficio" type="text"  class="input" placeholder="¿Qué buscas?" >
 	</div>
 	
 	<div class="form-group">
-		<input name="lugar" type="text"   placeholder="¿Distrito / Provincia? ¿Departamento?" />
+		<input name="lugar" type="text" class="input"  placeholder="¿Distrito / Provincia? ¿Departamento?" >
 	</div>
 	<div class="form-group">
-	<button class="btnbuscar" >Buscar </button><br>
+	<input type="submit"class="btnbuscar">
 	</div>
-	<div class="form-group">
-	    <input type="radio" name="trabajo" value="trabajador"> <h4>Buscar Empleo</h4> <br>
-	    <input type="radio" name="trabajo" value="trabajo"><h4>Buscar Trabajador</h4>
+	<div class="radio">
+	    <input type="radio" value="trabajo" class="rado" name="tipodebusqueda" checked><h5 id="tra1">Buscar Trabajador</h5>
+	    <input type="radio" value="trabajador" class="rado"name="tipodebusqueda"><h5 id="tra2">Buscar Trabajo</h5>
 	</div>
 	
 </form><br>
@@ -59,9 +58,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

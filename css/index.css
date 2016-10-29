@@ -8,6 +8,32 @@ body{
     background: rgba(255,255,255,0.5);
     border-radius: 20px;
 }
+.formu .radio{
+    height: 20px;
+    margin: 0 10%;
+    width: 160px;
+    display: table;
+}
+.rado{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 0;
+}
+.radio h5{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+#tra1{
+    margin: -10px 0;
+    padding: 15px 0;
+}
+#tra2{
+    margin: 5px 0;
+}
+#trabajo{
+    margin: 4px 10px 0px 10px;
+}
 form{
 	margin-top: 30px;
 }
@@ -24,7 +50,7 @@ form{
 	margin-left: 10%;
 	margin-top: 15%;
 }
-input{
+.input{
 	margin: 15px 1% -20px 0;
 	height: 42px;
 	width: 100%;
@@ -63,7 +89,7 @@ video{
 		margin-left: 20%;
 		margin-top: 5%;
 	}
-	input{
+	.input{
 		margin: 18px 5% 0px 5%;
 		width: 40%;
 		float: left;
@@ -89,7 +115,7 @@ video{
 		margin-left: 20%;
 		margin-top: 8%;
 	}
-	input{
+	.input{
 		margin: 1px 2% 22px 2%;
 		width: 40%;
 		height: 50px;
@@ -113,7 +139,7 @@ video{
 		margin-top: 5%;
 	}
 
-	input{
+	.input{
 		margin: 0px 1% 30px 0;
 		width: 45%;
 		height: 50px;
