@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Mi primer proyecto</title>
-	<link rel="stylesheet" href="css/lista.css">
+	<title>MayeOficios</title>
+	<link rel="stylesheet" href="../css/lista.css">
 </head>
 <body>
 	 <div class="lista">
