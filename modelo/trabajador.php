@@ -55,10 +55,10 @@
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("select * from trabajador where rubro=:rubro and lugar=:lugar");
+		  $sql=("select * from trabajador where oficio=:oficio and ciudad=:lugar");
 		 $statement=$conexion->prepare($sql);
-         $statement->bindParam(':rubro',$rubro);
-           $statement->bindParam(':lugar',$lugar);
+         $statement->bindParam(':oficio',$rubro);
+        $statement->bindParam(':lugar',$lugar);
 		 $statement->execute();
 		 
 		 while($filas=$statement->fetch(PDO::FETCH_ASSOC)){
