@@ -75,7 +75,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
 	.menu{
 		position:static;
 		width: auto;
-		height: auto;
+		height: 50px;
 		transform:translateX(-1%);
 		float:right;
 		display:flex;
