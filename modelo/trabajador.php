@@ -49,7 +49,7 @@
 		 }
 		 return $trabajador; 
 	 	}
-      public function search_trabajo($rubro,$lugar){
+      public function search_trabajador($rubro,$lugar){
 		 
 		 $trabajador = null;
 		 $modelo = new Conexion();

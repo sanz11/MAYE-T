@@ -36,9 +36,9 @@
 				
 				<!--FORMULARIO-->
 				
-<form action="" method="post">
+<form action="controlador/busquedainicial.php" method="post">
 	<div class="form-group">
-		<input name="oficio" type="text"  class="input" placeholder="¿Qué buscas?" >
+		<input name="rubro" type="text"  class="input" placeholder="¿Qué buscas?" >
 	</div>
 	
 	<div class="form-group">
@@ -48,8 +48,8 @@
 	<input type="submit"class="btnbuscar">
 	</div>
 	<div class="radio">
-	    <input type="radio" value="trabajo" class="rado" name="tipodebusqueda" checked><h5 id="tra1">Buscar Trabajador</h5>
-	    <input type="radio" value="trabajador" class="rado"name="tipodebusqueda"><h5 id="tra2">Buscar Trabajo</h5>
+	    <input type="radio" value="trabajo" class="rado" name="tipodebusqueda" checked><h5 id="tra1">Buscar Trabajo</h5>
+	    <input type="radio" value="trabajador" class="rado"name="tipodebusqueda"><h5 id="tra2">Buscar Trabajador</h5>
 	</div>
 	
 </form><br>
