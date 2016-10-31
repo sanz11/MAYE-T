@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/fontello.css">
 </head>
 <body>
+<?php include '../controlador/listartrabajador.php';?>
  <header>
 		<div class="contenedor">
 			<!--<img src="im/logo.png"  id="logo"/>-->
@@ -26,7 +27,7 @@
 	 <div class="filtro">
 	 	<div class="filtrar">
 	 		<h1 class="titulo">Filtros</h1>
-	 		<form action="" class="formu">
+	 		<form action="busquedainicial.php" class="formu" method="get">
 	 			<input type="text" name="quebuscas" id="quebuscas" placeholder="¿Que buscas?">
 	 			<br>
 	 			<br>
@@ -68,81 +69,51 @@
 	 
 	 
 	 <div class="section">
-	 	<section class="secciones">
-	 	    <H3>. Gasfitero, Electicista</H3>
-	 	    <div class="div">
-	 	    	<img src="imagen/abel.jpg" alt="">
+	  <!-- mostrado DE LISTA-->
+        <?php
+         echo @$mensaje;
+          if($msmlista=="valido"){
+          foreach($matriztrabajador as $registro){
+	       echo "<section class='secciones'>
+	 	    <H3>".$registro["oficio"]."</H3>
+	 	    <div class='div'>
+	 	    	<img src='".$registro["foto"]."'>
 	 	    </div>
-	 	    <div class="div">
-	 	    	<h5 class="nombre"> OSCAR PAUL CONTRERAS</h5>
-	 	    <h5>Jr:Larco Herrera 635</h5>
-	 	    <h5>Magdalena del Mar</h5>
+	 	    <div class='div'>
+	 	    	<h5 class='nombre'>".$registro["nombre"]." ".$registro["apellidos"]."</h5>
+	 	    <h5>".$registro["direccion"]."</h5>
+	 	    <h5>".$registro["ciudad"]."</h5>
 	 	    </div>
 	 			<section>
 	 			
-	 			<input type="submit" value="Ver portafolio" id="ver">
-	 			<input type="submit" value="Ver mas datos" id="ver"  data-toggle="modal" data-target="#miventana">
+	 			<input type='submit' value='Ver portafolio' id='ver'>
+	 			<input type='submit' value='Ver mas datos' id='ver'  data-toggle='modal' data-target='#miventana'>
 	 			<br>
 	 			<br>
 	 			
 	 		</section>
-	 	</section>
-	 	<section class="secciones">
-	 	    <H3>. Gasfitero, Electicista</H3>
-	 	    <div class="div">
-	 	    	<img src="imagen/abel.jpg" alt="">
+	 	</section>";
+            }}
+          else{
+              echo "<section class='secciones'>
+	 	    <div class='div'>
 	 	    </div>
-	 	    <div class="div">
-	 	    	<h5 class="nombre"> OSCAR PAUL CONTRERAS</h5>
-	 	    <h5>Jr:Larco Herrera 635</h5>
-	 	    <h5>Magdalena del Mar</h5>
+	 	    <div class='div'>
+	 	    	<h5 class='nombre'>".@$mensajes."</h5>
+	 	   
 	 	    </div>
-	 			<section>
-	 			
-	 			<input type="submit" value="Ver portafolio" id="ver">
-	 			<input type="submit" value="Ver mas datos" id="ver" data-toggle="modal" data-target="#miventana">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 	</section>
-	 	<section class="secciones">
-	 	    <H3>. Gasfitero, Electicista</H3>
-	 	    <div class="div">
-	 	    	<img src="imagen/abel.jpg" alt="">
-	 	    </div>
-	 	    <div class="div">
-	 	    	<h5 class="nombre"> OSCAR PAUL CONTRERAS</h5>
-	 	    <h5>Jr:Larco Herrera 635</h5>
-	 	    <h5>Magdalena del Mar</h5>
-	 	    </div>
-	 			<section>
-	 			
-	 			<input type="submit" value="Ver portafolio" id="ver">
-	 			<input type="submit" value="Ver mas datos" id="ver" data-toggle="modal" data-target="#miventana">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 	</section>
-	 	<section class="secciones">
-	 	    <H3>. Gasfitero, Electicista</H3>
-	 	    <div class="div">
-	 	    	<img src="imagen/abel.jpg" alt="">
-	 	    </div>
-	 	    <div class="div">
-	 	    	<h5 class="nombre"> OSCAR PAUL CONTRERAS</h5>
-	 	    <h5>Jr:Larco Herrera 635</h5>
-	 	    <h5>Magdalena del Mar</h5>
-	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Ver portafolio" id="ver">
-	 			<input type="submit" value="Ver mas datos" id="ver" data-toggle="modal" data-target="#miventana">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 	</section>
+	 	</section>";
+          }
+          //echo $msn;
+          ?>
+          
+        
+       
+        </table>
+        </div> 
+	 	
+	 	
+
 	 </div>	
 	 </div>
 	 

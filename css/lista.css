@@ -6,7 +6,6 @@
 body{
 	background-image: url(../im/f.jpg);
 	background-size: cover;
-	background-repeat: no-repeat;
     margin-top: 60px;
 }
 
@@ -171,9 +170,12 @@ select{
 	background-color:;
 	
 }
-h4{
+.modal-content h4{
 	color: black;
 	font-size: 21px;
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: -20px;
 }
 .registrar{
 	color: white;
