@@ -38,7 +38,7 @@ form{
 	height: 250px;
 	width: 90%;
 	margin-left: 5%;
-	 border: black 0.1px solid;
+border: black 0.1px solid;
 		 
 }
 input{
@@ -47,11 +47,11 @@ input{
 	border-radius: 5px;
 	margin-left: 20px;
 	margin-top: 25px;
-	color: white;
 }
 #submit{
 	background-color: #dc0117;
 	border-color: #dc0117;
+	color: white;
 }
 select{
 	height: 40px;

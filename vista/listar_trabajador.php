@@ -27,11 +27,11 @@
 	 <div class="filtro">
 	 	<div class="filtrar">
 	 		<h1 class="titulo">Filtros</h1>
-	 		<form action="busquedainicial.php" class="formu" method="get">
-	 			<input type="text" name="quebuscas" id="quebuscas" placeholder="¿Que buscas?">
+	 		<form action="?" class="formu" method="get">
+	 			<input type="text" name="rubro" id="quebuscas" placeholder="ej: mecanico">
 	 			<br>
 	 			<br>
-	 			<SELECT NAME="dia" class="select"> 
+	 			<SELECT name="lugar" class="select"> 
                      <OPTION VALUE="Amazonas">Amazonas</OPTION> 
                      <OPTION VALUE="Áncash">Áncash</OPTION> 
                      <OPTION VALUE="Apurímac">Apurímac</OPTION> 
@@ -75,7 +75,7 @@
           if($msmlista=="valido"){
           foreach($matriztrabajador as $registro){
 	       echo "<section class='secciones'>
-	 	    <H3>".$registro["oficio"]."</H3>
+	 	    <H3>. ".$registro["oficio"]."</H3>
 	 	    <div class='div'>
 	 	    	<img src='".$registro["foto"]."'>
 	 	    </div>
