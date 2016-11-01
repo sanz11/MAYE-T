@@ -55,7 +55,7 @@
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("select * from trabajador where oficio=:oficio and ciudad=:lugar");
+		  $sql=("select * from oficios where oficio=:oficio and lugar=:lugar");
 		 $statement=$conexion->prepare($sql);
          $statement->bindParam(':oficio',$rubro);
         $statement->bindParam(':lugar',$lugar);

@@ -67,12 +67,13 @@
 	       echo "<section class='secciones'>
 	 	    <H3>. ".$registro["oficio"]."</H3>
 	 	    <div class='div'>
-	 	    	<img src='".$registro["foto"]."'>
+	 	    	<img src='".$registro["foto"]."'><br>
+                <H5> experiencia: ".$registro["experiencia"]." años</H5>
 	 	    </div>
 	 	    <div class='div'>
 	 	    	<h5 class='nombre'>".$registro["nombre"]." ".$registro["apellidos"]."</h5>
 	 	    <h5>".$registro["direccion"]."</h5>
-	 	    <h5>".$registro["ciudad"]."</h5>
+	 	    <h5>".$registro["lugar"]."</h5>
 	 	    </div>
 	 			<section>
 	 			
