@@ -1,0 +1,203 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(../im/f.jpg);
+	background-size: cover;
+    margin-top: 60px;
+}
+
+.imagen img{
+	width: 225px;
+	height: 80px;
+	
+}
+.lista{
+	width: 100%;
+	height: 100px;
+}
+.titulo{
+	margin-top: 20px;
+	display:block;
+	background-color: white;
+	width: 90%;
+	height: 45px;
+	margin-left: 5%;
+	text-align: center;
+	font-size: 23px;
+	 border: black 0.1px solid;
+	color: #dc0114;
+	font-family: cursive;
+	
+}
+
+form{
+	background-color: rgba(0,0,0,0.5);
+	height: 250px;
+	width: 90%;
+	margin-left: 5%;
+border: black 0.1px solid;
+		 
+}
+input{
+	height: 40px;
+	width: 80%;
+	border-radius: 5px;
+	margin-left: 20px;
+	margin-top: 25px;
+}
+#submit{
+	background-color: #dc0117;
+	border-color: #dc0117;
+	color: white;
+}
+select{
+	height: 40px;
+	width: 82%;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+/*------secciones--------*/
+#ver{
+	background-color: #dc0117;
+	border-color: #dc0117;
+	text-align: center;
+}
+.secciones  h3{
+	font-family:cursive;
+	font-size: 20px;
+	background-color: rgba(0,0,0,0.1);
+	
+}.secciones  h4{
+	font-family:cursive;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.secciones  h5{
+	font-family:cursive;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.secciones  .nombre{
+	color: #333333;
+}
+.secciones{
+	margin-left: 5%;
+	background-color: white;
+	width: 90%;
+	margin-top: 10px;
+	text-align: center;
+}
+.div img{
+	width: 50%;
+	max-width: 100px;
+	border: 1px solid red;
+	border-radius: 50%;
+}
+
+@media(min-width:590px){
+	
+	.filtro,.section{
+		float: left;
+	}
+	.secciones{
+		margin-left: 0;
+		margin-top: 7px;
+		text-align: inherit;
+	}
+	.div img{
+		float: right;
+		margin-right: 10%;
+	}
+	#ver{
+	text-align: center;
+	width: 100px;
+}
+	.secciones{
+	width: 100%;
+}
+	.section{
+		width: 57%;
+	}
+	.filtro{
+		width: 40%;
+		max-width: 300px;
+	}
+
+}
+
+@media(min-width:924px){
+	.section{
+		width: 65%;
+	}
+}
+@media(min-width:1024px){
+	.lista{
+		width: 90%;
+		margin: auto;
+	}
+	.section{
+		width: 65%;
+	}
+	.filtro{
+		width: 40%;
+		max-width: 300px;
+        
+	}
+}
+@media(min-width:1150px){
+	.section{
+		width: 69%;
+		margin-left: 10px;
+	}
+}
+/*----------modal Login------------*/
+
+.modal-content{
+	color: #f94;
+	background:rgba(220,1,20,0.9);
+}
+.modal-content h1{
+	font-family: cursive;
+	background-size: 25px;
+	text-align: center;
+	color: white;
+		
+}
+.entrar{
+	background-color:;
+	
+}
+.modal-content h4{
+	color: black;
+	font-size: 21px;
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.registrar{
+	color: white;
+	background-color: #000000;
+}
+.entrar{
+	background-color: #000000;
+	color: white;
+	margin-left: 35%;
+}
+.form-control{
+	width: 60%;
+	height: 40px;
+	margin-left: 20%;
+}
+.login .btn{
+	width: 35%;
+		max-width: 120px;
+		text-align: center;
+	}
+.login .btn:hover{
+	background-color: white;
+	color: black;
+}
+
