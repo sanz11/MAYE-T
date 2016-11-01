@@ -38,11 +38,11 @@
 				
 <form action="controlador/busquedainicial.php" method="post">
 	<div class="form-group">
-		<input name="rubro" type="text"  class="input" placeholder="¿Qué buscas?" >
+		<input name="rubro" type="text"  class="input" placeholder="¿Qué buscas?" required>
 	</div>
 	
 	<div class="form-group">
-		<input name="lugar" type="text" class="input"  placeholder="¿Distrito / Provincia? ¿Departamento?" >
+		<input name="lugar" type="text" class="input"  placeholder="¿Distrito / Provincia? ¿Departamento?" required>
 	</div>
 	<div class="form-group">
 	<input type="submit"class="btnbuscar">

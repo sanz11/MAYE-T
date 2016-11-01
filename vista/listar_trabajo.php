@@ -2,20 +2,38 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>MayeOficios</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/menu.css">
+	<link rel="stylesheet" href="../css/fontello.css">
 	<link rel="stylesheet" href="../css/lista.css">
+
 </head>
 <body>
+ <?php include '../controlador/listartrabajo.php';?>
+ <header>
+		<div class="contenedor">
+			<!--<img src="im/logo.png"  id="logo"/>-->
+			<input type="checkbox" id="menu-bar"/>
+			<label class="icon-menu1" for="menu-bar"></label>
+				<nav class="menu">
+				<a href="" class="btn btn-login btn-xs">Entrar</a>
+				<a href="" class="btn btn-register btn-xs">Registrar</a>
+				</nav>		
+		</div>
+</header>
+ 
 	 <div class="lista">
 	 <div class="filtro">
-	 	<div class="filrar">
+	 	<div class="filtrar">
 	 		<h1 class="titulo">Filtros</h1>
-	 		<h1 class="titulos">Palabra Clave</h1>
-	 		<form action="">
-	 			<input type="text" name="quebuscas" id="quebuscas" placeholder="¿Que buscas?">
+	 		<form action="?" class="formu" method="get">
+	 			<input type="text" name="rubro" id="quebuscas" placeholder="¿Que buscas?">
 	 			<br>
 	 			<br>
-	 			<SELECT NAME="dia" class="select"> 
+	 			<SELECT NAME="lugar" class="select"> 
                      <OPTION VALUE="Amazonas">Amazonas</OPTION> 
                      <OPTION VALUE="Áncash">Áncash</OPTION> 
                      <OPTION VALUE="Apurímac">Apurímac</OPTION> 
@@ -52,70 +70,79 @@
 	 </div>
 	 
 	 
-	 <div class="section">
-	 	<section class="secciones">
-	 	    <H3>.Juan Villegas Gordillo</H3>
-	 	    
-	 	    <div class="div">
-	 	    <h4> ALBAÑIL</h4>
-				<h5 class="nombre"> Se necesita Gasfitero urgente c/sn experiencia en lince-lima</h5>
+	 <div class='section'>
+	   <?php
+         echo @$mensaje;
+          if($msmlista=="valido"){
+          foreach($matriztrabajo as $registro){
+	       echo "<section class='secciones'>
+	 	    <H3>".$registro["nombre"]."</H3>
+	 	    <div class='div'>
+	 	    <h4>".$registro["rubro"]."</h4>
+				<h5 class='nombre'>".$registro["descripcion"]."</h5>
+         <h5 class='nombre'>publicado el: ".$registro["fecha"]."</h5>
 	 	    </div>
-
-	 			<section>
-	 			<input type="submit" value="Postular" id="ver">
+	 	    <section>
+	 			<input type='submit' value='Postular' id='ver'  data-toggle='modal' data-target='#miventana'>
 	 			<br>
 	 			<br>
-	 			
 	 		</section>
-	 		</section>
-	 		
-	 		
-	 		<section class="secciones">
-	 	    <H3>.Nicolas Cruz Soto</H3>
-	 	    
-	 	    <div class="div">
-	 	    <h4> HERRERO</h4>
-				<h5 class="nombre"> Se necesita Gasfitero urgente c/sn experiencia en lince-lima</h>
+	 	 </section>";
+            }}
+          else{
+              echo "<section class='secciones'>
+	 	    <div class='div'>
 	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Postular" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 		</section>
-	 		
-	 		<section class="secciones">
-	 	    <H3>.Herber Garrafa Echeverria</H3>
-	 	    
-	 	    <div class="div">
-	 	    <h4> GASFITERO</h4>
-				<h5 class="nombre"> Se necesita Gasfitero urgente c/sn experiencia en lince-lima</h>
+	 	    <div class='div'>
+	 	    	<h5 class='nombre'>".@$mensajes."</h5>
 	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Postular" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 		</section>
-	 		
-	 		<section class="secciones">
-	 	    <H3>.Oscar Paul Contreras</H3>
-	 	    
-	 	    <div class="div">
-	 	    <h4> CARPINTERO</h4>
-				<h5 class="nombre"> Se necesita Gasfitero urgente c/sn experiencia en lince-lima</h>
-	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Postular" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 		</section>
+	 	</section>";
+          }
+          //echo $msn;
+          ?>
 	 	
+	 </div>	
 	 </div>
+	 
+	 
 
+<!------------------modalllll----------------------->
+ <div class="container" style="margin-top:60px;">
+  	
+  	<div class="modal fade" id="miventana" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+  		<div class="modal-content">
+  		<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+  		
+  		<div class="alert alert-warning alert-danger">
+  
+  <strong>Inicia Session para Postular!!!!! </strong>, Si aun no eres usuario registrate
+</div>
+  			<h1>Iniciar Sesión</h1>
+  			
+  			<div class="modal-body">
+  				<div class="login">
+  					<h4>Usuario</h4>
+  					<input type="text"  class="form-control" name="usuario" id="usuario" placeholder="Usuario">
+  					
+  					<h4>Contraseña</h4>
+  					<input type="password"  class="form-control" name="contraseña" id="contraseña" placeholder="Contraseña">
+  					  <br>
+  					   <br>
+  					<input type="submit" class="btn entrar"value="Entrar">
+  					<input type="submit" class="btn registrar " value="Registrar">
+  					<br>
+  					<br>
+  					
+  				</div>
+  			</div>
+  		</div>
+  		
+  	</div>
+  </div>
+	</div>
+  
+   <script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>	
 </body>
 </html>

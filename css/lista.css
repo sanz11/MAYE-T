@@ -6,7 +6,7 @@
 body{
 	background-image: url(../im/f.jpg);
 	background-size: cover;
-	background-repeat: no-repeat;
+    margin-top: 60px;
 }
 
 .imagen img{
@@ -32,31 +32,13 @@ body{
 	font-family: cursive;
 	
 }
-.titulos{
-	display: block;
-	background-color: #dc0117;
-	width: 90%;
-	height: 45px;
-	margin-left: 5%;
-	text-align: center;
-	font-size: 20px;
-	font-family: cursive;
-	 border: black 0.1px solid;
-	color: #ffffff;
-	
-}
 
-.menu img{
-	width: 70px;
-	height:  70px;
-	border-radius: 50px;
-}
 form{
 	background-color: rgba(0,0,0,0.5);
 	height: 250px;
 	width: 90%;
 	margin-left: 5%;
-	 border: black 0.1px solid;
+border: black 0.1px solid;
 		 
 }
 input{
@@ -65,11 +47,11 @@ input{
 	border-radius: 5px;
 	margin-left: 20px;
 	margin-top: 25px;
-	color: white;
 }
 #submit{
 	background-color: #dc0117;
 	border-color: #dc0117;
+	color: white;
 }
 select{
 	height: 40px;
@@ -162,6 +144,7 @@ select{
 	.filtro{
 		width: 40%;
 		max-width: 300px;
+        
 	}
 }
 @media(min-width:1150px){
@@ -170,3 +153,51 @@ select{
 		margin-left: 10px;
 	}
 }
+/*----------modal Login------------*/
+
+.modal-content{
+	color: #f94;
+	background:rgba(220,1,20,0.9);
+}
+.modal-content h1{
+	font-family: cursive;
+	background-size: 25px;
+	text-align: center;
+	color: white;
+		
+}
+.entrar{
+	background-color:;
+	
+}
+.modal-content h4{
+	color: black;
+	font-size: 21px;
+    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.registrar{
+	color: white;
+	background-color: #000000;
+}
+.entrar{
+	background-color: #000000;
+	color: white;
+	margin-left: 35%;
+}
+.form-control{
+	width: 60%;
+	height: 40px;
+	margin-left: 20%;
+}
+.login .btn{
+	width: 35%;
+		max-width: 120px;
+		text-align: center;
+	}
+.login .btn:hover{
+	background-color: white;
+	color: black;
+}
+
