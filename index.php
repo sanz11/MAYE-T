@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/menu.css">
 <link rel="stylesheet" href="css/fontello.css">
 
-<!--fonts-->
+<!--fonts--->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 <body>
