@@ -13,7 +13,7 @@
 	background-color:;
 	
 }
-h4{
+.login h4{
 	color: black;
 	text-align: center;
 	font-size: 21px;
@@ -32,7 +32,7 @@ h4{
 	height: 40px;
 	margin-left: 20%;
 }
-a{
+.login a{
 	margin-left: 35%;
 	color: white;
 }
