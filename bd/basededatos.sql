@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-11-2016 a las 01:33:50
+-- Tiempo de generación: 01-11-2016 a las 22:50:34
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -47,8 +47,22 @@ CREATE TABLE `administrador` (
 
 CREATE TABLE `oficios` (
   `dni` varchar(50) NOT NULL,
-  `oficio` varchar(50) NOT NULL
+  `oficio` varchar(50) NOT NULL,
+  `nombre` varchar(200) NOT NULL,
+  `lugar` varchar(100) NOT NULL,
+  `direccion` varchar(220) NOT NULL,
+  `foto` varchar(500) NOT NULL,
+  `experiencia` int(11) NOT NULL,
+  `apellidos` varchar(250) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `oficios`
+--
+
+INSERT INTO `oficios` (`dni`, `oficio`, `nombre`, `lugar`, `direccion`, `foto`, `experiencia`, `apellidos`) VALUES
+('10', 'albañil', 'Abel', 'lima', 'jgh:es 256', 'foto', 3, ''),
+('40', 'albañil', 'jose', 'lima', 'sdad', 'sadasd', 2, 'ajj jjjc');
 
 -- --------------------------------------------------------
 
@@ -80,7 +94,6 @@ CREATE TABLE `trabajador` (
   `direccion` varchar(800) DEFAULT NULL,
   `telefono` varchar(100) DEFAULT NULL,
   `celular` varchar(50) DEFAULT NULL,
-  `experiencia` int(11) DEFAULT NULL,
   `nacimiento` date DEFAULT NULL,
   `foto` varchar(250) NOT NULL,
   `cont_mensaje` int(11) NOT NULL
@@ -90,20 +103,20 @@ CREATE TABLE `trabajador` (
 -- Volcado de datos para la tabla `trabajador`
 --
 
-INSERT INTO `trabajador` (`dni`, `nombre`, `apellidos`, `email`, `contrasenia`, `ciudad`, `direccion`, `telefono`, `celular`, `experiencia`, `nacimiento`, `foto`, `cont_mensaje`) VALUES
-('70241454', 'Abel', 'Ricra Sanchez', 'abel@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 1, '2016-10-12', 'kk', 0),
-('7024146', 'juan', 'Ricra Sanchez', 'juan@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 1, '2016-10-12', 'kk', 0),
-('70241455', 'pedro', 'Ricra Sanchez', 'pedro@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 1, '2016-10-12', 'kk', 0),
-('70241457', 'mariano', 'Ricra Sanchez', 'mariano@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 1, '2016-10-12', 'kk', 0),
-('70245454', 'Abelardo', 'Ricra Sanchez', 'abelardo@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 1, '2016-10-12', 'kk', 0),
-('702419654', 'Andre', 'Ricra Sanchez', 'adre@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 1, '2016-10-12', 'kk', 0),
-('123456', 'manuel', 'maucaylle noise', 'jjs@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', 12, '2016-10-19', '45', 0),
-('15', 'manuel', 'maucaylle noise', 'jjk565s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', 12, '2016-10-19', '45', 0),
-('1455', 'aded', 'maucaylle noise', 'jjks45@hhs', 'coma', 'Piura', 'jjdd', 'dsfsdf', 'sdfsdfs', 12, '2016-10-19', '45', 0),
-('1555', 'manuhel', 'maucaylle noise', 'jj556ks@hhs', 'coma', 'Piura', 'jjdd', 'dsfsdf', 'sdfsdfs', 12, '2016-10-19', '45', 0),
-('185', 'loe', 'maucaylle noise', 'jjk45s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', 12, '2016-10-19', '45', 0),
-('15585', 'mafenuel', 'maucaylle noise', 'jj5ks@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', 12, '2016-10-19', '45', 0),
-('14575', 'forlan', 'maucaylle noise', 'jjk4s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', 12, '2016-10-19', '45', 0);
+INSERT INTO `trabajador` (`dni`, `nombre`, `apellidos`, `email`, `contrasenia`, `ciudad`, `direccion`, `telefono`, `celular`, `nacimiento`, `foto`, `cont_mensaje`) VALUES
+('70241454', 'Abel', 'Ricra Sanchez', 'abel@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
+('7024146', 'juan', 'Ricra Sanchez', 'juan@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
+('70241455', 'pedro', 'Ricra Sanchez', 'pedro@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
+('70241457', 'mariano', 'Ricra Sanchez', 'mariano@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
+('70245454', 'Abelardo', 'Ricra Sanchez', 'abelardo@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
+('702419654', 'Andre', 'Ricra Sanchez', 'adre@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
+('123456', 'manuel', 'maucaylle noise', 'jjs@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
+('15', 'manuel', 'maucaylle noise', 'jjk565s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
+('1455', 'aded', 'maucaylle noise', 'jjks45@hhs', 'coma', 'Piura', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
+('1555', 'manuhel', 'maucaylle noise', 'jj556ks@hhs', 'coma', 'Piura', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
+('185', 'loe', 'maucaylle noise', 'jjk45s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
+('15585', 'mafenuel', 'maucaylle noise', 'jj5ks@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
+('14575', 'forlan', 'maucaylle noise', 'jjk4s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0);
 
 -- --------------------------------------------------------
 
