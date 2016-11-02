@@ -55,7 +55,7 @@
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("select * from trabajador where oficio=:oficio and ciudad=:lugar");
+		  $sql=("select * from oficios where oficio=:oficio and lugar=:lugar");
 		 $statement=$conexion->prepare($sql);
          $statement->bindParam(':oficio',$rubro);
         $statement->bindParam(':lugar',$lugar);
@@ -130,6 +130,27 @@
 		 
 		 }
 		 return $trabajador; 
+	 	}
+     
+     public function eliminar_trabajador($id){
+		 
+		 $trabajador = null;
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		 
+		  $sql=("delete trabajador where dni=:id");
+		 $statement=$conexion->prepare($sql);
+         $statement->bindParam(':id',$id);
+
+		 
+		 if(!$statement){
+			  return "error no se pudo eliminar";
+		  }
+		  else{
+              $statement->execute();
+			  return "se elimino correctamente";
+              
+		  }
 	 	}
      
 }

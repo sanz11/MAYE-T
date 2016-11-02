@@ -12,17 +12,7 @@
 </head>
 <body>
 <?php include '../controlador/listartrabajador.php';?>
- <header>
-		<div class="contenedor">
-			<!--<img src="im/logo.png"  id="logo"/>-->
-			<input type="checkbox" id="menu-bar"/>
-			<label class="icon-menu1" for="menu-bar"></label>
-				<nav class="menu">
-				<a href="" class="btn btn-login btn-xs">Entrar</a>
-				<a href="" class="btn btn-register btn-xs">Registrar</a>
-				</nav>		
-		</div>
-</header>
+ <?php include ('menu.html');?>
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filtrar">
@@ -77,12 +67,13 @@
 	       echo "<section class='secciones'>
 	 	    <H3>. ".$registro["oficio"]."</H3>
 	 	    <div class='div'>
-	 	    	<img src='".$registro["foto"]."'>
+	 	    	<img src='".$registro["foto"]."'><br>
+                <H5> experiencia: ".$registro["experiencia"]." años</H5>
 	 	    </div>
 	 	    <div class='div'>
 	 	    	<h5 class='nombre'>".$registro["nombre"]." ".$registro["apellidos"]."</h5>
 	 	    <h5>".$registro["direccion"]."</h5>
-	 	    <h5>".$registro["ciudad"]."</h5>
+	 	    <h5>".$registro["lugar"]."</h5>
 	 	    </div>
 	 			<section>
 	 			

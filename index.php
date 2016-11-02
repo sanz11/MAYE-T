@@ -9,23 +9,14 @@
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/menu.css">
 <link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/login.css">
 
-<!--fonts-->
+<!--fonts--->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 <body>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
-<header>
-		<div class="contenedor">
-			<!--<img src="im/logo.png"  id="logo"/>-->
-			<input type="checkbox" id="menu-bar"/>
-			<label class="icon-menu1" for="menu-bar"></label>
-				<nav class="menu">
-				<a href="" class="btn btn-login btn-xs">Entrar</a>
-				<a href="" class="btn btn-register btn-xs">Registrar</a>
-				</nav>		
-		</div>
-</header>
+<?php include ('vista/menu.html');?>
 
 <div class="container-fluid">
 		<div class="main row cont">
@@ -58,5 +49,8 @@
 				</div>
 			</div>
 		</div>
+		
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>	
 </body>
 </html>

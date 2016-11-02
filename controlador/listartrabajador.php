@@ -1,6 +1,7 @@
 <?php
 require_once("../modelo/Conectar.php");
 require_once("../modelo/trabajador.php");
+
 $trabajador= new trabajador();
 
 @$rubro=$_GET['rubro'];

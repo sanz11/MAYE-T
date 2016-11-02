@@ -9,21 +9,12 @@
 	<link rel="stylesheet" href="../css/menu.css">
 	<link rel="stylesheet" href="../css/fontello.css">
 	<link rel="stylesheet" href="../css/lista.css">
+	<link rel="stylesheet" href="../css/login.css">
 
 </head>
 <body>
  <?php include '../controlador/listartrabajo.php';?>
- <header>
-		<div class="contenedor">
-			<!--<img src="im/logo.png"  id="logo"/>-->
-			<input type="checkbox" id="menu-bar"/>
-			<label class="icon-menu1" for="menu-bar"></label>
-				<nav class="menu">
-				<a href="" class="btn btn-login btn-xs">Entrar</a>
-				<a href="" class="btn btn-register btn-xs">Registrar</a>
-				</nav>		
-		</div>
-</header>
+ <?php include ('menu.html');?>
  
 	 <div class="lista">
 	 <div class="filtro">
