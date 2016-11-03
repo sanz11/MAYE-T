@@ -10,8 +10,7 @@
 		</div>
 </header>
 
-
-
+<?php include('../controlador/login.php');?>
   	
   	<div class="modal fade" id="miventanalogin" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   	<div class="modal-dialog">
@@ -22,6 +21,7 @@
   			
   			<div class="modal-body">
   				<div class="login">
+  				<form action="?" method="post">
   					<h4>Usuario</h4>
   					<input type="text"  class="form-control" name="usuario" id="usuario" placeholder="Usuario">
   					
@@ -29,11 +29,12 @@
   					<input type="password"  class="form-control" name="contraseña" id="contraseña" placeholder="Contraseña">
   					  <br>
   					   <br>
-  					<input type="submit" class="btn entrar"value="Entrar">
+  					<input type="submit" class="btn entrar"value="Entrar" name="ingresar">
   					<input type="submit" class="btn registrar " value="Registrar">
   					<br>
   					<br>
   					<a href="">Olvidé mi contraseña</a>
+  					</form>
   				</div>
   			</div>
   		</div>

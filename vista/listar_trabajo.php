@@ -14,7 +14,7 @@
 </head>
 <body>
  <?php include '../controlador/listartrabajo.php';?>
- <?php include ('menu.html');?>
+ <?php include ('menu.php');?>
  
 	 <div class="lista">
 	 <div class="filtro">
