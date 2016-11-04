@@ -134,8 +134,8 @@
   					<h4>Contraseña</h4>
   					<input type="password"  class="form-control log" name="contraseña" id="contraseña" placeholder="Contraseña">
   					  <br>
-  					<input type="submit" class="btn entrar"value="Entrar">
-  					<input type="submit" class="btn registrar " value="Registrar">
+  					<input type="submit" name="ingresar"class="btn entrar"value="Entrar">
+  					<input type="submit" name="irregistrar"class="btn registrar " value="Registrar">
   					<br>
   					<br>
   		        </form>

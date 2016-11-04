@@ -43,6 +43,11 @@
                     $cerrar2="&times;";
 		}
 	}
-	
+	if(@$_POST['irregistrar']){
+		header('location:registrar.php');
+	}
+    if(@$_POST['irregistrarin']){
+		header('location:vista/registrar.php');
+	}
 	
 ?> 

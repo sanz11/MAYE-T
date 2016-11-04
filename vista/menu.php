@@ -8,7 +8,7 @@
 			<label class="icon-menu1" for="menu-bar"></label>
 				<nav class="menu">
 				<a class="btn  btn-xs" data-toggle="modal" data-target="#miventanalogin" >Entrar</a>
-				<a href="" class="btn  btn-xs">Registrar</a>
+				<a href="registrar.php" class="btn  btn-xs">Registrar</a>
 				</nav>
 		</div>
 </header>
@@ -43,7 +43,7 @@
   					<input type="password"  class="form-control log" name="contraseña" id="contraseña" placeholder="Contraseña">
   					  <br>
   					<input type="submit" class="btn entrar" value="Entrar" name="ingresar">
-  					<input type="submit" class="btn registrar " value="Registrar">
+  					<input type="submit" class="btn registrar "  name="irregistrar" value="Registrar">
   					<br>
   					<br>
   					<a href="">Olvidé mi contraseña</a>
