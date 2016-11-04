@@ -33,7 +33,7 @@ body{
 	
 }
 
-form{
+.formu{
 	background-color: rgba(0,0,0,0.5);
 	height: 250px;
 	width: 90%;
@@ -41,7 +41,7 @@ form{
 border: black 0.1px solid;
 		 
 }
-input{
+ input{
 	height: 40px;
 	width: 80%;
 	border-radius: 5px;
@@ -53,7 +53,7 @@ input{
 	border-color: #dc0117;
 	color: white;
 }
-select{
+.formu select{
 	height: 40px;
 	width: 82%;
 	border-radius: 5px;
@@ -155,10 +155,6 @@ select{
 }
 /*----------modal Login------------*/
 
-.modal-content{
-	color: #f94;
-	background:rgba(220,1,20,0.9);
-}
 .modal-content h1{
 	font-family: cursive;
 	background-size: 25px;
@@ -166,33 +162,17 @@ select{
 	color: white;
 		
 }
-.entrar{
-	background-color:;
-	
-}
 .modal-content h4{
 	color: black;
 	font-size: 21px;
     margin-top: 20px;
     margin-bottom: -20px;
 }
-.registrar{
-	color: white;
-	background-color: #000000;
-}
-.entrar{
-	background-color: #000000;
-	color: white;
-}
-.form-control{
-	width: 60%;
-	height: 40px;
-}
-.login .btn{
+.loginlis .btn{
 	width: 35%;
 max-width: 120px;
 	}
-.login .btn:hover{
+.loginlis .btn:hover{
 	background-color: white;
 	color: black;
 }

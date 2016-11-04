@@ -35,14 +35,13 @@
   			
   			<div class="modal-body">
   				<div class="login">
-  				<form action="?" method="post">
+  				<form action="?" method="post" class="formulog">
   				
   					<h4>Usuario</h4>
-  					<input type="text"  class="form-control" name="usuario" id="usuario" placeholder="Usuario">
+  					<input type="text"  class="form-control log" name="usuario" id="usuario" placeholder="DNI">
   					<h4>Contraseña</h4>
-  					<input type="password"  class="form-control" name="contraseña" id="contraseña" placeholder="Contraseña">
+  					<input type="password"  class="form-control log" name="contraseña" id="contraseña" placeholder="Contraseña">
   					  <br>
-  					   <br>
   					<input type="submit" class="btn entrar" value="Entrar" name="ingresar">
   					<input type="submit" class="btn registrar " value="Registrar">
   					<br>

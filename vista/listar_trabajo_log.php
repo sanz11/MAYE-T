@@ -7,9 +7,10 @@
 	<link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/lista.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
- <?php include ('menu.html');?>
+ <?php include ('menu.php');?>
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filrar">
