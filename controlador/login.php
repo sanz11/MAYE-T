@@ -1,5 +1,6 @@
 <?php 
 	@include"../modelo/Conectar.php";
+    @include"modelo/Conectar.php";
 	$clase=" ";
 	$icono="";
 	$mensaje="";
@@ -19,34 +20,27 @@
 					$arreglo=mysqli_fetch_array($consulta);
 					$_SESSION["nombre"]=$arreglo["nombre"];
                     $_SESSION["dni"]=$arreglo["dni"];
-                    $_SESSION["nick"]=$arreglo["nick"];
-                    $_SESSION["apellidos"]=$arreglo["apellidos"];
-					$_SESSION["correo"]=$arreglo["correo"];
+                    $_SESSION["contrasenia"]=$arreglo["contrasenia"];
 					$_SESSION["foto"]=$arreglo["foto"];
                     
-                    $tipo=$arreglo["tipo_admin"];
-        
-	                   if($tipo=="superadmin"){
-                           header('location:superadmin.php');
+                    header('location:indexlog.php');
                            session_start();
-	                   }else{
-	                   	header('location:admin.php');
-                           session_start();
-	                   }
-                    
 					
 				}else{
 					$error[3]="Usuario o Contraseña incorrecta";
 					$clase="alert alert-danger";
                     $cerrar="&times;";
-					$icono="fa fa-exclamation-circle vd_red";
 					$mensaje="¡Oh no!";
 				}
 			}else{
 				$error[2]="Ingrese la contraseña";
+                $clase2="alert alert-danger";
+                    $cerrar2="&times;";
 			}
 		}else{
 			$error[1]="Ingrese el su DNI";
+            $clase2="alert alert-danger";
+                    $cerrar2="&times;";
 		}
 	}
 	

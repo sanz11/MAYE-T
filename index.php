@@ -16,7 +16,7 @@
 </head>
 <body>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
-<?php include ('vista/menu.html');?>
+<?php include ('vista/menu.php');?>
 
 <div class="container-fluid">
 		<div class="main row cont">
