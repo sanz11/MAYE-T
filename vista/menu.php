@@ -1,4 +1,4 @@
-<?php @include('controlador/login.php');@include('../controlador/login.php');?>
+<?php include('../controlador/login.php');?>
 
 <header>
 		<div class="contenedor">
