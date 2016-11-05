@@ -93,7 +93,7 @@
 		<input name="lugar" type="text" class="input"  placeholder="¿Distrito / Provincia? ¿Departamento?" required>
 	</div>
 	<div class="form-group">
-	<input type="submit"class="btnbuscar">
+	<input type="submit"class="btnbuscar" name="buscarlog">
 	</div>
 	<div class="radio">
 	    <input type="radio" value="trabajo" class="rado" name="tipodebusqueda" checked><h5 id="tra1">Buscar Trabajo</h5>
