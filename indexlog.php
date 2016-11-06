@@ -30,7 +30,7 @@
 			<!--FIN MENU-->
 				<nav class="menu">
 				 <?php echo '<img src="'.$_SESSION['foto'].'">';?>
-				<h3 class="btn  btn-xs"><?php echo $_SESSION['nombre']." ";?><span class="glyphicon glyphicon-cog" data-toggle="modal" data-target="#cerrarsession"></span></h3>
+				<h3 class="btn  btn-xs" data-toggle="modal" data-target="#cerrarsession"><?php echo $_SESSION['nombre']." ";?><span class="glyphicon glyphicon-cog" ></span></h3>
 				</nav>
 		</div>
 </header>
