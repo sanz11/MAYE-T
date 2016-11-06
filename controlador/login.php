@@ -23,7 +23,7 @@
 					$_SESSION["foto"]=$arreglo["foto"];
                     
                     header('location:indexlog.php');
-                           session_start();
+                    session_start();
 					
 				}else{
 					$error[3]="Usuario o Contraseña incorrecta";

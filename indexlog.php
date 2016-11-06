@@ -14,10 +14,12 @@
 <!--fonts--->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
-<?php include('controlador/login.php');?>
  <?php
+    session_start();
 	  if(isset($_SESSION['nombre'])){
 ?>
+<?php include('controlador/login.php');?>
+
 <body>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
 
@@ -119,7 +121,7 @@
   			<center><h1 style="color:#2E9AFE;">¿QUÉ DESEA HACER?</h1> </center>
   			  			
   		<div class="modal-body" style="background:#CED8F6;">
-          <center> <span class="edit glyphicon glyphicon-cog" ><a href="vista/perfil">Ir Perfil</a> </span>
+          <center> <span class="edit glyphicon glyphicon-cog" ><a href="vista/perfil,php">Ir Perfil</a> </span>
             
 
             <a href="index.php?cerrar=session"  title="Editar Perfil">

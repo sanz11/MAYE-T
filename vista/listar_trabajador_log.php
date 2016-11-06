@@ -12,7 +12,7 @@
 </head>
 <body>
 
- <?php include ('menu.php');?>
+ <?php include ('menu2.php');?>
  <?php include '../controlador/listartrabajador.php';?>
 	 <div class="lista">
 	  <div class="filtro">
