@@ -2,7 +2,7 @@
 
 <header>
 		<div class="contenedor">
-			<!--<img src="im/logo.png"  id="logo"/>-->
+			<a href="../index.php"><img src="../im/logo.png"  id="logo"/></a>
 			
 			<input type="checkbox" id="menu-bar"/>
 			<label class="icon-menu1" for="menu-bar"></label>

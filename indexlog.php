@@ -23,12 +23,17 @@
 
 <header>
 		<div class="contenedor">
-			<!--<img src="im/logo.png"  id="logo"/>-->
+			
 			
 			<input type="checkbox" id="menu-bar"/>
 			<label class="icon-menu1" for="menu-bar"></label>
 			<!--FIN MENU-->
 				<nav class="menu">
+				<a href="">irperfil</a>
+				<a href="">irperfil</a>
+				<a href="">irperfil</a>
+				<a href="">irperfil</a>
+				<p style="width:150px;"></p>
 				 <?php echo '<img src="'.$_SESSION['foto'].'">';?>
 				<h3 class="btn  btn-xs" data-toggle="modal" data-target="#cerrarsession"><?php echo $_SESSION['nombre']." ";?><span class="glyphicon glyphicon-cog" ></span></h3>
 				</nav>
