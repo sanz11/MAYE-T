@@ -14,9 +14,12 @@
 <!--fonts--->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
+<?php include('controlador/login.php');?>
+ <?php
+	  if(isset($_SESSION['nombre'])){
+?>
 <body>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
-<?php include('controlador/login.php');?>
 
 <header>
 		<div class="contenedor">
@@ -26,8 +29,8 @@
 			<label class="icon-menu1" for="menu-bar"></label>
 			<!--FIN MENU-->
 				<nav class="menu">
-				<a class="btn  btn-xs" data-toggle="modal" data-target="#miventanalogin" >Entrar</a>
-				<a href="vista/registrar.php" class="btn  btn-xs">Registrar</a>
+				 <?php echo '<img src="'.$_SESSION['foto'].'">';?>
+				<h3 class="btn  btn-xs"><?php echo $_SESSION['nombre']." ";?><span class="glyphicon glyphicon-cog" data-toggle="modal" data-target="#cerrarsession"></span></h3>
 				</nav>
 		</div>
 </header>
@@ -107,7 +110,44 @@
 			</div>
 		</div>
 		
+		
+<div class="modal fade " id="cerrarsession" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+  		<div class="modal-content">
+  			
+  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+  			<center><h1 style="color:#2E9AFE;">¿QUÉ DESEA HACER?</h1> </center>
+  			  			
+  		<div class="modal-body" style="background:#CED8F6;">
+          <center> <span class="edit glyphicon glyphicon-cog" ><a href="vista/perfil">Ir Perfil</a> </span>
+            
+
+            <a href="index.php?cerrar=session"  title="Editar Perfil">
+                <span class="glyphicon glyphicon-log-out"title="Cerrar Session">CerrarSessión</span>
+            </a> 
+            </center> 
+   
+     <center id="cancelar"><button type="button" class="btn btn-info" class="close" data-dismiss="modal" aria-hidden="true">Cancelar</button></center>
+  					<br>
+  					<br>
+  			</div>
+  		</div>
+  		
+  	</div>
+  </div>
+		
+		
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>	
+
+
 </body>
+
+
+<?php		  
+	  }else{
+		  echo "Acceso denegado";
+          header('location:index.php');
+	  }
+	  ?>
 </html>

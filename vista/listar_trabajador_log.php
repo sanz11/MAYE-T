@@ -11,7 +11,12 @@
 
 </head>
 <body>
+<?php
+	  session_start();
+	  if(isset($_SESSION['nombre'])){
+?>
  <?php include ('menu.php');?>
+ 
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filrar">
@@ -146,6 +151,12 @@
 	 	
 	 </div>
 	 <script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>	
+<script src="../js/bootstrap.min.js"></script>
+<?php		  
+	  }else{
+		  echo "Acceso denegado";
+          header('location:../index.php');
+	  }
+	  ?>	
 </body>
 </html>
