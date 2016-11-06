@@ -4,6 +4,7 @@
 	$clase=" ";
 	$icono="";
 	$mensaje="";
+session_start();
 	if(@$_GET["cerrar"]){
 		session_unset('nombre');
 		session_destroy();

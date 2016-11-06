@@ -14,12 +14,10 @@
 <!--fonts--->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
+<?php include('controlador/login.php');?>
  <?php
-    session_start();
 	  if(isset($_SESSION['nombre'])){
 ?>
-<?php include('controlador/login.php');?>
-
 <body>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
 
