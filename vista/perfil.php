@@ -33,6 +33,7 @@
            <td><strong>Email:</strong></td><td><H4><?php echo $_SESSION['email'];?></H4></td>
         </tr>
         <?php
+          if($dni== $_SESSION['dni']){
           foreach($matriztrabajador as $registro){
 	       echo "
 	 	    
@@ -64,7 +65,12 @@
                 </ul>
             </td>
         </tr>";
-          //echo $msn;
+          }else{
+              echo "
+              <tr>
+                <td colspan='2'><strong>Error.</strong> Algunos Datos están ocultos</H4></td>
+            </tr>";
+          }
           ?>
         <tr>
           <td><button class="btn btn-info" data-toggle="modal" data-target="#miventana">Editar Perfil</button></td>
