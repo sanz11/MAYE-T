@@ -124,7 +124,7 @@
   			<center><h1 style="color:#2E9AFE;">¿QUÉ DESEA HACER?</h1> </center>
   			  			
   		<div class="modal-body" style="background:#CED8F6;">
-          <center> <span class="edit glyphicon glyphicon-cog" ><a href="vista/perfil,php">Ir Perfil</a> </span>
+          <center> <span class="edit glyphicon glyphicon-cog" ><a href="vista/perfil.php?dni=<?php echo $_SESSION['dni'];?>">Ir Perfil</a> </span>
             
 
             <a href="index.php?cerrar=session"  title="Editar Perfil">

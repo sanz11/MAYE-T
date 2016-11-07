@@ -19,6 +19,7 @@ session_start();
 				if(mysqli_num_rows($consulta)){
 					$arreglo=mysqli_fetch_array($consulta);
 					$_SESSION["nombre"]=$arreglo["nombre"];
+                    $_SESSION["email"]=$arreglo["email"];
                     $_SESSION["dni"]=$arreglo["dni"];
                     $_SESSION["contrasenia"]=$arreglo["contrasenia"];
 					$_SESSION["foto"]=$arreglo["foto"];

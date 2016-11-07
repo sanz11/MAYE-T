@@ -15,7 +15,7 @@
 </head>
 <body>
  <?php include ('menu2.php');?>
-
+<?php include ('../controlador/perfil.php');?>
 <div class="perfil">
    <div class="percon">
     <div class="img div"><img src="../im/perfil3.jpg"></div>
@@ -23,39 +23,49 @@
       <br>   
       <table>
        <tr>
-           <td colspan="2"><h1>Julian Mendoza Huillca</h1></td> 
+           <td colspan="2"><h1><?php echo $_SESSION['nombre'];?></h1></td> 
            </tr>
         <tr>
-        <td id="tamaño"><strong>DNI</strong></td><td><H4> 70241498</H4></td>
+        <td id="tamaño"><strong>DNI</strong></td><td><h4><?php echo $_SESSION['dni'];?></h4></td>
+        
         </tr>
         <tr>
-           <td><strong>Email</strong></td><td><H4> julian@gmail.com</H4></td>
+           <td><strong>Email:</strong></td><td><H4><?php echo $_SESSION['email'];?></H4></td>
         </tr>
+        <?php
+          foreach($matriztrabajador as $registro){
+	       echo "
+	 	    
         <tr>
-                <td><strong>Ciudad</strong></td><td><H4> Lince - Lima</H4></td>
+                <td><strong>Ciudad</strong></td><td><H4>".$registro["ciudad"]."</H4></td>
             </tr>
         <tr>
-                <td><strong>Dirección</strong></td><td><H4> Salavelly</H4></td>
+                <td><strong>Dirección</strong></td><td><H4>".$registro["direccion"]."</H4></td>
             </tr>
         <tr>
-                <td><strong>Teléfono</strong></td><td><H4> 01-986853</H4></td>
+                <td><strong>Teléfono</strong></td><td><H4>".$registro["telefono"]."</H4></td>
             </tr>
         <tr>
-                <td><strong>Celular</strong></td><td><H4> 986853856</H4></td>
+                <td><strong>Celular</strong></td><td><H4>".$registro["celular"]."</H4></td>
             </tr>
         <tr>
-                <td><strong>F.N</strong></td><td><H4> 11/07/80</H4></td>
+                <td><strong>F.N</strong></td><td><H4>".$registro["nacimiento"]."</H4></td>
             </tr>
         <tr>
             <td><strong>OFICIOS</strong></td>
             <td>
-                <ul>
-                    <li>1:Mecanico</li>
-                    <li>2:Electricista</li>
-                    <li>3:Mecanico</li>
+                <ul>";}?>
+         <?php
+          foreach($matrizoficios as $regis){
+	       echo "
+                    <li>".$regis["oficio"]."</li>";}?>
+         <?php
+	       echo "
                 </ul>
             </td>
-        </tr>
+        </tr>";
+          //echo $msn;
+          ?>
         <tr>
           <td><button class="btn btn-info" data-toggle="modal" data-target="#miventana">Editar Perfil</button></td>
           <td><a href="#"class="btn btn-danger">Eliminar Cuenta</a></td>

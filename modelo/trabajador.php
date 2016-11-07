@@ -49,13 +49,13 @@
 		 }
 		 return $trabajador; 
 	 	}
-      public function search_trabajador($rubro,$lugar){
+     public function search_trabajador($rubro,$lugar){
 		 
 		 $trabajador = null;
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("select * from oficios where oficio=:oficio and lugar=:lugar");
+		  $sql=("select * from oficios where oficio=:oficio and ciudad=:lugar");
 		 $statement=$conexion->prepare($sql);
          $statement->bindParam(':oficio',$rubro);
         $statement->bindParam(':lugar',$lugar);
@@ -151,6 +151,24 @@
 			  return "se elimino correctamente";
               
 		  }
+	 	}
+     
+     public function get_oficios($dni){
+		 
+		 $trabajador = null;
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		 
+		  $sql=("select * from oficios where dni=:dni");
+		 $statement=$conexion->prepare($sql);
+          $statement->bindParam(':dni',$dni);
+		 $statement->execute();
+		 
+		 while($filas=$statement->fetch(PDO::FETCH_ASSOC)){
+			 $trabajador[]=$filas;
+		 
+		 }
+		 return $trabajador; 
 	 	}
      
 }
