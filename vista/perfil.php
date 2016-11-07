@@ -13,7 +13,7 @@
 <!--fonts-->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
-<body>
+<body >
  <?php include ('menu2.php');?>
 <?php include ('../controlador/perfil.php');?>
 <div class="perfil">
