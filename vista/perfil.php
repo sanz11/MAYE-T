@@ -18,7 +18,7 @@
 <?php include ('../controlador/perfil.php');?>
 <div class="perfil">
    <div class="percon">
-    <div class="img div"><img src="../im/perfil3.jpg"></div>
+    <div class="img div"><img src="<?php echo $_SESSION['foto'];?>"></div>
     <div class="datos div">
       <br>   
       <table>
@@ -74,7 +74,6 @@
           ?>
         <tr>
           <td><button class="btn btn-info" data-toggle="modal" data-target="#miventana">Editar Perfil</button></td>
-          <td><a href="#"class="btn btn-danger">Eliminar Cuenta</a></td>
         </tr>
         </table>
         <br>

@@ -17,7 +17,13 @@
 <body>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
 <?php include('controlador/login.php');?>
-
+<?php
+	  if(isset($_SESSION['nombre'])){
+        header('location:indexlog.php');
+	  }else{
+		  
+         ?>
+	
 <header>
 		<div class="contenedor">
 			<!--<img src="im/logo.png"  id="logo"/>-->
@@ -106,6 +112,7 @@
 				</div>
 			</div>
 		</div>
+		 <?php }?>
 		
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>	

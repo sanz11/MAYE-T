@@ -1,9 +1,18 @@
 <?php
+$fe="";
+ include ('date.php');
+        
+    $fecha= new fechahoy();
+     $fe=$fecha->fechahoy();
 
  class trabajo{
-	 
-	public function set_trabajo($nombre,$rubro,$descripcion,$fecha,$lugar){
-		 
+     
+     
+
+
+	public function set_trabajo($nombre,$rubro,$descripcion,$lugar){
+		 $fef="16-2-2";
+        
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
         
@@ -12,15 +21,15 @@
 		 $statement->bindParam(':nombre',$nombre);
            $statement->bindParam(':rubro',$rubro);
            $statement->bindParam(':descripcion',$descripcion);
-           $statement->bindParam(':fecha',$fecha);
+           $statement->bindParam(':fecha',$fef);
         $statement->bindParam(':lugar',$lugar);
 		  
 		  if(!$statement){
-			  return "error registrar";
+			  return '<SCRIPT>alert ("OH NO! error publicar");</SCRIPT>';
 		  }
 		  else{
 			 $statement->execute();
-			  return "tu oferta fue enviado exitosamente para ser verificada";
+			  return '<SCRIPT>alert ("tu oferta fue enviado exitosamente para ser verificada");</SCRIPT>';
               
 		  }
 		  

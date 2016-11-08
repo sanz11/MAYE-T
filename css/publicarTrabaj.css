@@ -1,0 +1,117 @@
+* { 
+    margin:0;
+    padding:0;
+    }
+body{
+    
+    background:#ffffff url(../im/fona.jpg);
+   
+    
+}
+.perfil{
+    width: 90%;
+    margin-top: 20%;
+    margin-left: 5%;
+    border: 2px red;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+}
+
+.percon{
+    max-width: 250px;
+    margin: auto;
+}
+#otro{
+   display: none;
+    font-size: 11px;
+}
+select, #otro{
+    width: 100%;
+    max-width: 150px;
+}
+h1{
+   color:rgb(200,0,20);
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Baloo Bhaina', cursive;
+}
+h4{ 
+    color: #555555;
+    font-size: 15px;
+    font-family:  monospace;
+}
+#nomempresa{
+   max-width: 150px;
+    margin: auto;
+    display: none;
+    font-size: 11px;
+}
+#empresa:checked ~ #nomempresa{
+    display: block;
+}
+#checotro:checked ~ #otro{
+    display: block;
+}
+#checotro:checked ~ #rubro{
+    display: none;
+}
+#otroru{
+    margin:0 50px 0 0;
+}
+
+@media (min-width:490px){
+    .percon{
+    max-width: 350px;
+    justify-content: center;
+}
+    .perfil{
+    }
+}
+@media (min-width:550px){
+    .percon{
+    max-width: 350px;
+    justify-content: center;
+}
+    .perfil{
+        margin-top: 12%;
+    }
+}
+@media (min-width:864px){
+    .perfil{
+        display: flex;
+    }
+   
+    .perfil .percon{
+        width: 60%;
+        max-width: 100%;
+    }
+    
+}
+@media (min-width:924px){
+    
+    .perfil{
+        margin-top: 10%;
+        width: 60%;
+        margin-left: 20%;
+    }
+    
+}
+@media (min-width:1064px){
+    .perfil{
+        margin-top: 5%;
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+@media (min-width:1350px){
+	.perfil{
+        margin-top: 5%;
+         width: 60%;
+        margin-left: 20%;
+    }
+}
+
+
+

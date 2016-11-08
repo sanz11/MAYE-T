@@ -1,0 +1,112 @@
+* { 
+    margin:0;
+    padding:0;
+    }
+body{
+    
+    background:#ffffff url(../im/fona.jpg);
+   
+    
+}
+.perfil{
+    width: 90%;
+    margin-left: 5%;
+    border: 2px red;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+}
+
+.oficio{
+    width: 100%;
+    background-color: #dc0117;
+    display: flex;
+}
+.oficio form{
+    width: 100%;
+}
+.oficio h4{ 
+    color: #ffffff;
+    font-size: 18px;
+     font-family: 'Baloo Bhaina', cursive;
+}
+input{
+    height: 35px;
+    width: 70%;
+    border-radius: 5px;
+}
+.percon{
+     
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+}
+.t{
+    margin:10px auto;
+    font-size: 13px;      
+    width: 98%;
+}
+#titulo{
+   margin:30% auto 10px 0 ;
+    text-align: center;
+     font-family: 'Baloo Bhaina', cursive;
+}
+.guardar{
+   background-color:deepskyblue ; 
+    color: black;
+}
+h4{ 
+    color: #000000;
+    font-size: 15px;
+    font-family:  monospace;
+}
+.table{
+    border: 1px solid black;
+}
+
+form{
+    max-width: 300px;
+    margin:30px auto;
+    height: 280px;
+    
+    }
+@media (min-width:420px){
+    #titulo{
+   margin:15% auto 30px 0 ;
+    }}
+@media (min-width:720px){
+    #titulo{
+   margin:10% auto 50px 0 ;
+}
+    .percon{
+    width: 100%;
+    justify-content: center;
+    display: table;
+}
+    .oficio{
+        width: 30%;
+        
+    }
+    .datos{
+        width: 70%; 
+    }
+    .perfil .div{
+        float: left;
+       
+    }
+    .t{
+    margin:30px auto;
+    font-size: 13px;      
+    width: 68%;
+    
+}
+    @media (min-width:1020px){
+        .perfil{
+            width: 60%;
+            margin: auto;
+    
+            }
+    
+    
+}
