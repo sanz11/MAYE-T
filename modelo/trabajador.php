@@ -26,7 +26,7 @@
 		  }
 		  else{
 			 $statement->execute();
-			  return "Usted se registro correctamente";
+			  return '<SCRIPT>alert ("SE REGISTRO CORRECTAMENTE :D");</SCRIPT>';
               
 		  }
 		  
@@ -93,15 +93,16 @@
 		  }
 		  
 	 	}
-	 public function Exists_trabajador($dni){
+	 public function Exists_trabajador($dni,$email){
 		 $trabajador = null;
          $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		  
 		 
-		 $consulta1=(" select * from  trabajador where dni=:dni ");
+		 $consulta1=(" select * from  trabajador where dni=:dni || email=:email ");
 		 $statement1=$conexion->prepare($consulta1);
 		 $statement1->bindParam(':dni',$dni);
+		 $statement1->bindParam(':email',$email);
 		 $statement1->execute();
 		  
 		  while($filas=$statement1->fetch(PDO::FETCH_ASSOC)){

@@ -4,32 +4,40 @@
 	
 }
 body{
-	background-image: url(../im/fona.jpg);
-    
+	background-image: url(../imagen/fondo.jpg);
 }
 .formu{
 	width: 90%;
 	margin: auto;
-    color: white;
 	margin-top: 30px;
 	background:rgba(220,1,20,1);
 	/*-webkit-box-shadow: 9px 10px 29px 2px rgba(255,255,255,1);
 -moz-box-shadow: 9px 10px 29px 2px rgba(255,255,255,1);
 box-shadow: 9px 10px 29px 2px rgba(255,255,255,1);*/
 }
-.formregistro input{
+.registros{
 	height: 40px;
-	width: 80%;
+	width: 30%;
 	border-radius: 5px;
 	margin-left: 15px;
-    color: white;
+	background-color: black;
+	color: white;
 }
-
-.formregistro h4{
+/*#menu{
+	width: 100%;
+	height: 10%;
+	background-color: #ffffff;
+	
+}
+#menu  img{
+	width: 225px;
+	height: 80px;
+	
+}*/
+h4{
 margin-left: 15px;
-    color: white;
 }
-.formregistro{
+form{
 	margin-top: 35px;
 	display: table;
 }
@@ -37,15 +45,13 @@ margin-left: 15px;
 	height: 30px;
 	width: 40px;
 	border-radius: 5px;
-	margin-left: 15px;
-    color: black;
+	margin-left: 15px; 
 }
 .selectmes{
 	height: 30px;
 	width: 90px;
 	border-radius: 5px;
 	margin-left: 15px; 
-    color: black;
 }
 .year{
 	height: 30px;
@@ -53,18 +59,29 @@ margin-left: 15px;
 	border-radius: 5px;
 	margin-left: 15px; 
 }
-
-
+.experiencia{
+	height: 30px;
+	width: 50px;
+	border-radius: 5px;
+	margin-left: 15px; 
+}
+.registro{
+	height: 40px;
+	width: 80%;
+	max-width: 200px;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	border-color: black;
+}
 .aviso{
 	background-color: bisque;
 	border: 2px solid white;
-	color: black;
+	color: chocolate;
 	font-family: cursive;
 	width: 40%;
 	margin-left: 5%;
-}
-.aviso h4{
-    color: black;
 }
 .ofertante{
 	display: none;
@@ -80,53 +97,30 @@ margin-left: 15px;
 	transition:display 2s;
 	transition-delay: 1s;
 }
-#experiencia , #anio{
-	height: 30px;
-	width: 100px;
-	border-radius: 5px;
-	margin-left: 15px; 
-}
-.boton .registro{
-    padding: 7px 10px;
-	max-width: 200px;
-    cursor: pointer;
-	border-radius: 5px;
-	background-color: black;
-	font-size: 15px;
-	border-color: black;
-}
-.registro:hover{
-    background-color: rgba(0,0,0,0.9);
-}
 @media(min-width:490px){
 	
 	.formu{
 		width: 80%;
 		margin: 30px auto;
 	}
-.formregistro input{
+	input{
 	height: 40px;
 	width: 90%;
 	border-radius: 5px;
 	margin-left: 15px;
 }
-	.formregistro{
+	form{
 		width: 80%;
 		margin: 20px auto;
 	}
-	#experiencia , #anio{
-	height: 30px;
-	width: 100px;
-	border-radius: 5px;
-	margin-left: 15px; 
-}
+	
 	
 }
 @media(min-width:764px){
 	
 	.formu{
 		width: 65%;
-		margin:60px auto;
+		margin:30px auto;
 	}
 	
 }
@@ -134,9 +128,9 @@ margin-left: 15px;
 	
 	.formu{
 		width: 60%;
-		margin:60px  auto;
+		margin:30px  auto;
 	}
-	.formregistro{
+	form{
 		width: 100%;
 	}
 	.separ{
@@ -150,6 +144,6 @@ margin-left: 15px;
 	
 	.formu{
 		width: 60%;
-		margin: 60px auto;
+		margin: 30px auto;
 	}
 }
