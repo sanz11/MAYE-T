@@ -26,8 +26,9 @@
     <fieldset class="form-group">
       <div class="form-check col-sm-6 col-xs-12">
         <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="nombre" value="nombre" checked>
+            <input type="radio" class="form-check-input" name="nombre" value="nombre" id="nom" checked>
             Usar Mi nombre para publicar
+            <input type="text" name="realname" class="form-control" id="realname" value="<?php echo $_SESSION['nombre'];?>" readonly>
         </label>
       </div>
     <div class="form-check col-sm-6 col-xs-12">

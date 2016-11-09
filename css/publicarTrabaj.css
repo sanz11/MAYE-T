@@ -48,7 +48,16 @@ h4{
     display: none;
     font-size: 11px;
 }
+#realname{
+    display: none;
+     max-width: 150px;
+     font-size: 11px;
+    margin: auto;
+}
 #empresa:checked ~ #nomempresa{
+    display: block;
+}
+#nom:checked ~ #realname{
     display: block;
 }
 #checotro:checked ~ #otro{

@@ -8,7 +8,7 @@ require_once('../modelo/date.php');
 
 $trabajo= new trabajo();
 
-$nombre="";
+@$nombre=$_POST['realname'];
 
 @$lugar=$_POST['lugar'];
 
@@ -23,16 +23,19 @@ $nombre="";
 @$otro=$_POST['otro'];
 @$descripcion=$_POST['descripcion'];
 
-if($raempresa="empresa"){
+if($raempresa==="empresa"){
     $nombre = $nomempresa;
 }
 if($otrorubro){
    $rubro= $otro;
 }
-
 if(@$_POST['publicar']){
+    
+    if(empty($nombre) || empty($rubro)|| empty($descripcion)||$rubro==="---" ){
+        $alerta="<script>alert ('llene todos los datos');</script>";
+    }else{
 	$alerta=$trabajo->set_trabajo($nombre,$rubro,$descripcion,$lugar,$fe);
+    }
+
 }
-
-
 ?>
