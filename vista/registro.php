@@ -110,18 +110,18 @@
                      <OPTION VALUE="31">31</OPTION>
                </SELECT>
                <SELECT NAME="mes" class="selectmes"> 
-                     <OPTION VALUE="enero">Enero</OPTION> 
-                     <OPTION VALUE="febrero">Febrero</OPTION> 
-                     <OPTION VALUE="marzo">Marzo</OPTION> 
-                     <OPTION VALUE="abril">Abril</OPTION> 
-                     <OPTION VALUE="mayo">Mayo</OPTION> 
-                     <OPTION VALUE="junio">Junio</OPTION>
-                     <OPTION VALUE="julio">Julio</OPTION> 
-                     <OPTION VALUE="agosto">Agosto</OPTION> 
-                     <OPTION VALUE="setiembre">Setiembre</OPTION>
-                     <OPTION VALUE="octubre">Octubre</OPTION> 
-                     <OPTION VALUE="noviembre">Noviembre</OPTION> 
-                     <OPTION VALUE="diciembre">Diciembre</OPTION>
+                     <OPTION VALUE="1">Enero</OPTION> 
+                     <OPTION VALUE="2">Febrero</OPTION> 
+                     <OPTION VALUE="3">Marzo</OPTION> 
+                     <OPTION VALUE="4">Abril</OPTION> 
+                     <OPTION VALUE="5">Mayo</OPTION> 
+                     <OPTION VALUE="6">Junio</OPTION>
+                     <OPTION VALUE="7">Julio</OPTION> 
+                     <OPTION VALUE="8">Agosto</OPTION> 
+                     <OPTION VALUE="9">Setiembre</OPTION>
+                     <OPTION VALUE="10">Octubre</OPTION> 
+                     <OPTION VALUE="11">Noviembre</OPTION> 
+                     <OPTION VALUE="12">Diciembre</OPTION>
                      
                </SELECT>
 	 		  <input type="number" id="anio" class="year"name="anio" placeholder="año">

@@ -26,7 +26,7 @@
 		  }
 		  else{
 			 $statement->execute();
-			  return "Usted se registro correctamente";
+			  return '<SCRIPT>alert ("SE REGISTRO CORRECTAMENTE :D");</SCRIPT>';
               
 		  }
 		  

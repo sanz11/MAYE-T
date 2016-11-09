@@ -20,7 +20,7 @@ $trabajo= new trabajador();
 
 $nacimiento=$anio."-".$mes."-".$dia;
 //2012-2-2
-//215-enero-11
+//215-$mes-11
 $mensaje="";
 
  if(@$_POST['registro']){
@@ -30,7 +30,7 @@ $mensaje="";
 	   $mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja);
 
      }else{
-        $mensaje="las contraseñas no coinsiden";
+        $mensaje="<script> alert('Las contraseñas no coinciden');</script>";
      }
 }
 
