@@ -17,6 +17,7 @@ body{
 	margin:20px;
     max-width: 230px;
 	color: white;
+    height: 320px;
     font-family: 'Baloo Bhaina', cursive;
     background:#ffffff url(../im/manui.png);
     background-size: 100%;
@@ -28,6 +29,12 @@ body{
 -moz-box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
 box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
 }
+.menuconte .info-proye h1{
+    padding-top: 26px;
+}a:hover{
+    text-decoration: none;
+}
+
 .menuconte .info-proye .imapro{
 	max-width: 230px;
 	height: 170px;
