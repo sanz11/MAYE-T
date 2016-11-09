@@ -9,15 +9,19 @@
 	<title>Formulario</title>
 	</head>
 <body>
- <?php
-    include ('menu.php');
-    ?>
+ 
+    <?php
+	include '../controlador/registro.php';
+	?>
 	 <div class="formu">
-	 	<form action="" class="formregistro">
-	 	     <br>
+	 	<form action="?" class="formregistro" method="post">
+	 	     <br> 
              <br>
              <div class="aviso">
              <h4>Para tener privilegios de ofertante activa la casilla y llena tus datos</h4>
+              <?php
+				echo @$mensaje;
+				?>
              </div>
 	 		  <input type="checkbox" id="check" >
              <div class="separ">
@@ -40,7 +44,7 @@
                 <br>
                <br>
                <h4>Contraseña:</h4>
-	 		  <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
+	 		  <input type="password" id="contraseña" name="contra" placeholder="Contraseña">
              
              <br>
              <br>
@@ -120,20 +124,20 @@
                      <OPTION VALUE="diciembre">Diciembre</OPTION>
                      
                </SELECT>
-	 		  <input type="number" id="anio" class="year"name="año" placeholder="año">
+	 		  <input type="number" id="anio" class="year"name="anio" placeholder="año">
 	       <br>
 	 	       <br>
  	       </div>
 	 	       
 	 	     <div class="boton">
-                 <botton type="submit" class="registro">Registrar</botton>
+                 <input type="submit" class="registro" name="registro" value="registrar"/>
 	 	     </div>
 	 	
 	 	</form>
 	 	<br>
 	 
 	 </div>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
