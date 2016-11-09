@@ -168,6 +168,23 @@
 		 
 		 }
 		 return $trabajador; 
+	 	} 
+     public function num_bandeja($dni){
+		 
+		 $bandeja = null;
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		 
+		  $sql=("select cont_mensaje from trabajador where dni=:dni");
+		 $statement=$conexion->prepare($sql);
+          $statement->bindParam(':dni',$dni);
+		 $statement->execute();
+		 
+		 while($filas=$statement->fetch(PDO::FETCH_ASSOC)){
+			 $bandeja[]=$filas;
+		 
+		 }
+		 return $bandeja; 
 	 	}
      
 }

@@ -1,7 +1,10 @@
  <?php
 session_start();
 	  if(isset($_SESSION['nombre'])){
+
+    include('../controlador/bandeja.php');     
 ?>
+
 <header>
 		<div class="contenedor">
 			<a href="../indexlog.php"><img src="../im/logo.png"  id="logo"/></a>
@@ -14,9 +17,11 @@ session_start();
 				<a href="">irperfil</a>
 				<a href="">irperfil</a>
 				<a href="">irperfil</a>
-				<p style="width:150px;"></p>
-				 <?php echo '<img src="'.$_SESSION['foto'].'">';?>
-				<h3 class="btn  btn-xs" data-toggle="modal" data-target="#cerrarsession"><?php echo $_SESSION['nombre']." ";?><span class="glyphicon glyphicon-cog" ></span></h3>
+				<a><span style="background:#FF4000;padding:7px 5px;border-radius:50%;cursor:pointer;"><span class="glyphicon glyphicon-comment"></span><span style="padding:2px 3px;"><?php foreach($numbandeja as $countbandeja){
+        echo $countbandeja["cont_mensaje"];}?></span></span></a>
+				<a>
+				 <?php echo '<img src="'.$_SESSION['foto'].'">';?></a>
+				<a class=" btn-xs" data-toggle="modal" data-target="#cerrarsession"><?php echo $_SESSION['nombre'];?><span class="glyphicon glyphicon-cog" ></span></a>
 				</nav>
 		</div>
 </header>

@@ -14,9 +14,11 @@
 <!--fonts--->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
-<?php include('controlador/login.php');?>
+
  <?php
+    session_start();
 	  if(isset($_SESSION['nombre'])){
+          include('controlador/bandeja.php');
 ?>
 <body>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
@@ -29,13 +31,12 @@
 			<label class="icon-menu1" for="menu-bar"></label>
 			<!--FIN MENU-->
 				<nav class="menu">
-				<a href="">irperfil</a>
-				<a href="">irperfil</a>
-				<a href="">irperfil</a>
-				<a href="">irperfil</a>
-				<p style="width:150px;"></p>
-				 <?php echo '<img src="'.$_SESSION['foto'].'">';?>
-				<h3 class="btn  btn-xs" data-toggle="modal" data-target="#cerrarsession"><?php echo $_SESSION['nombre']." ";?><span class="glyphicon glyphicon-cog" ></span></h3>
+				<a href="vista/men.php"><span class="glyphicon glyphicon-th-large"></span>Menu</a>
+				<a><span style="background:#FF4000;padding:7px 5px;border-radius:50%;cursor:pointer;"><span class="glyphicon glyphicon-comment"></span><span style="padding:2px 3px;"><?php foreach($numbandeja as $countbandeja){
+        echo $countbandeja["cont_mensaje"];}?></span></span></a>
+				<a>
+				 <?php echo '<img src="'.$_SESSION['foto'].'">';?></a>
+				<a class=" btn-xs" data-toggle="modal" data-target="#cerrarsession"><?php echo $_SESSION['nombre']." ";?><span class="glyphicon glyphicon-cog" ></span></a>
 				</nav>
 		</div>
 </header>

@@ -25,7 +25,7 @@ session_start();
                     $_SESSION["contrasenia"]=$arreglo["contrasenia"];
 					$_SESSION["foto"]=$arreglo["foto"];
                     
-                    header('location:indexlog.php');
+                    header('location:vista/men.php');
                     session_start();
 					
 				}else{
@@ -60,7 +60,7 @@ session_start();
                     $_SESSION["contrasenia"]=$arreglo["contrasenia"];
 					$_SESSION["foto"]=$arreglo["foto"];
                     
-                    header('location:../indexlog.php');
+                    header('location:men.php');
                            session_start();
 					
 				}else{
