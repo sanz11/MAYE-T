@@ -33,7 +33,7 @@
 			<!--FIN MENU-->
 				<nav class="menu">
 				<a class="btn  btn-xs" data-toggle="modal" data-target="#miventanalogin" >Entrar</a>
-				<a href="vista/registrar.php" class="btn  btn-xs">Registrar</a>
+				<a href="vista/registro.php" class="btn  btn-xs">Registrar</a>
 				</nav>
 		</div>
 </header>

@@ -10,7 +10,6 @@ body{
 .formu{
 	width: 90%;
 	margin: auto;
-    color: white;
 	margin-top: 30px;
 	background:rgba(220,1,20,1);
 	/*-webkit-box-shadow: 9px 10px 29px 2px rgba(255,255,255,1);
@@ -20,9 +19,7 @@ box-shadow: 9px 10px 29px 2px rgba(255,255,255,1);*/
 .formregistro input{
 	height: 40px;
 	width: 80%;
-	border-radius: 5px;
 	margin-left: 15px;
-    color: white;
 }
 
 .formregistro h4{
@@ -94,6 +91,7 @@ margin-left: 15px;
 	background-color: black;
 	font-size: 15px;
 	border-color: black;
+    color: white;
 }
 .registro:hover{
     background-color: rgba(0,0,0,0.9);
@@ -107,7 +105,6 @@ margin-left: 15px;
 .formregistro input{
 	height: 40px;
 	width: 90%;
-	border-radius: 5px;
 	margin-left: 15px;
 }
 	.formregistro{
@@ -117,7 +114,6 @@ margin-left: 15px;
 	#experiencia , #anio{
 	height: 30px;
 	width: 100px;
-	border-radius: 5px;
 	margin-left: 15px; 
 }
 	
