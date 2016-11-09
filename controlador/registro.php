@@ -17,21 +17,41 @@ $trabajo= new trabajador();
 @$dia=$_POST['dia'];
 @$mes=$_POST['mes'];
 @$anio=$_POST['anio'];
+@$check=$_POST['check'];
 
-$nacimiento=$anio."-".$mes."-".$dia;
-//2012-2-2
-//215-$mes-11
+
 $mensaje="";
+$existe="";
 
- if(@$_POST['registro']){
-	 $foto="fotostrabaja/admin.jpg";
-	 $bandeja=0;
-     if($contra===$contra2){
-	   $mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja);
 
-     }else{
-        $mensaje="<script> alert('Las contraseñas no coinciden');</script>";
-     }
+	if(@$_POST['registro']){
+		
+	 if($check=="1"){
+		 if(empty($ciudad)||empty($direccion)||empty($dia)||empty($mes)||empty($anio)){
+			 $mensaje="<script> alert(' No puede dejar uno o mas estos campos vacios: ciudad, direccion y fecha de nacimiento ');</script>";
+		 }else{
+			$nacimiento=$anio."-".$mes."-".$dia;
+			$existe=$trabajo->Exists_trabajador($dni,$email);
+		if(!$existe){
+	 		$foto="fotostrabaja/admin.jpg";
+	 		$bandeja=0;
+     		if($contra===$contra2){
+	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja);
+
+     		}else{
+        	$mensaje="<script> alert('Las contraseñas no coinciden');</script>";
+     		}
+		}else{
+			$mensaje="<script> alert(' DNI ó EMAIL ya existen ');</script>";
+		}
+			
+		}
+		 
+	 }
+		
+	
+		
 }
+ 
 
 ?>

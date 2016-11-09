@@ -23,33 +23,33 @@
 				echo @$mensaje;
 				?>
              </div>
-	 		  <input type="checkbox" id="check" >
+	 		  <input type="checkbox" id="check" value="1" name="check" >
              <div class="separ">
              
 	 		<h4>Nombre:</h4> 
-	 		 <input type="text" id="nombre" name="nombre" placeholder="Nombre"/>
+	 		 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required/>
 	 		
 	          <br>
              <br>
 	 		  <h4>Apellidos:</h4>
-	 		  <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+	 		  <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
 	 		  <br>
              <br>
 	 		 <h4>Dni:</h4> 
-	 		  <input type="number" id="dni" name="dni" placeholder="Dni">
+	 		  <input type="number" id="dni" name="dni" placeholder="Dni" required>
 	 		    <br>
                 <br>
 	 		   <h4>E-mail:</h4>
-	 		  <input type="text" id="e-mail" name="email" placeholder="E-mail">
+	 		  <input type="email" id="e-mail" name="email" placeholder="@gmail" required>
                 <br>
                <br>
                <h4>Contraseña:</h4>
-	 		  <input type="password" id="contraseña" name="contra" placeholder="Contraseña">
+	 		  <input type="password" id="contraseña" name="contra" placeholder="Contraseña" required>
              
              <br>
              <br>
              <h4>Confirmar Contraseña:</h4>
-	 		  <input type="password" id="confircontraseña" name="confircontraseña" placeholder="Confirmar Contraseña">
+	 		  <input type="password" id="confircontraseña" name="confircontraseña" placeholder="Confirmar Contraseña" required>
              <br>
              <br>
              
@@ -61,22 +61,22 @@
 	 		  <br>
              <br>
 	 		 <h4>Direccion:</h4> 
-	 		  <input type="text" id="direccion" name="direccion" placeholder="Direccion">
+	 		  <input type="text" id="direccion" name="direccion" placeholder="Direccion" >
 	 		  
 	 		  <br>
              <br>
 	 		   <h4>Telefono:</h4>
-	 		  <input type="number" id="telefono" name="telefono" placeholder="Telefono">
+	 		  <input type="number" id="telefono" name="telefono" placeholder="Telefono" >
               
                <br>
                <br>
                <h4>Celular:</h4>
-	 		  <input type="number" id="celular" name="celular" placeholder="celular">
+	 		  <input type="number" id="celular" name="celular" placeholder="celular" >
                                 
                <br>
                <br>
                <h4>Nacimiento:</h4>
-	 		   <SELECT NAME="dia" class="select"> 
+	 		   <SELECT NAME="dia" class="select" > 
                      <OPTION VALUE="1">1</OPTION> 
                      <OPTION VALUE="2">2</OPTION> 
                      <OPTION VALUE="3">3</OPTION> 
@@ -124,7 +124,7 @@
                      <OPTION VALUE="12">Diciembre</OPTION>
                      
                </SELECT>
-	 		  <input type="number" id="anio" class="year"name="anio" placeholder="año">
+	 		  <input type="number" id="anio" class="year"name="anio" placeholder="año" >
 	       <br>
 	 	       <br>
  	       </div>
