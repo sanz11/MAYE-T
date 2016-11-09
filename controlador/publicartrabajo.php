@@ -1,6 +1,10 @@
 <?php
 require_once("../modelo/Conectar.php");
 require_once("../modelo/trabajo.php");
+require_once('../modelo/date.php');
+        
+    $fecha= new fechahoy();
+     $fe=$fecha->fechahoy();
 
 $trabajo= new trabajo();
 
@@ -27,7 +31,7 @@ if($otrorubro){
 }
 
 if(@$_POST['publicar']){
-	$alerta=$trabajo->set_trabajo($nombre,$rubro,$descripcion,$lugar);
+	$alerta=$trabajo->set_trabajo($nombre,$rubro,$descripcion,$lugar,$fe);
 }
 
 

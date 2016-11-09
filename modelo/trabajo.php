@@ -1,17 +1,13 @@
 <?php
-$fe="";
- include ('date.php');
-        
-    $fecha= new fechahoy();
-     $fe=$fecha->fechahoy();
+ 
 
  class trabajo{
      
      
 
 
-	public function set_trabajo($nombre,$rubro,$descripcion,$lugar){
-		 $fef="16-2-2";
+	public function set_trabajo($nombre,$rubro,$descripcion,$lugar,$fecha){
+		
         
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
@@ -21,7 +17,7 @@ $fe="";
 		 $statement->bindParam(':nombre',$nombre);
            $statement->bindParam(':rubro',$rubro);
            $statement->bindParam(':descripcion',$descripcion);
-           $statement->bindParam(':fecha',$fef);
+           $statement->bindParam(':fecha',$fecha);
         $statement->bindParam(':lugar',$lugar);
 		  
 		  if(!$statement){

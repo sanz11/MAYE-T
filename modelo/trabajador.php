@@ -2,11 +2,11 @@
 
  class trabajador{
 	 
-	public function set_trabajador($dni,$nombre,$apellidos,$email,$contrasenia,$ciudad,$direccion,$telefono,$celular,$oficio,$experiencia,$nacimiento,$foto){
+	public function set_trabajador($dni,$nombre,$apellidos,$email,$contrasenia,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja){
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
         
-		 $sql="insert into trabajador(dni,nombre,apellidos,email,contrasenia,ciudad,direccion,telefono,celular,oficio,experiencia,nacimiento,foto) values(:dni,:nombre,:apellidos,:email,:contrasenia,:ciudad,:direccion,:telefono,:celular,:oficio,:experiencia,:nacimiento,:foto) ";
+		 $sql="insert into trabajador(dni,nombre,apellidos,email,contrasenia,ciudad,direccion,telefono,celular,nacimiento,foto,cont_mensaje) values(:dni,:nombre,:apellidos,:email,:contrasenia,:ciudad,:direccion,:telefono,:celular,:nacimiento,:foto,:cont) ";
 		 $statement=$conexion->prepare($sql);
 		 $statement->bindParam(':dni',$dni);
            $statement->bindParam(':nombre',$nombre);
@@ -17,10 +17,9 @@
            $statement->bindParam(':direccion',$direccion);
            $statement->bindParam(':telefono',$telefono);
            $statement->bindParam(':celular',$celular);
-            $statement->bindParam(':oficio',$oficio);
-           $statement->bindParam(':experiencia',$experiencia);
            $statement->bindParam(':nacimiento',$nacimiento);
-         $statement->bindParam(':foto',$foto);
+           $statement->bindParam(':foto',$foto);
+           $statement->bindParam(':cont',$bandeja);
 		  
 		  if(!$statement){
 			  return "error registrar";
