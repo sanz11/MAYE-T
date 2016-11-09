@@ -7,18 +7,23 @@
 	<link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/lista.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
- <?php include ('menu.html');?>
+ 
+ <?php include ('menu2.php');?>
+     <?php include '../controlador/listartrabajo.php';?>
+
+	
 	 <div class="lista">
 	 <div class="filtro">
-	 	<div class="filrar">
+	 	<div class="filtrar">
 	 		<h1 class="titulo">Filtros</h1>
-	 		<form action="">
-	 			<input type="text" name="quebuscas" id="quebuscas" placeholder="¿Que buscas?">
+	 		<form action="?" class="formu" method="get">
+	 			<input type="text" name="rubro" id="quebuscas" placeholder="¿Que buscas?">
 	 			<br>
 	 			<br>
-	 			<SELECT NAME="dia" class="select"> 
+	 			<SELECT NAME="lugar" class="select"> 
                      <OPTION VALUE="Amazonas">Amazonas</OPTION> 
                      <OPTION VALUE="Áncash">Áncash</OPTION> 
                      <OPTION VALUE="Apurímac">Apurímac</OPTION> 
@@ -55,71 +60,42 @@
 	 </div>
 	 
 	 
-	 <div class="section">
-	 	<section class="secciones">
-	 	    <H3>.Juan Villegas Gordillo</H3>
-	 	    
-	 	    <div class="div">
-	 	    <h4> ALBAÑIL</h4>
-				<h5 class="nombre"> Se necesita Gasfitero urgente c/sn experiencia en lince-lima</h5>
+	 <div class='section'>
+	   <?php
+         echo @$mensaje;
+          if($msmlista=="valido"){
+          foreach($matriztrabajo as $registro){
+	       echo "<section class='secciones'>
+	 	    <H3>".$registro["nombre"]."</H3>
+	 	    <div class='div'>
+	 	    <h4>".$registro["rubro"]."</h4>
+				<h5 class='nombre'>".$registro["descripcion"]."</h5>
+         <h5 class='nombre'>publicado el: ".$registro["fecha"]."</h5>
 	 	    </div>
-
-	 			<section>
-	 			<input type="submit" value="Postular" id="ver">
+	 	    <section>
+	 			<input type='button' value='Postular' id='ver'>
 	 			<br>
 	 			<br>
-	 			
 	 		</section>
-	 		</section>
-	 		
-	 		
-	 		<section class="secciones">
-	 	    <H3>.Nicolas Cruz Soto</H3>
-	 	    
-	 	    <div class="div">
-	 	    <h4> HERRERO</h4>
-				<h5 class="nombre"> Se necesita Gasfitero urgente c/sn experiencia en lince-lima</h>
+	 	 </section>";
+            }}
+          else{
+              echo "<section class='secciones'>
+	 	    <div class='div'>
 	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Postular" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 		</section>
-	 		
-	 		<section class="secciones">
-	 	    <H3>.Herber Garrafa Echeverria</H3>
-	 	    
-	 	    <div class="div">
-	 	    <h4> GASFITERO</h4>
-				<h5 class="nombre"> Se necesita Gasfitero urgente c/sn experiencia en lince-lima</h>
+	 	    <div class='div'>
+	 	    	<h5 class='nombre'>".@$mensajes."</h5>
 	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Postular" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 		</section>
-	 		
-	 		<section class="secciones">
-	 	    <H3>.Oscar Paul Contreras</H3>
-	 	    
-	 	    <div class="div">
-	 	    <h4> CARPINTERO</h4>
-				<h5 class="nombre"> Se necesita Gasfitero urgente c/sn experiencia en lince-lima</h>
-	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Postular" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 		</section>
+	 	</section>";
+          }
+          //echo $msn;
+          ?>
 	 	
+	 </div>	
 	 </div>
+	 
 <script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>	
+<script src="../js/bootstrap.min.js"></script>
+
 </body>
 </html>

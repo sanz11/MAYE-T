@@ -71,6 +71,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
 #menu-bar:checked ~ .menu{
 	transform:translateX(-1%);
 }
+.msje{
+    position: fixed;
+    z-index: 2;
+    margin-top: 0px;
+    height: 40px;
+    width: 25%;
+    right: 10px;
+}
 @media (min-width:824px){
 	.menu{
 		position:static;

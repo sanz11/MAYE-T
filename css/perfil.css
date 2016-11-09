@@ -1,0 +1,145 @@
+* { 
+    margin:0;
+    padding:0;
+    }
+body{
+    
+    background:#ffffff url(../im/fona.jpg);
+   
+    
+}
+.perfil{
+    width: 90%;
+    margin-top: 25%;
+    margin-left: 5%;
+    border: 2px red;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+}
+.perfil .img{
+    width: 100%;
+    border: 3px solid rgba(255,255,255,0.3);
+    
+}
+.perfil .img img{
+    width: 100%;
+    max-width: 260px;
+    height: 280px;
+    margin: auto;
+}
+.percon{
+    max-width: 250px;
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+}
+table{
+    margin: auto;
+    text-align: left
+}
+.datos{
+     width: 95%;
+    margin: auto
+}
+h1{
+   color:rgb(200,0,20);
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Baloo Bhaina', cursive;
+}
+h4{ 
+    color: #555555;
+    font-size: 15px;
+    font-family:  monospace;
+}
+strong{
+    font-family: 'Baloo Bhaina', cursive;
+}
+li{
+    list-style: none;
+}
+#tamaño{
+    width:100px; 
+}
+
+@media (min-width:490px){
+    .percon{
+    max-width: 350px;
+    justify-content: center;
+}
+    .perfil{
+    }
+}
+@media (min-width:550px){
+    .percon{
+    max-width: 350px;
+    justify-content: center;
+}
+    .perfil{
+        margin-top: 17%;
+    }
+}
+@media (min-width:864px){
+    .perfil{
+        display: flex;
+    }
+    .perfil .div{
+        float: left;
+    }
+    .perfil .percon{
+        width: 100%;
+        max-width: 100%;
+    }
+    .perfil .img{
+        width: 360px;
+        height:440px;
+    }
+    .perfil .img img{
+        width: 360px;
+        height:440px;
+        max-width: 360px;
+    }
+    .perfil .datos{
+    width: 40%;
+    }
+    
+}
+@media (min-width:924px){
+    .perfil .img{
+        width: 380px;
+        height:440px;
+    }
+    .perfil .img img{
+        width: 380px;
+        height:440px;
+        max-width: 380px;
+    }
+    .perfil{
+        margin-top: 15%;
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+}
+@media (min-width:1064px){
+    .perfil{
+        margin-top: 10%;
+        width: 76%;
+        margin-left: 12%;
+    }
+    .perfil .datos{
+    width: 50%;
+    }
+}
+@media (min-width:1350px){
+	.perfil{
+        margin-top: 10%;
+         width: 70%;
+        margin-left: 15%;
+    }
+}
+
+
+

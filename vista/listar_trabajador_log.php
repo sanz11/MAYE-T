@@ -7,19 +7,22 @@
 	<link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/fontello.css">
 	<link rel="stylesheet" href="../css/lista.css">
+	<link rel="stylesheet" href="../css/login.css">
 
 </head>
 <body>
- <?php include ('menu.html');?>
+
+ <?php include ('menu2.php');?>
+ <?php include '../controlador/listartrabajador.php';?>
 	 <div class="lista">
-	 <div class="filtro">
-	 	<div class="filrar">
+	  <div class="filtro">
+	 	<div class="filtrar">
 	 		<h1 class="titulo">Filtros</h1>
-	 		<form action="">
-	 			<input type="text" name="quebuscas" id="quebuscas" placeholder="¿Que buscas?">
+	 		<form action="?" class="formu" method="get">
+	 			<input type="text" name="rubro" id="quebuscas" placeholder="ej: mecanico">
 	 			<br>
 	 			<br>
-	 			<SELECT NAME="dia" class="select"> 
+	 			<SELECT name="lugar" class="select"> 
                      <OPTION VALUE="Amazonas">Amazonas</OPTION> 
                      <OPTION VALUE="Áncash">Áncash</OPTION> 
                      <OPTION VALUE="Apurímac">Apurímac</OPTION> 
@@ -56,91 +59,50 @@
 	 </div>
 	 
 	 
+	 
 	 <div class="section">
-	 	<section class="secciones">
-	 	    <H3>. Gasfitero, Electicista</H3>
-	 	    <div class="div">
-	 	    	<img src="imagen/abel.jpg" alt="">
+	 	 <?php
+         echo @$mensaje;
+          if($msmlista=="valido"){
+          foreach($matriztrabajador as $registro){
+	       echo "<section class='secciones'>
+	 	    <H3>. ".$registro["oficio"]."</H3>
+	 	    <div class='div'>
+	 	    	<img src='".$registro["foto"]."'><br>
+                <H5> experiencia: ".$registro["experiencia"]." años</H5>
 	 	    </div>
-	 	    <div class="div">
-	 	    	<h5 class="nombre"> OSCAR PAUL CONTRERAS</h5>
-	 	    <h5>Jr:Larco Herrera 635</h5>
-	 	    <h5>Magdalena del Mar</h5>
-	 		<h5>Tlf:986754782</h5>
-	 		<h5>email:Oscarpaul@gmail.com</h5>
+	 	    <div class='div'>
+	 	    	<h5 class='nombre'>".$registro["nombre"]." ".$registro["apellidos"]."</h5>
+	 	    <h5>".$registro["direccion"]."</h5>
+	 	    <h5>".$registro["lugar"]."</h5>
+            <h5>Telefono: -".$registro["telefono"]."</h5>
+            <h5>Celular: -".$registro["celular"]."</h5>
+            <h5>Correo:".$registro["email"]."</h5>
 	 	    </div>
 	 			<section>
-	 			<input type="submit" value="Ver perfil" id="ver">
-	 			<input type="submit" value="Ver portafolio" id="ver">
-	 			<input type="submit" value="Enviar E-mail" id="ver">
+	 			
+	 			<input type='submit' value='Ver perfil' id='ver'>
+	 			<input type='submit' value='Ver portafolio' id='ver'>
+                <input type='submit' value='Enviar Email' id='ver'>
 	 			<br>
 	 			<br>
 	 			
 	 		</section>
-	 	</section>
-	 	<section class="secciones">
-	 	    <H3>. Gasfitero, Electicista</H3>
-	 	    <div class="div">
-	 	    	<img src="imagen/abel.jpg" alt="">
+	 	</section>";
+            }}
+          else{
+              echo "<section class='secciones'>
+	 	    <div class='div'>
 	 	    </div>
-	 	    <div class="div">
-	 	    	<h5 class="nombre"> OSCAR PAUL CONTRERAS</h5>
-	 	    <h5>Jr:Larco Herrera 635</h5>
-	 	    <h5>Magdalena del Mar</h5>
-	 		<h5>Tlf:986754782</h5>
-	 		<h5>email:Oscarpaul@gmail.com</h5>
+	 	    <div class='div'>
+	 	    	<h5 class='nombre'>".@$mensajes."</h5>
+	 	   
 	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Ver perfil" id="ver">
-	 			<input type="submit" value="Ver portafolio" id="ver">
-	 			<input type="submit" value="Enviar E-mail" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 	</section>
-	 	<section class="secciones">
-	 	    <H3>. Gasfitero, Electicista</H3>
-	 	    <div class="div">
-	 	    	<img src="imagen/abel.jpg" alt="">
-	 	    </div>
-	 	    <div class="div">
-	 	    	<h5 class="nombre"> OSCAR PAUL CONTRERAS</h5>
-	 	    <h5>Jr:Larco Herrera 635</h5>
-	 	    <h5>Magdalena del Mar</h5>
-	 		<h5>Tlf:986754782</h5>
-	 		<h5>email:Oscarpaul@gmail.com</h5>
-	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Ver perfil" id="ver">
-	 			<input type="submit" value="Ver portafolio" id="ver">
-	 			<input type="submit" value="Enviar E-mail" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 	</section>
-	 	<section class="secciones">
-	 	    <H3>. Gasfitero, Electicista</H3>
-	 	    <div class="div">
-	 	    	<img src="imagen/abel.jpg" alt="">
-	 	    </div>
-	 	    <div class="div">
-	 	    	<h5 class="nombre"> OSCAR PAUL CONTRERAS</h5>
-	 	    <h5>Jr:Larco Herrera 635</h5>
-	 	    <h5>Magdalena del Mar</h5>
-	 		<h5>Tlf:986754782</h5>
-	 		<h5>email:Oscarpaul@gmail.com</h5>
-	 	    </div>
-	 			<section>
-	 			<input type="submit" value="Ver perfil" id="ver">
-	 			<input type="submit" value="Ver portafolio" id="ver">
-	 			<input type="submit" value="Enviar E-mail" id="ver">
-	 			<br>
-	 			<br>
-	 			
-	 		</section>
-	 	</section>
+	 	</section>";
+          }
+          //echo $msn;
+          ?>
+          
 	 </div>
 	 	
 	 </div>

@@ -1,9 +1,14 @@
 <?php
+ 
 
  class trabajo{
-	 
-	public function set_trabajo($nombre,$rubro,$descripcion,$fecha,$lugar){
-		 
+     
+     
+
+
+	public function set_trabajo($nombre,$rubro,$descripcion,$lugar,$fecha){
+		
+        
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
         
@@ -16,11 +21,11 @@
         $statement->bindParam(':lugar',$lugar);
 		  
 		  if(!$statement){
-			  return "error registrar";
+			  return '<SCRIPT>alert ("OH NO! error publicar");</SCRIPT>';
 		  }
 		  else{
 			 $statement->execute();
-			  return "tu oferta fue enviado exitosamente para ser verificada";
+			  return '<SCRIPT>alert ("tu oferta fue enviado exitosamente para ser verificada");</SCRIPT>';
               
 		  }
 		  

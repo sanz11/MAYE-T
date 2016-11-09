@@ -13,8 +13,9 @@
 
 </head>
 <body>
+ <?php include ('menu.php');?>
  <?php include '../controlador/listartrabajo.php';?>
- <?php include ('menu.html');?>
+
  
 	 <div class="lista">
 	 <div class="filtro">
@@ -107,24 +108,24 @@
   		
   		<div class="alert alert-warning alert-danger">
   
-  <strong>Inicia Session para Postular!!!!! </strong>, Si aun no eres usuario registrate
+  <strong>Inicia Session para ver datos!!!!! </strong>, Si aun no eres usuario registrate
 </div>
   			<h1>Iniciar Sesión</h1>
   			
   			<div class="modal-body">
-  				<div class="login">
+  				<div class="loginlis">
+  				<form action="?" method="post">
   					<h4>Usuario</h4>
-  					<input type="text"  class="form-control" name="usuario" id="usuario" placeholder="Usuario">
+  					<input type="text"  class="form-control log" name="usuario" id="usuario" placeholder="Usuario">
   					
   					<h4>Contraseña</h4>
-  					<input type="password"  class="form-control" name="contraseña" id="contraseña" placeholder="Contraseña">
+  					<input type="password"  class="form-control log" name="contraseña" id="contraseña" placeholder="Contraseña">
   					  <br>
-  					   <br>
-  					<input type="submit" class="btn entrar"value="Entrar">
-  					<input type="submit" class="btn registrar " value="Registrar">
+  					<input type="submit" name="ingresar"class="btn entrar"value="Entrar">
+  					<input type="submit" name="irregistrar"class="btn registrar " value="Registrar">
   					<br>
   					<br>
-  					
+  		        </form>
   				</div>
   			</div>
   		</div>
