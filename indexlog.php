@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/login.css">
 
 <!--fonts--->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 
@@ -32,7 +33,7 @@
 			<!--FIN MENU-->
 				<nav class="menu">
 				<a href="vista/men.php"><span class="glyphicon glyphicon-th-large"></span>Menu</a>
-				<a><span style="background:#FF4000;padding:7px 5px;border-radius:50%;cursor:pointer;"><span class="glyphicon glyphicon-comment"></span><span style="padding:2px 3px;"><?php foreach($numbandeja as $countbandeja){
+				<a id="ben"><span style="background:#FF4000;padding:7px 5px;border-radius:50%;cursor:pointer;"><span class="glyphicon glyphicon-comment"></span><span style="padding:2px 3px;"><?php foreach($numbandeja as $countbandeja){
         echo $countbandeja["cont_mensaje"];}?></span></span></a>
 				<a>
 				 <?php echo '<img src="'.$_SESSION['foto'].'">';?></a>
@@ -115,7 +116,7 @@
 				</div>
 			</div>
 		</div>
-		
+ </div>
 		
 <div class="modal fade " id="cerrarsession" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   	<div class="modal-dialog">
@@ -141,7 +142,27 @@
   		
   	</div>
   </div>
-		
+		<div class="bandeja">
+     <div class="flecha"></div>
+      <h5><span class="glyphicon glyphicon-alert"></span>Usted tiene <?php foreach($numbandeja as $countbandeja){
+        echo $countbandeja["cont_mensaje"];}?> notificaciones, Por favor revise su correo</h5>
+  </div>
+  
+  <script >
+        $(document).ready(function(){
+   /**Aparecer y desaparecer lista cambiar**/ 
+            var i =0;
+           
+        $("#ben").click(function(){
+            if(i==0){
+                $(".bandeja").slideDown(); i=1;
+            }else{
+                $(".bandeja").slideUp(); i=0;
+            }
+     
+        });
+        });
+</script>
 		
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>	

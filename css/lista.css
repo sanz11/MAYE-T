@@ -177,3 +177,33 @@ max-width: 120px;
 	color: black;
 }
 
+.bandeja{
+    display: none;
+    width: 250px;
+    position: fixed;
+    margin-top: 0px;
+    height: 100px;
+    background-color: crimson;
+    margin-left:81%;
+}
+.bandeja .flecha{
+    margin-left: 75px;
+    margin-top: -15px;
+    background-color: crimson;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50px 50px 10px 20px;
+   
+}
+.bandeja h5{
+    text-align: center;
+    padding:1px 35px 0;
+    font-size: 17px;
+    color: white;
+}
+.bandeja h5 span{
+    font-size: 25px;
+    padding:0px 22px 0px 0px;
+}
+
