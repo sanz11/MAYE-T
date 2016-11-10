@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-11-2016 a las 22:50:34
+-- Tiempo de generación: 10-11-2016 a las 03:21:35
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -46,23 +46,40 @@ CREATE TABLE `administrador` (
 --
 
 CREATE TABLE `oficios` (
-  `dni` varchar(50) NOT NULL,
+  `dni` varchar(150) NOT NULL,
+  `nombre` varchar(300) NOT NULL,
+  `apellidos` varchar(500) NOT NULL,
+  `email` varchar(300) NOT NULL,
   `oficio` varchar(50) NOT NULL,
-  `nombre` varchar(200) NOT NULL,
-  `lugar` varchar(100) NOT NULL,
-  `direccion` varchar(220) NOT NULL,
-  `foto` varchar(500) NOT NULL,
-  `experiencia` int(11) NOT NULL,
-  `apellidos` varchar(250) NOT NULL
+  `ciudad` varchar(300) DEFAULT NULL,
+  `direccion` varchar(800) DEFAULT NULL,
+  `telefono` varchar(100) DEFAULT NULL,
+  `celular` varchar(50) DEFAULT NULL,
+  `foto` varchar(250) NOT NULL,
+  `experiencia` int(5) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `oficios`
 --
 
-INSERT INTO `oficios` (`dni`, `oficio`, `nombre`, `lugar`, `direccion`, `foto`, `experiencia`, `apellidos`) VALUES
-('10', 'albañil', 'Abel', 'lima', 'jgh:es 256', 'foto', 3, ''),
-('40', 'albañil', 'jose', 'lima', 'sdad', 'sadasd', 2, 'ajj jjjc');
+INSERT INTO `oficios` (`dni`, `nombre`, `apellidos`, `email`, `oficio`, `ciudad`, `direccion`, `telefono`, `celular`, `foto`, `experiencia`) VALUES
+('70241454', 'Abel', 'Ricra Sanchez', 'abel@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0),
+('7024146', 'juan', 'Ricra Sanchez', 'juan@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0),
+('70241455', 'pedro', 'Ricra Sanchez', 'pedro@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0),
+('70241457', 'mariano', 'Ricra Sanchez', 'mariano@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0),
+('70245454', 'Abelardo', 'Ricra Sanchez', 'abelardo@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0),
+('702419654', 'Andre', 'Ricra Sanchez', 'adre@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0),
+('123456', 'manuel', 'maucaylle noise', 'jjs@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '45', 0),
+('15', 'manuel', 'maucaylle noise', 'jjk565s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '45', 0),
+('1455', 'aded', 'maucaylle noise', 'jjks45@hhs', 'coma', 'Piura', 'jjdd', 'dsfsdf', 'sdfsdfs', '45', 0),
+('1555', 'manuhel', 'maucaylle noise', 'jj556ks@hhs', 'coma', 'Piura', 'jjdd', 'dsfsdf', 'sdfsdfs', '45', 0),
+('185', 'loe', 'maucaylle noise', 'jjk45s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '45', 0),
+('15585', 'mafenuel', 'maucaylle noise', 'jj5ks@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '45', 0),
+('14575', 'forlan', 'maucaylle noise', 'jjk4s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '45', 0),
+('70241454', 'Abel', 'Ricra Sanchez', 'abel@gmail.com', 'albañil', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0),
+('70241454', 'Abel', 'Ricra Sanchez', 'abel@gmail.com', 'mecanico', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0),
+('70241454', 'Abel', 'Ricra Sanchez', 'abel@gmail.com', 'chofer', 'magallanes', 'jh', 'kjh', 'kjh', 'kk', 0);
 
 -- --------------------------------------------------------
 
@@ -104,7 +121,7 @@ CREATE TABLE `trabajador` (
 --
 
 INSERT INTO `trabajador` (`dni`, `nombre`, `apellidos`, `email`, `contrasenia`, `ciudad`, `direccion`, `telefono`, `celular`, `nacimiento`, `foto`, `cont_mensaje`) VALUES
-('70241454', 'Abel', 'Ricra Sanchez', 'abel@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
+('70241454', 'Abel', 'Ricra Sanchez', 'abel@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 3),
 ('7024146', 'juan', 'Ricra Sanchez', 'juan@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
 ('70241455', 'pedro', 'Ricra Sanchez', 'pedro@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
 ('70241457', 'mariano', 'Ricra Sanchez', 'mariano@gmail.com', '123', 'magallanes', 'jh', 'kjh', 'kjh', '2016-10-12', 'kk', 0),
@@ -116,7 +133,8 @@ INSERT INTO `trabajador` (`dni`, `nombre`, `apellidos`, `email`, `contrasenia`, 
 ('1555', 'manuhel', 'maucaylle noise', 'jj556ks@hhs', 'coma', 'Piura', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
 ('185', 'loe', 'maucaylle noise', 'jjk45s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
 ('15585', 'mafenuel', 'maucaylle noise', 'jj5ks@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
-('14575', 'forlan', 'maucaylle noise', 'jjk4s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0);
+('14575', 'forlan', 'maucaylle noise', 'jjk4s@hhs', 'coma', 'Amazonas', 'jjdd', 'dsfsdf', 'sdfsdfs', '2016-10-19', '45', 0),
+('1010', 'eduardo', 'abc', '101@h.o', '123', 'vacio', 'vacio', 'vacio', 'vacio', '0001-01-01', 'fotostrabaja/admin.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -145,15 +163,15 @@ INSERT INTO `trabajo` (`nombre`, `rubro`, `descripcion`, `fecha`, `lugar`) VALUE
 ('KJ', 'mecanico', 'se necesita mecani en liefma huaras jhjhksdsdfjkfkfj', '2016-10-12', 'Lima'),
 ('JORGE', 'mecanico', 'se necesita mecani por skken lima huaras jhjhksdsdfjkfkfj', '2016-10-12', 'Lima'),
 ('EDA', 'mecanico', 'se necesita mecaniade en lima huaras jhjhksdsdfjkfkfj', '2016-10-12', 'Lima'),
-('Juan', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'la victoria'),
-('Juan', 'Albañil', 'Necesito albañil urgente parjj jj jj a nose cuado', '2016-10-11', 'lima'),
-('pedro', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
-('justino', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'apurimac'),
-('luliano', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
-('estefani', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
-('estefano', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
-('Juan', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
-('pedrito', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
+('sadas', 'Albañil', 'sda', '2016-11-09', 'Amazonas'),
+('abcde', 'Albañil', 'fghjklñ', '2016-11-09', 'Amazonas'),
+('abcde', 'Albañil', 'fghjklñ', '2016-11-09', 'Amazonas'),
+('Abel', 'Gasfitero', 'ds', '2016-11-09', 'Moquegua'),
+('Abel', 'Gasfitero', 'ds', '2016-11-09', 'Moquegua'),
+('', 'Albañil', 'kjh', '2016-11-09', 'Moquegua'),
+('', 'Albañil', 'fas', '2016-11-09', 'Moquegua'),
+('', 'Mecanico', 'po', '2016-11-09', 'Madre de Dios'),
+('', 'Mecanico', 'po', '2016-11-09', 'Madre de Dios'),
 ('Juana', 'mecanico', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
 ('pedro', 'mecanico', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
 ('justino', 'mecanico', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'apurimac'),
@@ -170,14 +188,15 @@ INSERT INTO `trabajo` (`nombre`, `rubro`, `descripcion`, `fecha`, `lugar`) VALUE
 ('Juan', 'gasfitero', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
 ('pedrito', 'gasfitero', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
 ('Juana', 'gasfitero', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'junin'),
-('Juan', 'Albañil', 'Necesito albañil urgente parjj jj jj a nose cuado', '2016-10-11', 'lima'),
-('pedro', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
-('justino', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
-('luliano', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
-('estefani', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
-('estefano', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
-('Juan', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
-('pedrito', 'Albañil', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
+('', 'Albañil', 'alba', '2016-11-09', 'Junín'),
+('', 'Albañil', 'alba', '2016-11-09', 'Junín'),
+('hjhgj', 'Gasfitero', 'abelillo', '2016-11-08', 'Piura'),
+('hjhgj', 'Gasfitero', 'abelillo', '2016-11-08', 'Piura'),
+('iberptec', 'Albañil', 'sfdaef', '2016-02-02', 'Moquegua'),
+('sanzpedria', 'Albañil', 'sdajsdasdad', '2016-02-02', 'Amazonas'),
+('marl', 'Gasfitero', 'piedra', '2016-02-02', 'Amazonas'),
+('sanzmar', 'Albañil', 'necesito programador', '2016-02-02', 'Amazonas'),
+('jj', 'Chofer', 'dfsdfsd', '2016-02-02', 'Loreto'),
 ('Juana', 'mecanico', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
 ('pedro', 'mecanico', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
 ('justino', 'mecanico', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
@@ -193,7 +212,26 @@ INSERT INTO `trabajo` (`nombre`, `rubro`, `descripcion`, `fecha`, `lugar`) VALUE
 ('estefano', 'gasfitero', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
 ('Juan', 'gasfitero', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
 ('pedrito', 'gasfitero', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
-('Juana', 'gasfitero', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima');
+('Juana', 'gasfitero', 'Necesito albañil urgente para nose cuado', '2016-10-11', 'lima'),
+('ghnhg', 'Mecanico', 'asas', '2016-11-09', 'La Libertad'),
+('ghnhg', 'Mecanico', 'asas', '2016-11-09', 'La Libertad'),
+('Abel', 'Mecanico', 'kkk', '2016-11-09', 'Amazonas'),
+('Abel', 'Mecanico', 'pppp', '2016-11-09', 'Amazonas'),
+('Abel', '---', '', '2016-11-09', 'Amazonas'),
+('Abel', '---', '', '2016-11-09', 'Amazonas'),
+('Abel', '---', '', '2016-11-09', 'Amazonas'),
+('Abel', '---', '', '2016-11-09', 'Amazonas'),
+('Abel', 'Albañil', '1', '2016-11-09', 'Amazonas'),
+('Abel', '---', '2', '2016-11-09', 'Amazonas'),
+('Abel', '---', '2', '2016-11-09', 'Amazonas'),
+('Abel', '---', '3', '2016-11-09', 'Amazonas'),
+('Abel', '---', '4', '2016-11-09', 'Amazonas'),
+('Abel', '---', '1l', '2016-11-09', 'Amazonas'),
+('Abel', '---', '1l', '2016-11-09', 'Amazonas'),
+('', '---', 'fg', '2016-11-09', 'Amazonas'),
+('', '---', 'fg', '2016-11-09', 'Amazonas'),
+('Abel', '---', '', '2016-11-09', 'Amazonas'),
+('Abel', 'Albañil', 'ss', '2016-11-09', 'Amazonas');
 
 --
 -- Índices para tablas volcadas
