@@ -13,10 +13,10 @@ session_start();
 			<label class="icon-menu1" for="menu-bar"></label>
 			<!--FIN MENU-->
 				<nav class="menu">
-				<a href="">irperfil</a>
-				<a href="">irperfil</a>
-				<a href="">irperfil</a>
-				<a href="">irperfil</a>
+				<a href="listar_trabajador_log.php"><img src="../im/ico-bstra.png" title="Buscar Trabajador" style="width:30px"><span class="letramenu"> Buscar Trabajador</span></a>
+				<a href="listar_trabajo_log.php"><img src="../im/ico-bu.png" title="Buscar Trabajo" style="width:30px"><span class="letramenu"> Buscar Trabajo </span></a>
+				<a href="publicar_trabajo.php"><img src="../im/ico-brtr.png" title="Publicar Trabajo" style="width:30px"><span class="letramenu"> Publicar Trabajo</span></a>
+				<a href="aniadirOficio.php"><img src="../im/ico-list.png" title="Añadir Oficio" style="width:30px"><span class="letramenu"> Añadir Oficio</span></a>
 				<a id="ben"><span style="background:#FF4000;padding:7px 5px;border-radius:50%;cursor:pointer;"><span class="glyphicon glyphicon-comment"></span><span style="padding:2px 3px;"><?php foreach($numbandeja as $countbandeja){
         echo $countbandeja["cont_mensaje"];}?></span></span></a>
 				<a>

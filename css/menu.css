@@ -24,6 +24,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
 header .contenedor{
 	display: table;
 }
+.letramenu{
+    display: ;
+}
 #menu-bar{
 	display: none;
 }
@@ -101,6 +104,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
     color: white;
     
 	}
+    .letramenu{
+    display: none;
+    }
 }
 
 
