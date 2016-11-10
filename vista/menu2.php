@@ -4,7 +4,7 @@ session_start();
 
     include('../controlador/bandeja.php');     
 ?>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <header>
 		<div class="contenedor">
 			<a href="../indexlog.php"><img src="../im/logo.png"  id="logo"/></a>
@@ -17,7 +17,7 @@ session_start();
 				<a href="">irperfil</a>
 				<a href="">irperfil</a>
 				<a href="">irperfil</a>
-				<a><span style="background:#FF4000;padding:7px 5px;border-radius:50%;cursor:pointer;"><span class="glyphicon glyphicon-comment"></span><span style="padding:2px 3px;"><?php foreach($numbandeja as $countbandeja){
+				<a id="ben"><span style="background:#FF4000;padding:7px 5px;border-radius:50%;cursor:pointer;"><span class="glyphicon glyphicon-comment"></span><span style="padding:2px 3px;"><?php foreach($numbandeja as $countbandeja){
         echo $countbandeja["cont_mensaje"];}?></span></span></a>
 				<a>
 				 <?php echo '<img src="'.$_SESSION['foto'].'">';?></a>
@@ -51,6 +51,28 @@ session_start();
   		
   	</div>
   </div>
+  
+  <div class="bandeja">
+     <div class="flecha"></div>
+      <h5><span class="glyphicon glyphicon-alert"></span>Usted tiene <?php foreach($numbandeja as $countbandeja){
+        echo $countbandeja["cont_mensaje"];}?> notificaciones, Por favor revise su correo</h5>
+  </div>
+  
+  <script >
+        $(document).ready(function(){
+   /**Aparecer y desaparecer lista cambiar**/ 
+            var i =0;
+           
+        $("#ben").click(function(){
+            if(i==0){
+                $(".bandeja").slideDown(); i=1;
+            }else{
+                $(".bandeja").slideUp(); i=0;
+            }
+     
+        });
+        });
+</script>
 <?php		  
 	  }else{
 		  echo "Acceso denegado";

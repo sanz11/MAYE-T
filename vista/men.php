@@ -12,6 +12,7 @@
 
 <!--fonts-->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+
 </head>
 <body>
 <?php include ('menu2.php');?>
