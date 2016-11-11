@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/fontello.css">
 <link rel="stylesheet" href="../css/login.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 <body>
 <?php include ('menu.php');?>

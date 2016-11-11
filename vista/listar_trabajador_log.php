@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/fontello.css">
 	<link rel="stylesheet" href="../css/lista.css">
 	<link rel="stylesheet" href="../css/login.css">
-
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 <body>
 

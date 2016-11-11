@@ -33,7 +33,7 @@ $existe="";
 			 $mensaje="<script> alert(' No puede dejar uno o mas estos campos vacios: ciudad, direccion y fecha de nacimiento ');</script>";
 		 }else{
 			$nacimiento=$anio."-".$mes."-".$dia;
-			$existe=$trabajo->Exists_trabajador($dni,$email);
+			$existe=$trabajo->Existe_trabajador($dni,$email);
 		if(!$existe){
 	 		$foto="fotostrabaja/admin.jpg";
 	 		$bandeja=0;
@@ -55,7 +55,7 @@ $existe="";
          $telefono="vacio";
          $celular="vacio";
          $nacimiento="1-1-1";
-			$existe=$trabajo->Exists_trabajador($dni,$email);
+			$existe=$trabajo->Existe_trabajador($dni,$email);
 		if(!$existe){
 	 		$foto="fotostrabaja/admin.jpg";
 	 		$bandeja=0;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/lista.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 <body>
  
@@ -66,7 +67,7 @@
           if($msmlista=="valido"){
           foreach($matriztrabajo as $registro){
 	       echo "<section class='secciones'>
-	 	    <H3>".$registro["nombre"]."</H3>
+	 	    <H3>".$registro["nombre"]." ".$registro["dni"]."</H3>
 	 	    <div class='div'>
 	 	    <h4>".$registro["rubro"]."</h4>
 				<h5 class='nombre'>".$registro["descripcion"]."</h5>
