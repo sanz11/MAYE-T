@@ -64,17 +64,19 @@
 	 <div class='section'>
 	   <?php
          echo @$mensaje;
+         echo @$enviomsn;
           if($msmlista=="valido"){
           foreach($matriztrabajo as $registro){
 	       echo "<section class='secciones'>
-	 	    <H3>".$registro["nombre"]." ".$registro["dni"]."</H3>
+	 	    <H3>".$registro["nombre"]."</H3>
+            <input type='text' value=' ".$registro["email"]."' name='emailms' style='display:none;'>
 	 	    <div class='div'>
 	 	    <h4>".$registro["rubro"]."</h4>
 				<h5 class='nombre'>".$registro["descripcion"]."</h5>
          <h5 class='nombre'>publicado el: ".$registro["fecha"]."</h5>
 	 	    </div>
 	 	    <section>
-	 			<input type='button' value='Postular' id='ver'>
+	 			<a href='../controlador/postular.php?to=".$registro["email"]."&for=".$_SESSION["email"]."'><input type='button' value='Postular' id='ver'></a>
 	 			<br>
 	 			<br>
 	 		</section>
