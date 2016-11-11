@@ -15,18 +15,22 @@
 </head>
 <body>
 <?php include ('menu2.php');?>
+<?php include ('../controlador/aniadirOficio.php');?>
+
+<?php 
+	echo @$mensaje;?>
 <h1 id="titulo">Añadir Oficio</h1>
 <div class="perfil">
    <div class="percon">
     <div class="oficio div">
-        <form action="" id="ofi">
+        <form action="?" id="ofi" method="post">
             <h4>Oficios</h4>
             <input type="text" name="oficio" id="oficio" placeholder="Oficio">
             <h4>Experiencia(años)</h4>
             <input type="text" name="experiencia" id="experiencia" placeholder="Experiencia">
             <br>
             <br>
-            <input type="submit" value="Guardar" class="guardar btn ">
+            <input type="submit" value="Guardar" name="aniadir" class="guardar btn ">
             <br>
             <br>
         </form>
@@ -67,7 +71,7 @@
 
 
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

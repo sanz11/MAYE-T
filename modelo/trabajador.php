@@ -32,14 +32,15 @@
 		  
 	 	}
 	  
-	 public function get_trabajador(){
+	 public function get_trabajador($dni){
 		 
 		 $trabajador = null;
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("select * from trabajador");
+		  $sql=("select * from trabajador where dni=:dni");
 		 $statement=$conexion->prepare($sql);
+		 $statement->bindParam(':dni',$dni);
 		 $statement->execute();
 		 
 		 while($filas=$statement->fetch(PDO::FETCH_ASSOC)){
@@ -187,6 +188,38 @@
 		 }
 		 return $bandeja; 
 	 	}
+	 
+	 
+	 public function set_oficio($dni,$nombre,$apellidos,$email,$oficio,$ciudad,$direccion,$telefono,$celular,$foto,$experiencia){
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+        
+		 $sql="insert into oficios(dni,nombre,apellidos,email,oficio,ciudad,direccion,telefono,celular,foto,experiencia) values(:dni,:nombre,:apellidos,:email,:oficio,:ciudad,:direccion,:telefono,:celular,:foto,:experiencia) ";
+		 $statement=$conexion->prepare($sql);
+		 $statement->bindParam(':dni',$dni);
+           $statement->bindParam(':nombre',$nombre);
+           $statement->bindParam(':apellidos',$apellidos);
+           $statement->bindParam(':email',$email);
+           $statement->bindParam(':oficio',$oficio);
+           $statement->bindParam(':ciudad',$ciudad);
+           $statement->bindParam(':direccion',$direccion);
+           $statement->bindParam(':telefono',$telefono);
+           $statement->bindParam(':celular',$celular);
+           $statement->bindParam(':foto',$foto);
+           $statement->bindParam(':experiencia',$experiencia);
+		  
+		  if(!$statement){
+			  return "error al añadir oficio";
+		  }
+		  else{
+			 $statement->execute();
+			  return '<SCRIPT>alert ("SE SEAÑADIO CORRECTAMENTE SU OFICIO :D");</SCRIPT>';
+              
+		  }
+		  
+	 	}
+	 
+	 
      
 }
 ?>
