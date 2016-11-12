@@ -44,13 +44,13 @@
                 <td><strong>Dirección</strong></td><td><H4>".$registro["direccion"]."</H4></td>
             </tr>
         <tr>
-                <td><strong>Teléfono</strong></td><td><H4>".$registro["telefono"]."</H4></td>
-            </tr>
-        <tr>
-                <td><strong>Celular</strong></td><td><H4>".$registro["celular"]."</H4></td>
+                <td><strong>Teléfono</strong></td><td><H4>".$registro["telefono"]." <strong>Celular:</strong> ".$registro["celular"]."</H4></td>
             </tr>
         <tr>
                 <td><strong>F.N</strong></td><td><H4>".$registro["nacimiento"]."</H4></td>
+            </tr>
+        <tr>
+                <td><strong>DESCRIPCION DE PERFIL</strong></td><td><H4>".$registro["perfil"]."</H4></td>
             </tr>
         <tr>
             <td><strong>OFICIOS</strong></td>

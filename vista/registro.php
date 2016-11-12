@@ -9,7 +9,7 @@
     <link rel="stylesheet"href="../css/login.css">
 	<title>Formulario</title>
 	</head>
-<body>
+<body>r
  <?php include ('menu.php');?>
     <?php
 	include '../controlador/registro.php';

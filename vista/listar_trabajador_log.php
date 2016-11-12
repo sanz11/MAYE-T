@@ -73,8 +73,8 @@
 	 	    </div>
 	 	    <div class='div'>
 	 	    	<h5 class='nombre'>".$registro["nombre"]." ".$registro["apellidos"]."</h5>
+	 	    <h5>".$registro["ciudad"]."</h5>
 	 	    <h5>".$registro["direccion"]."</h5>
-	 	    <h5>".$registro["lugar"]."</h5>
             <h5>Telefono: -".$registro["telefono"]."</h5>
             <h5>Celular: -".$registro["celular"]."</h5>
             <h5>Correo:".$registro["email"]."</h5>

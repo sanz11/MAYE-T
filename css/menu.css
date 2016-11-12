@@ -82,7 +82,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
     width: 25%;
     right: 10px;
 }
-
+#fotodeperfil{
+    display: block;
+	color: #fff;
+	height: 57px;
+    margin-top: -7px;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+    transition:0.5s;
+}
+.photoperfil{
+    width: 30px;
+    border-radius: 50%;
+}
 @media (min-width:824px){
 	.menu{
 		position:static;
