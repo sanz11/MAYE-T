@@ -37,30 +37,26 @@
     </div>
     <div class="datos div">
       <div class=" t table-responsive" > 
+      
+      
       <table class="table table-striped table-bordered table-condensed">
        <tr class="info">
            <th>Oficio</th>
            <th>Experiencia(años)</th>
            <th>Opciones</th> 
            </tr>
-        <tr>
-           <td>Plomero</td>
-           <td>4</td>
-           <td><button class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></button><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
-        </tr>
-       
-         <tr>
-           <td>Gasfitero</td>
-           <td>5</td>
-           <td><button class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></button><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
-        </tr>
-         
-         <tr>
-           <td>Mecanico</td>
-           <td>4</td>
-           <td><button class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></button><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
-        </tr>
+           <?php
+		 
+		   foreach($matrizoficios as $aniadirDa){
+       echo " <tr>
+           <td>".$aniadirDa["oficio"]."</td>
+           <td>".$aniadirDa["experiencia"]."</td>
+           <td><button class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button><button class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>
+        </tr>";
+		   }
+       ?>
         </table>
+			
         </div> 
         <br>
     </div>
@@ -69,9 +65,11 @@
 
 <!------------------------------------>
 
-
-
 <script src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
