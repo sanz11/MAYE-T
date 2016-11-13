@@ -3,12 +3,13 @@ body{
 }
 .perfil{
     width: 80%;
-    margin: 25% auto;
+    margin: 25% auto 5%;
     display: table;
     background-color: rgba(255,255,255,0.9);
      -webkit-box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
 box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
+    color: #3333333;
   }
 .datos{
     display: table;
@@ -25,9 +26,48 @@ box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
    height: 330px;
    width: 100%;
    }
-.dat{
-    color: #Ffffff
+#dni{
+   width: 94%;
+    margin: auto;
 }
+.nameoficio{
+    color:rgb(2,0,20);
+    font-family: 'Baloo Bhaina', cursive;
+    font-size: 25px;
+}
+#dni h2 ,#descrip{
+    font-size: 20px;
+    padding: 0;
+    margin: 10px;
+}
+#descrip{
+    text-align: justify
+}
+.dat #name{
+    color:rgb(200,0,20);
+    font-family: 'Baloo Bhaina', cursive;
+}
+#perfil{
+    color:rgb(150,0,20);
+    font-family: 'Baloo Bhaina', cursive;
+    border-bottom: 1px solid rgb(150,0,50);
+}
+#ofi{
+    color:rgb(150,0,20);
+    font-family: 'Baloo Bhaina', cursive;
+    border-bottom: 1px solid rgb(150,0,50);
+}
+.puntos{
+    margin-left: 100%;
+    color: rgb(10,0,120);
+    font-family: 'Baloo Bhaina', cursive;
+}
+
+
+
+
+
+
 
 /**skill**/
 .total{
@@ -35,7 +75,6 @@ box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
     width:60%;
     height:20px;
     border-radius:8px;
-    overflow: hidden;
 }
 .avanexperiencia{
     height:18px;
@@ -51,7 +90,12 @@ box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
     }
 }
 @media (min-width:550px){
-   
+   .datos{
+    display: table;
+    padding-top: 30px;
+    width: 80%;
+    margin: auto;
+}
     .perfil{
         margin-top: 11%;
     }
@@ -66,10 +110,7 @@ box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
          margin-top: 6%;
     }
 }
-@media (min-width:1064px){
-}
-@media (min-width:1350px){
-}
+☺
 
 .bandeja{
     display: none;
