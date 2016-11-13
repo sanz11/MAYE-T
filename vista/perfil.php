@@ -18,7 +18,7 @@
 <?php include ('../controlador/perfil.php');?>
 <div class="perfil">
    <div class="percon">
-    <div class="img div"><img src="<?php echo $_SESSION['foto'];?>"></div>
+    <div class="img div"><img src="../fotosadmin/<?php echo $_SESSION['foto'];?>"></div>
     <div class="datos div">
       <br>   
       <table>
