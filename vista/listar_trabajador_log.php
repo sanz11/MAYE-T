@@ -17,7 +17,7 @@
 	 <div class="lista">
 	  <div class="filtro">
 	 	<div class="filtrar">
-	 		<h1 class="titulo">Filtros</h1>
+	 		<h1 class="titulo">Buscar Trabajador</h1>
 	 		<form action="?" class="formu" method="get">
 	 			<input type="text" name="rubro" id="quebuscas" placeholder="ej: mecanico">
 	 			<br>
@@ -58,8 +58,6 @@
 	 		</div>
 	 </div>
 	 
-	 
-	 
 	 <div class="section">
 	 	 <?php
          echo @$mensaje;
@@ -79,11 +77,12 @@
             <h5>Celular: -".$registro["celular"]."</h5>
             <h5>Correo:".$registro["email"]."</h5>
 	 	    </div>
+            <br>
 	 			<section>
 	 			
-	 			<input type='submit' value='Ver perfil' id='ver'>
-	 			<input type='submit' value='Ver portafolio' id='ver'>
-                <input type='submit' value='Enviar Email' id='ver'>
+	 			<a href='#' id='ver'>Ver perfil</a>
+                <a href='#' id='ver'>Ver portafolio</a>
+                <a href='#' id='ver'>Enviar Email</a>
 	 			<br>
 	 			<br>
 	 			

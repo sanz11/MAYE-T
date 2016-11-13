@@ -48,6 +48,22 @@ border: black 0.1px solid;
 	margin-left: 20px;
 	margin-top: 25px;
 }
+
+.secciones section a{
+	text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: #dc0117;
+	border-color: #dc0117;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.secciones section a:hover{
+	
+    padding: 11px;
+    background-color: rgb(150,10,10);
+}
 #submit{
 	background-color: #dc0117;
 	border-color: #dc0117;
@@ -61,9 +77,7 @@ border: black 0.1px solid;
 }
 /*------secciones--------*/
 #ver{
-	background-color: #dc0117;
-	border-color: #dc0117;
-	text-align: center;
+	width: 80%;
 }
 .secciones  h3{
 	font-family:cursive;

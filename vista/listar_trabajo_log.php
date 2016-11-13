@@ -19,7 +19,7 @@
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filtrar">
-	 		<h1 class="titulo">Filtros</h1>
+	 		<h1 class="titulo">Buscar Trabajo</h1>
 	 		<form action="?" class="formu" method="get">
 	 			<input type="text" name="rubro" id="quebuscas" placeholder="¿Que buscas?">
 	 			<br>
@@ -75,8 +75,9 @@
 				<h5 class='nombre'>".$registro["descripcion"]."</h5>
          <h5 class='nombre'>publicado el: ".$registro["fecha"]."</h5>
 	 	    </div>
+            <br>
 	 	    <section>
-	 			<a href='../controlador/postular.php?to=".$registro["email"]."&for=".$_SESSION["email"]."'><input type='button' value='Postular' id='ver'></a>
+	 			<a href='../controlador/postular.php?to=".$registro["email"]."&for=".$_SESSION["email"]."' id='ver'>Postular</a>
 	 			<br>
 	 			<br>
 	 		</section>

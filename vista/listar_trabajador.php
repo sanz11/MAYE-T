@@ -18,7 +18,7 @@
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filtrar">
-	 		<h1 class="titulo">Filtros</h1>
+	 		<h1 class="titulo">Buscar Trabajador</h1>
 	 		<form action="?" class="formu" method="get">
 	 			<input type="text" name="rubro" id="quebuscas" placeholder="ej: mecanico">
 	 			<br>
@@ -75,12 +75,11 @@
 	 	    <div class='div'>
 	 	    	<h5 class='nombre'>".$registro["nombre"]." ".$registro["apellidos"]."</h5>
 	 	    <h5>".$registro["direccion"]."</h5>
-	 	    <h5>".$registro["lugar"]."</h5>
-	 	    </div>
+	 	    <h5>".$registro["ciudad"]."</h5>
+	 	    </div><br>
 	 			<section>
-	 			
-	 			<input type='submit' value='Ver portafolio' id='ver'>
-	 			<input type='submit' value='Ver mas datos' id='ver'  data-toggle='modal' data-target='#miventana'>
+	 			<a href='' id='ver' data-toggle='modal' data-target='#miventana'>Ver portafolio</a>
+	 			<a href='submit'id='ver' data-toggle='modal' data-target='#miventana'>Ver mas datos</a>
 	 			<br>
 	 			<br>
 	 			

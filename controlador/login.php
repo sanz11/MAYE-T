@@ -56,6 +56,8 @@ session_start();
 				if(mysqli_num_rows($consulta)){
 					$arreglo=mysqli_fetch_array($consulta);
 					$_SESSION["nombre"]=$arreglo["nombre"];
+					$_SESSION["apellidos"]=$arreglo["apellidos"];
+                    $_SESSION["email"]=$arreglo["email"];
                     $_SESSION["dni"]=$arreglo["dni"];
                     $_SESSION["contrasenia"]=$arreglo["contrasenia"];
 					$_SESSION["foto"]=$arreglo["foto"];
@@ -82,10 +84,10 @@ session_start();
 	}
 
 	if(@$_POST['irregistrar']){
-		header('location:registrar.php');
+		header('location:registro.php');
 	}
     if(@$_POST['irregistrarin']){
-		header('location:vista/registrar.php');
+		header('location:vista/registro.php');
 	}
 	
 ?> 
