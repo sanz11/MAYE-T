@@ -51,7 +51,7 @@
        echo " <tr>
            <td>".$aniadirDa["oficio"]."</td>
            <td>".$aniadirDa["experiencia"]."</td>
-           <td><button class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>
+           <td><a name='elimin' class='btn btn-danger' href='../controlador/eliminarOficio.php?oficio=".$aniadirDa["oficio"]."'><span class='glyphicon glyphicon-trash'></span></a></td>
         </tr>";
 		   }
        ?>

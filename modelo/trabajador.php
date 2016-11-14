@@ -240,7 +240,27 @@
 		  
 	 	}
 	 
-	 
+	  public function eliminar_oficio($dni,$oficio){
+		 
+		
+		  
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		 
+		  $sql=("delete oficios where dni=:dni and oficio=:oficio");
+		 $statement=$conexion->pdo->prepare($sql);
+         $statement->bindParam(':dni',$dni);
+         $statement->bindParam(':oficio',$oficio);
+		 
+		 if(!$statement){
+			  return "error no se pudo eliminar";
+		  }
+		  else{
+              $statement->execute();
+			  return "se elimino correctamente";
+              
+		  }
+	 	}
      
 }
 ?>

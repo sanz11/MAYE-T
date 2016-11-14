@@ -36,4 +36,5 @@ if(@$_POST['aniadir']){
 $matrizoficios=$trabajador->get_oficios($dni);
 
 
+
 ?>
