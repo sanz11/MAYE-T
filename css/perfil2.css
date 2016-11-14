@@ -19,6 +19,10 @@ box-shadow: 6px 6px 21px 8px rgba(0,0,0,0.75);
 .datos .red{
     text-align: center;
     }
+.datos .red img{
+    border: 5px rgb(210,20,20) solid;
+    border-radius: 20px;
+    }
 .fotperf { 
    background-repeat: no-repeat;
    background-size: cover;

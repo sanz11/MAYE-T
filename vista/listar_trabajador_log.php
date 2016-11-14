@@ -80,7 +80,7 @@
             <br>
 	 			<section>
 	 			
-	 			<a href='#' id='ver'>Ver perfil</a>
+	 			<a href='perfilnew.php?dni=".$registro["dni"]."' id='ver'>Ver perfil</a>
                 <a href='#' id='ver'>Ver portafolio</a>
                 <a href='#' id='ver'>Enviar Email</a>
 	 			<br>

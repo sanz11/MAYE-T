@@ -12,6 +12,7 @@
 </head>
 <body>
 <?php include ('menu2.php');?>
+<?php include ('../controlador/perfil.php');?>
 <div class="perfil">
     <div class=" datos" >
        
@@ -19,32 +20,48 @@
             <img src="../fotosadmin/perfil2.jpg" class="fotperf">
         </div>
         <div class="col-sm-7 col-xs-12 dat">
-            <h1 style="text-align:center;" id="name">Abel Ricra Sanchez</h1>
-            <div id="dni">
-            <h2><strong>Dni:</strong> 70241454</h2>
-            <h2><strong>Email:</strong> abel@gmail.com</h2>
-            <h2><strong>Ciudad:</strong> magallanes</h2>
-            <h2><strong>Dirección:</strong> av. magallanes 545</h2>
-            <h2><strong>F.N:</strong> 2016-10-12</h2>
+           <?php
+          foreach($matriztrabajador as $registro){
+	       echo "<h1 style='text-align:center;' id='name'>".$registro["nombre"]." ".$registro["apellidos"]."</h1>
+            <div id='dni'>
+            <h2><strong>Dni:</strong>".$registro["dni"]."</h2>
+            <h2><strong>Email:</strong>".$registro["email"]."</h2>
+            <h2><strong>Ciudad:</strong>".$registro["ciudad"]."</h2>
+            <h2><strong>Dirección:</strong>".$registro["direccion"]."</h2>
+            <h2><strong>F.N:</strong>".$registro["nacimiento"]."</h2>
             </div>
+        
         </div>
     </div>
-    <div class="col-sm-12" >
-        <div class="col-sm-7 col-xs-12">
-              <h1 id="perfil">PERFIL</h1>
-           <h2 id="descrip">En definitiva, cada uno de nosotros deberá decidir qué le conviene más destacar: nuestros puntos fuertes, conocimientos, competencias, habilidades o nuestros intereses y motivaciones profesionales</h2>
-        </div>
+    <div class='col-sm-12' >
+        <div class='col-sm-7 col-xs-12'>
+              <h1 id='perfil'>PERFIL</h1>
+           <h2 id='descrip'>".$registro["perfil"]."</h2>
+        </div>";}?>
          <div class="col-sm-5 col-xs-12">
               <h1 id="ofi">OFICIOS</h1>
-           <h1 class="nameoficio">Mecanico</h1>
-           <div class="total"  style="border:0.5px solid red;"><div class="avanexperiencia" style="background:red;
-    width:30%;"><div class="puntos">7</div></div></div>
-           <h1 class="nameoficio">Albañil</h1>
-           <div class="total"  style="border:0.5px solid blue;"><div class="avanexperiencia" style="background:blue;
-    width:60%;"><div class="puntos">12</div></div></div>
-           <h1 class="nameoficio">Gasfitero</h1>
-           <div class="total"  style="border:0.5px solid green;"><div class="avanexperiencia" style="background:green;
-    width:15%;"><div class="puntos">5</div></div></div><br><br><br>
+               <?php
+          foreach($matrizoficios as $regis){
+              $valor=$regis["experiencia"];
+              if($valor>=10){
+                   $valo="100%";
+              }else{
+                  $valo=$valor*10;
+              }
+                $color="#880E4F";
+              if($valor<8){$color="#C2185B";}if($valor<6){$color="#D81B60";}
+              if($valor<4){$color="#E91E63";}if($valor<2){$color="#F06292";}
+              if($valor<1){$color="#F8BBD0";}
+            
+	       echo " <h1 class='nameoficio'>".$regis["oficio"]." <span style='font-size:12px;color:#E91E63;'>".$valor." años</span></h1>
+           <div class='total'  style='border:0.5px solid #E91E63;'>
+               <div class='avanexperiencia' style='background:".$color."; width:".$valo."%;'> 
+                   <div class='puntos'>".$regis["experiencia"]." </div>
+              </div>
+           </div>
+            ";}
+            ?>
+                <br><br><br>  
         </div>
     </div>
 </div>
