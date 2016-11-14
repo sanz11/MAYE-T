@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+
+
+*, 
+*:before, 
+*:after {
+  box-sizing:border-box; 
+}
+
+.modal-body {
+background: #BDBDBD;
+  font-family: 'Merriweather', sans-serif;
+}
+
+#emailmodal h1 {
+   text-align: center;
+   color: #e74c3c;
+   text-shadow: 1px 1px 0 black;
+}
+
+#emailmodal form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+}
+#emailmodal input, #emailmodal textarea {
+     border:0; outline:0;
+     padding: 1em;
+     border-radius:8px;
+     display: block;
+     width: 94%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     resize: none;
+  }  
+#emailmodal input:focus , #emailmodal textarea:focus {
+        box-shadow:0 1px 10px 1px dodgerblue;
+    
+  }
+  
+ #emailmodal #input-submit {
+     color: white; 
+     background: #e74c3c;
+     cursor: pointer;
+}
+ #emailmodal #input-submit:hover {
+    box-shadow:0 1px 1px 1px rgba(0,0,0,0.5); 
+    
+  }
+  
+#emailmodal  textarea {
+      height: 150px;
+  }
+
+
+
+#emailmodal .half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+#emailmodal .right { width: 50%; }
+
+#emailmodal .left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  #emailmodal .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+#emailmodal .cf:before,
+#emailmodal .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+#emailmodal .cf:after {
+    clear: both;
+}

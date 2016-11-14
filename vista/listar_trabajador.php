@@ -7,6 +7,7 @@
 	
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/lista.css">
+	<link rel="stylesheet" href="../css/modal.css">
 	<link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/fontello.css">
 <link rel="stylesheet" href="../css/login.css">

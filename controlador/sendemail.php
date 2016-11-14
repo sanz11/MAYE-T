@@ -1,8 +1,11 @@
 <?php
 
-
-@$a=$_GET['to'];
-@$de=$_GET['for'];
+if(isset($_POST['enviarema'])){
+$nombre=$_POST['nombrems'];
+$email=$_POST['emailms'];
+$asunto=$_POST['asunto'];
+    
+$nombredemi=$_SESSION['nombre'];
 $contenido="Estes es un mensaje de  postulacion";
 
 if (mail($a,"Mensaje de: ".$de,$contenido)) {
@@ -12,5 +15,5 @@ if (mail($a,"Mensaje de: ".$de,$contenido)) {
 	}else{
     $enviomsn="<script> alert('Lo sentimos, usted no a podido postular.');</script>";
 }
-
+}
 ?>
