@@ -72,7 +72,7 @@
 	       <section class="secciones">
 	 	    <H3><?php echo " ".$registro["oficio"];?></H3>
 	 	    <div class="div">
-	 	    	<img src="<?php echo $registro["foto"];?>"><br>
+	 	    	<img src="../fotosadmin/<?php echo $registro["foto"];?>"><br>
                 <H5> experiencia: <?php echo $registro["experiencia"];?> años</H5>
 	 	    </div>
 	 	    <div class="div">

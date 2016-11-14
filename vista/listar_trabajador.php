@@ -70,7 +70,7 @@
 	       echo "<section class='secciones'>
 	 	    <H3>. ".$registro["oficio"]."</H3>
 	 	    <div class='div'>
-	 	    	<img src='".$registro["foto"]."'><br>
+	 	    	<img src='../fotosadmin/".$registro["foto"]."'><br>
                 <H5> experiencia: ".$registro["experiencia"]." años</H5>
 	 	    </div>
 	 	    <div class='div'>

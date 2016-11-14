@@ -36,9 +36,10 @@ $existe="";
 			$existe=$trabajo->Existe_trabajador($dni,$email);
 		if(!$existe){
 	 		$foto="fotostrabaja/admin.jpg";
+            $perfil="contenido";
 	 		$bandeja=0;
      		if($contra===$contra2){
-	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja);
+	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil);
 
      		}else{
         	$mensaje="<script> alert('Las contraseñas no coinciden');</script>";
@@ -50,6 +51,7 @@ $existe="";
 		}
 		 
 	 }else{
+         $perfil="contenido";
          $ciudad="vacio";
          $direccion="vacio";
          $telefono="vacio";
@@ -60,7 +62,7 @@ $existe="";
 	 		$foto="fotostrabaja/admin.jpg";
 	 		$bandeja=0;
      		if($contra===$contra2){
-	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja);
+	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil);
 
      		}else{
         	$mensaje="<script> alert('Las contraseñas no coinciden');</script>";
