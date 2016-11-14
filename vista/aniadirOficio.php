@@ -51,7 +51,7 @@
        echo " <tr>
            <td>".$aniadirDa["oficio"]."</td>
            <td>".$aniadirDa["experiencia"]."</td>
-           <td><button class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span></button><button class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>
+           <td><button class='btn btn-danger'><span class='glyphicon glyphicon-trash'></span></button></td>
         </tr>";
 		   }
        ?>

@@ -94,7 +94,26 @@
 		  }
 		  
 	 	}
-	 public function Exists_trabajador($dni,$email){
+	 public function Exists_trabajador($dnil){
+		 $trabajador = null;
+         $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		  
+		 
+		 $consulta1=(" select * from  trabajador where dni=:dni  ");
+		 $statement1=$conexion->prepare($consulta1);
+		 $statement1->bindParam(':dni',$dni);
+		 $statement1->execute();
+		  
+		  while($filas=$statement1->fetch(PDO::FETCH_ASSOC)){
+			 $trabajador[]=$filas;
+			  
+		 
+		 }
+		 return $trabajador; 
+	 }
+	 
+	  public function Existe_trabajador($dni,$email){
 		 $trabajador = null;
          $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
@@ -113,6 +132,8 @@
 		 }
 		 return $trabajador; 
 	 }
+	 
+	 
 	   
      public function login_trabajador($user,$pass){
 		 

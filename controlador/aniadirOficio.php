@@ -9,7 +9,7 @@ $trabajador= new trabajador();
 @$experiencia=$_POST['experiencia'];
 $dni=$_SESSION['dni'];
 
-$matrizoficios=$trabajador->get_oficios($dni);
+
 $datos=$trabajador->get_trabajador($dni);
 foreach($datos as $aniadir){
 	       $nombre=$aniadir["nombre"];
@@ -33,6 +33,7 @@ if(@$_POST['aniadir']){
 	
 
 }
+$matrizoficios=$trabajador->get_oficios($dni);
 
 
 ?>
