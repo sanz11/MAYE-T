@@ -95,6 +95,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#880114', end
     width: 30px;
     border-radius: 50%;
 }
+.sesion a{
+    padding: 10px 20px;
+}
+.sesion .btn{
+    margin-top: 10px
+}
 @media (min-width:824px){
 	.menu{
 		position:static;
