@@ -11,6 +11,13 @@ if($matriz){
 }else{
     $valor="2";
 }
-$matrizoficios=$trabajador->get_oficios($dni);
+
+$matrizo=$trabajador->get_oficios($dni);
+if($matrizo){
+    $matrizoficios=$matrizo;
+    $val="1";
+}else{
+    $val="2";
+}
 
 ?>

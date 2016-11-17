@@ -142,10 +142,19 @@
   		
   	</div>
   </div>
-		<div class="bandeja">
+		 <div class="bandeja">
      <div class="flecha"></div>
-      <h5><span class="glyphicon glyphicon-alert"></span>Usted tiene <?php foreach($numbandeja as $countbandeja){
-        echo $countbandeja["cont_mensaje"];}?> notificaciones, Por favor revise su correo</h5>
+      <h5><span class="glyphicon glyphicon-alert"></span> <?php foreach($numbandeja as $countbandeja){
+        $num=$countbandeja["cont_mensaje"];}
+          if($num==0){
+              echo "Usted no tiene notificaciones por el momento.";
+          }else if($num==1){
+              echo "Usted tiene ". $num ." notificacion, Por favor revise su correo.";
+          }else {
+              echo "Usted tiene ". $num ." notificaciones, Por favor revise su correo.";
+          }
+          
+          ?></h5>
   </div>
   
   <script >

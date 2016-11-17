@@ -4,148 +4,79 @@
 <meta charset="UTF-8">
 <title></title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
 <link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/perfil.css">
 <link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/fontello.css">
-
-<!--fonts-->
+<link rel="stylesheet" href="../css/perfil2.css">
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
-<body >
- <?php include ('menu2.php');?>
+<body>
+<?php include ('menu2.php');?>
 <?php include ('../controlador/perfil.php');?>
 <div class="perfil">
-   <div class="percon">
-    <div class="img div"><img src="../fotosadmin/<?php echo $_SESSION['foto'];?>"></div>
-    <div class="datos div">
-      <br>   
-      <table>
-       <tr>
-           <td colspan="2"><h1><?php echo $_SESSION['nombre'];?></h1></td> 
-           </tr>
-        <tr>
-        <td id="tamaño"><strong>DNI</strong></td><td><h4><?php echo $_SESSION['dni'];?></h4></td>
-        
-        </tr>
-        <tr>
-           <td><strong>Email:</strong></td><td><H4><?php echo $_SESSION['email'];?></H4></td>
-        </tr>
-        <?php
-          if($dni== $_SESSION['dni']){
+    <div class=" datos" >
+       
+        <div class=" red col-sm-5 col-xs-12" >
+           <img src="../fotosadmin/<?php echo $_SESSION['foto'];?>" class='fotperf'>
+        </div>
+        <div class="col-sm-7 col-xs-12 dat">
+          <h1 style="text-align:center;" id="name"><?php echo $_SESSION['nombre']." ".$_SESSION['apellidos'];?></h1>
+            <div id="dni">
+            <h2><strong>Dni: </strong><?php echo $_SESSION['dni'];?></h2>
+            <h2><strong>Email: </strong><?php echo $_SESSION['email'];?></h2>
+            <?php
+                if($dni==$_SESSION['dni']){
+             if($valor=="1"){
           foreach($matriztrabajador as $registro){
 	       echo "
-	 	    
-        <tr>
-                <td><strong>Ciudad</strong></td><td><H4>".$registro["ciudad"]."</H4></td>
-            </tr>
-        <tr>
-                <td><strong>Dirección</strong></td><td><H4>".$registro["direccion"]."</H4></td>
-            </tr>
-        <tr>
-                <td><strong>Teléfono</strong></td><td><H4>".$registro["telefono"]." <strong>Celular:</strong> ".$registro["celular"]."</H4></td>
-            </tr>
-        <tr>
-                <td><strong>F.N</strong></td><td><H4>".$registro["nacimiento"]."</H4></td>
-            </tr>
-        <tr>
-                <td><strong>DESCRIPCION DE PERFIL</strong></td><td><H4>".$registro["perfil"]."</H4></td>
-            </tr>
-        <tr>
-            <td><strong>OFICIOS</strong></td>
-            <td>
-                <ul>";}?>
-         <?php
-          foreach($matrizoficios as $regis){
-	       echo "
-                    <li>".$regis["oficio"]."</li>";}?>
-         <?php
-	       echo "
-                </ul>
-            </td>
-        </tr>";
-          }else{
-              echo "
-              <tr>
-                <td colspan='2'><strong>Error.</strong> Algunos Datos están ocultos</H4></td>
-            </tr>";
-          }
-          ?>
-        <tr>
-          <td><button class="btn btn-info" data-toggle="modal" data-target="#miventana">Editar Perfil</button></td>
-        </tr>
-        </table>
-        <br>
+            <h2><strong>Ciudad: </strong>".$registro["ciudad"]."</h2>
+            <h2><strong>Dirección: </strong>".$registro["direccion"]."</h2>
+            <h2><strong>F.N:</strong>".$registro["nacimiento"]."</h2>
+            </div>
+        
+        </div>
     </div>
+    <div class='col-sm-12' >
+        <div class='col-sm-7 col-xs-12'>
+              <h1 id='perfil'>PERFIL</h1>
+           <h2 id='descrip'>".$registro["perfil"]."</h2>
+        </div>";}?>
+         <div class="col-sm-5 col-xs-12">
+              <h1 id="ofi">MIS OFICIOS</h1>
+               <?php
+            if($val=="1"){
+          foreach($matrizoficios as $regis){
+              $valor=$regis["experiencia"];
+              if($valor>=10){
+                   $valo="100%";
+              }else{
+                  $valo=$valor*10;
+              }
+                $color="#880E4F";
+              if($valor<8){$color="#C2185B";}if($valor<6){$color="#D81B60";}
+              if($valor<4){$color="#E91E63";}if($valor<2){$color="#F06292";}
+              if($valor<1){$color="#F8BBD0";}
+            
+	       echo " <h1 class='nameoficio'>".$regis["oficio"]." <span style='font-size:12px;color:#E91E63;'>".$valor." años</span></h1>
+           <div class='total'  style='border:0.5px solid #E91E63;'>
+               <div class='avanexperiencia' style='background:".$color."; width:".$valo."%;'> 
+                   <div class='puntos'>".$regis["experiencia"]." </div>
+              </div>
+           </div>
+            ";}}else{
+                echo "<div class='alert alert-success'>USTED <STRONG>NO </STRONG>TIENE OFICIOS AÑADIDOS, SI DESEA AÑADIR HAS <A HREF='  aniadirOficio.php'<STRONG>CLIC AQUI<STRONG></A></div>";
+            }}
+             else{
+                 header('location:../indexlog.php');
+             }}else{
+                    echo "<div class='alert alert-warning'> Algunos datos ocultos</div>";
+                }
+            ?>
+                <br><br><br>  
+        </div>
     </div>
 </div>
 
-<div class="modal fade" id="miventana" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  	<div class="modal-dialog">
-  		<div class="modal-content">
-  			
-  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-  			<h1>EDITAR PERFIL</h1>
-  			  			
-  			<div class="modal-body">
-                     <div class="alert alert-info alert-dismissable">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>¡Cuidado!</strong> solo debe editar los datos necesarios, y <strong>no es obligatorio</strong> que edite todo.
-</div>
-  					<form role="form">
-  <div class="form-group">
-    <label for="nombre">Nombre</label>
-    <input type="text" class="form-control" id="nombre">
-  </div>
-  <div class="form-group">
-    <label for="apellidos">Apellidos:</label>
-    <input type="text" class="form-control" id="apellidos">
-  </div>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" id="email">
-  </div>
-  <div class="form-group">
-    <label for="region">Región:</label>
-    <input type="text" class="form-control" id="region">
-  </div>
-  <div class="form-group">
-    <label for="provincia">Provincia:</label>
-    <input type="text" class="form-control" id="provincia">
-  </div>
-  <div class="form-group">
-    <label for="direccion">Dirección:</label>
-    <input type="text" class="form-control" id="direccion">
-  </div>
-  <div class="form-group">
-    <label for="telefono">Teléfono:</label>
-    <input type="text" class="form-control" id="telefono">
-  </div>
-  <div class="form-group">
-    <label for="celular">Celular:</label>
-    <input type="text" class="form-control" id="celular">
-  </div>
-  <div class="form-group">
-    <label for="ejemplo_archivo_1">Editar foto de perfil</label>
-    <input type="file" id="ejemplo_archivo_1">
-    <p class="help-block">280px X 280px</p>
-  </div>
-  <div class="form-group">
-      <div class="alert alert-warning"><h4> Ingrese su contraseña para <strong>comprobar </strong> que es usted el que esta realizando los cambios.</h4></div> <br>
-    <label for="contraseña">Contraseña:</label>
-    <input type="text" class="form-control" id="contraseña">
-  </div>
-  <button type="submit" class="btn btn-primary">Actualizar</button>
-  <button type="submit" class="btn btn-info">Cancelar</button>
-</form>
-  					<br>
-  					<br>
-  			</div>
-  		</div>
-  		
-  	</div>
-  </div>
 
 <script src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
