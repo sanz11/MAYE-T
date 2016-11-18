@@ -95,22 +95,13 @@
 		  }
 		  
 	 	}
-<<<<<<< HEAD
 	 public function Exists_trabajador($dnil){
-=======
-     
-     public function Exists_trabajador($dni){
->>>>>>> 04afc6956825a994083a14dd0490127048c0e685
 		 $trabajador = null;
          $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		  
 		 
-<<<<<<< HEAD
 		 $consulta1=(" select * from  trabajador where dni=:dni  ");
-=======
-		 $consulta1=(" select * from  trabajador where dni=:dni ");
->>>>>>> 04afc6956825a994083a14dd0490127048c0e685
 		 $statement1=$conexion->prepare($consulta1);
 		 $statement1->bindParam(':dni',$dni);
 		 $statement1->execute();
@@ -122,13 +113,7 @@
 		 }
 		 return $trabajador; 
 	 }
-<<<<<<< HEAD
-	 
-	  public function Existe_trabajador($dni,$email){
-=======
-     
 	 public function Existe_trabajador($dni,$email){
->>>>>>> 04afc6956825a994083a14dd0490127048c0e685
 		 $trabajador = null;
          $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
