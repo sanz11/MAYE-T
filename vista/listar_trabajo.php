@@ -9,8 +9,9 @@
 	<link rel="stylesheet" href="../css/menu.css">
 	<link rel="stylesheet" href="../css/fontello.css">
 	<link rel="stylesheet" href="../css/lista.css">
+	<link rel="stylesheet" href="../css/modal.css">
 	<link rel="stylesheet" href="../css/login.css">
-
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 <body>
  <?php include ('menu.php');?>
@@ -20,7 +21,7 @@
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filtrar">
-	 		<h1 class="titulo">Filtros</h1>
+	 		<h1 class="titulo">Buscar Trabajo</h1>
 	 		<form action="?" class="formu" method="get">
 	 			<input type="text" name="rubro" id="quebuscas" placeholder="¿Que buscas?">
 	 			<br>
@@ -74,8 +75,8 @@
 				<h5 class='nombre'>".$registro["descripcion"]."</h5>
          <h5 class='nombre'>publicado el: ".$registro["fecha"]."</h5>
 	 	    </div>
-	 	    <section>
-	 			<input type='submit' value='Postular' id='ver'  data-toggle='modal' data-target='#miventana'>
+	 	    <section><br>
+	 		        <a href='' id='ver' data-toggle='modal' data-target='#miventana'>Postular</a>
 	 			<br>
 	 			<br>
 	 		</section>

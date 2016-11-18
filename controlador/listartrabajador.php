@@ -12,7 +12,7 @@ $rubro='mecanico';
 $lugar='lima';
 }
 
-@$mensaje="FILTRANDO: ".$rubro."s, en ".$lugar;
+@$mensaje="<div class='alert alert-danger'> FILTRANDO: <strong>".$rubro."s, </strong> en <strong>".$lugar ."</strong> </div>";
 
 $matriztrabajador=$trabajador->search_trabajador($rubro,$lugar);
 if($matriztrabajador){

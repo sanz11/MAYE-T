@@ -33,12 +33,13 @@ $existe="";
 			 $mensaje="<script> alert(' No puede dejar uno o mas estos campos vacios: ciudad, direccion y fecha de nacimiento ');</script>";
 		 }else{
 			$nacimiento=$anio."-".$mes."-".$dia;
-			$existe=$trabajo->Exists_trabajador($dni,$email);
+			$existe=$trabajo->Existe_trabajador($dni,$email);
 		if(!$existe){
-	 		$foto="fotostrabaja/admin.jpg";
+	 		$foto="admin.jpg";
+            $perfil="si deseas puedes añadir tu perfil";
 	 		$bandeja=0;
      		if($contra===$contra2){
-	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja);
+	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil);
 
      		}else{
         	$mensaje="<script> alert('Las contraseñas no coinciden');</script>";
@@ -50,17 +51,19 @@ $existe="";
 		}
 		 
 	 }else{
+         $perfil="contenido";
          $ciudad="vacio";
-         $direccion="vacio";
-         $telefono="vacio";
-         $celular="vacio";
+         $direccion="no a añadido aun su dirección";
+         $telefono="no a añadido aun su dirección";
+         $celular="no a añadido aun su dirección";
          $nacimiento="1-1-1";
-			$existe=$trabajo->Exists_trabajador($dni,$email);
+			$existe=$trabajo->Existe_trabajador($dni,$email);
 		if(!$existe){
-	 		$foto="fotostrabaja/admin.jpg";
+	 		$foto="admin.jpg";
+             $perfil="si deseas puedes añadir tu perfil";
 	 		$bandeja=0;
      		if($contra===$contra2){
-	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja);
+	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil);
 
      		}else{
         	$mensaje="<script> alert('Las contraseñas no coinciden');</script>";

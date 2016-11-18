@@ -17,18 +17,17 @@
     <div class=" datos" >
        
         <div class=" red col-sm-5 col-xs-12" >
-           <img src="../fotosadmin/<?php echo $_SESSION['foto'];?>" class='fotperf'>
-        </div>
-        <div class="col-sm-7 col-xs-12 dat">
-          <h1 style="text-align:center;" id="name"><?php echo $_SESSION['nombre']." ".$_SESSION['apellidos'];?></h1>
-            <div id="dni">
-            <h2><strong>Dni: </strong><?php echo $_SESSION['dni'];?></h2>
-            <h2><strong>Email: </strong><?php echo $_SESSION['email'];?></h2>
             <?php
-                if($dni==$_SESSION['dni']){
              if($valor=="1"){
           foreach($matriztrabajador as $registro){
 	       echo "
+            <img src='../fotosadmin/".$registro["foto"]."' class='fotperf'>
+        </div>
+        <div class='col-sm-7 col-xs-12 dat'>
+          <h1 style='text-align:center;' id='name'>".$registro["nombre"]." ".$registro["apellidos"]."</h1>
+            <div id='dni'>
+            <h2><strong>Dni: </strong>".$registro["dni"]."</h2>
+            <h2><strong>Email: </strong>".$registro["email"]."</h2>
             <h2><strong>Ciudad: </strong>".$registro["ciudad"]."</h2>
             <h2><strong>Dirección: </strong>".$registro["direccion"]."</h2>
             <h2><strong>F.N:</strong>".$registro["nacimiento"]."</h2>
@@ -42,9 +41,9 @@
            <h2 id='descrip'>".$registro["perfil"]."</h2>
         </div>";}?>
          <div class="col-sm-5 col-xs-12">
-              <h1 id="ofi">MIS OFICIOS</h1>
+              <h1 id="ofi">OFICIOS</h1>
                <?php
-            if($val=="1"){
+            
           foreach($matrizoficios as $regis){
               $valor=$regis["experiencia"];
               if($valor>=10){
@@ -63,14 +62,10 @@
                    <div class='puntos'>".$regis["experiencia"]." </div>
               </div>
            </div>
-            ";}}else{
-                echo "<div class='alert alert-success'>USTED <STRONG>NO </STRONG>TIENE OFICIOS AÑADIDOS, SI DESEA AÑADIR HAS <A HREF='  aniadirOficio.php'<STRONG>CLIC AQUI<STRONG></A></div>";
-            }}
+            ";}}
              else{
                  header('location:../indexlog.php');
-             }}else{
-                    echo "<div class='alert alert-warning'> Algunos datos ocultos</div>";
-                }
+             }
             ?>
                 <br><br><br>  
         </div>

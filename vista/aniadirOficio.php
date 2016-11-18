@@ -79,3 +79,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
+>>>>>>> 04afc6956825a994083a14dd0490127048c0e685

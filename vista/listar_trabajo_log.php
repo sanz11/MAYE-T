@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/lista.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 <body>
  
@@ -18,7 +19,7 @@
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filtrar">
-	 		<h1 class="titulo">Filtros</h1>
+	 		<h1 class="titulo">Buscar Trabajo</h1>
 	 		<form action="?" class="formu" method="get">
 	 			<input type="text" name="rubro" id="quebuscas" placeholder="¿Que buscas?">
 	 			<br>
@@ -63,17 +64,20 @@
 	 <div class='section'>
 	   <?php
          echo @$mensaje;
+         echo @$enviomsn;
           if($msmlista=="valido"){
           foreach($matriztrabajo as $registro){
 	       echo "<section class='secciones'>
 	 	    <H3>".$registro["nombre"]."</H3>
+            <input type='text' value=' ".$registro["email"]."' name='emailms' style='display:none;'>
 	 	    <div class='div'>
 	 	    <h4>".$registro["rubro"]."</h4>
 				<h5 class='nombre'>".$registro["descripcion"]."</h5>
          <h5 class='nombre'>publicado el: ".$registro["fecha"]."</h5>
 	 	    </div>
+            <br>
 	 	    <section>
-	 			<input type='button' value='Postular' id='ver'>
+	 			<a href='../controlador/postular.php?to=".$registro["email"]."&for=".$_SESSION["email"]."' id='ver'>Postular</a>
 	 			<br>
 	 			<br>
 	 		</section>

@@ -2,11 +2,11 @@
 
  class trabajador{
 	 
-	public function set_trabajador($dni,$nombre,$apellidos,$email,$contrasenia,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja){
+	public function set_trabajador($dni,$nombre,$apellidos,$email,$contrasenia,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil){
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
         
-		 $sql="insert into trabajador(dni,nombre,apellidos,email,contrasenia,ciudad,direccion,telefono,celular,nacimiento,foto,cont_mensaje) values(:dni,:nombre,:apellidos,:email,:contrasenia,:ciudad,:direccion,:telefono,:celular,:nacimiento,:foto,:cont) ";
+		 $sql="insert into trabajador(dni,nombre,apellidos,email,contrasenia,ciudad,direccion,telefono,celular,nacimiento,foto,cont_mensaje,perfil) values(:dni,:nombre,:apellidos,:email,:contrasenia,:ciudad,:direccion,:telefono,:celular,:nacimiento,:foto,:cont,:perfil) ";
 		 $statement=$conexion->prepare($sql);
 		 $statement->bindParam(':dni',$dni);
            $statement->bindParam(':nombre',$nombre);
@@ -20,13 +20,14 @@
            $statement->bindParam(':nacimiento',$nacimiento);
            $statement->bindParam(':foto',$foto);
            $statement->bindParam(':cont',$bandeja);
+        $statement->bindParam(':perfil',$perfil);
 		  
 		  if(!$statement){
 			  return "error registrar";
 		  }
 		  else{
 			 $statement->execute();
-			  return '<SCRIPT>alert ("SE REGISTRO CORRECTAMENTE :D");</SCRIPT>';
+			  return '<SCRIPT>alert ("SE REGISTRO CORRECTAMENTE ");</SCRIPT>';
               
 		  }
 		  
@@ -94,13 +95,22 @@
 		  }
 		  
 	 	}
+<<<<<<< HEAD
 	 public function Exists_trabajador($dnil){
+=======
+     
+     public function Exists_trabajador($dni){
+>>>>>>> 04afc6956825a994083a14dd0490127048c0e685
 		 $trabajador = null;
          $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		  
 		 
+<<<<<<< HEAD
 		 $consulta1=(" select * from  trabajador where dni=:dni  ");
+=======
+		 $consulta1=(" select * from  trabajador where dni=:dni ");
+>>>>>>> 04afc6956825a994083a14dd0490127048c0e685
 		 $statement1=$conexion->prepare($consulta1);
 		 $statement1->bindParam(':dni',$dni);
 		 $statement1->execute();
@@ -112,8 +122,13 @@
 		 }
 		 return $trabajador; 
 	 }
+<<<<<<< HEAD
 	 
 	  public function Existe_trabajador($dni,$email){
+=======
+     
+	 public function Existe_trabajador($dni,$email){
+>>>>>>> 04afc6956825a994083a14dd0490127048c0e685
 		 $trabajador = null;
          $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();

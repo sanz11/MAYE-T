@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet"href="../css/login.css">
 	<title>Formulario</title>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 	</head>
 <body>
  <?php include ('menu.php');?>

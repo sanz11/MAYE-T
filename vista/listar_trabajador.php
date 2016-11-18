@@ -7,9 +7,11 @@
 	
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/lista.css">
+	<link rel="stylesheet" href="../css/modal.css">
 	<link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/fontello.css">
 <link rel="stylesheet" href="../css/login.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 <body>
 <?php include ('menu.php');?>
@@ -17,7 +19,7 @@
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filtrar">
-	 		<h1 class="titulo">Filtros</h1>
+	 		<h1 class="titulo">Buscar Trabajador</h1>
 	 		<form action="?" class="formu" method="get">
 	 			<input type="text" name="rubro" id="quebuscas" placeholder="ej: mecanico">
 	 			<br>
@@ -68,18 +70,17 @@
 	       echo "<section class='secciones'>
 	 	    <H3>. ".$registro["oficio"]."</H3>
 	 	    <div class='div'>
-	 	    	<img src='".$registro["foto"]."'><br>
+	 	    	<img src='../fotosadmin/".$registro["foto"]."'><br>
                 <H5> experiencia: ".$registro["experiencia"]." años</H5>
 	 	    </div>
 	 	    <div class='div'>
 	 	    	<h5 class='nombre'>".$registro["nombre"]." ".$registro["apellidos"]."</h5>
 	 	    <h5>".$registro["direccion"]."</h5>
-	 	    <h5>".$registro["lugar"]."</h5>
-	 	    </div>
+	 	    <h5>".$registro["ciudad"]."</h5>
+	 	    </div><br>
 	 			<section>
-	 			
-	 			<input type='submit' value='Ver portafolio' id='ver'>
-	 			<input type='submit' value='Ver mas datos' id='ver'  data-toggle='modal' data-target='#miventana'>
+	 			<a href='' id='ver' data-toggle='modal' data-target='#miventana'>Ver portafolio</a>
+	 			<a href='submit'id='ver' data-toggle='modal' data-target='#miventana'>Ver mas datos</a>
 	 			<br>
 	 			<br>
 	 			

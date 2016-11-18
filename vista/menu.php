@@ -7,6 +7,8 @@
 			<input type="checkbox" id="menu-bar"/>
 			<label class="icon-menu1" for="menu-bar"></label>
 				<nav class="menu">
+				<a href="listar_trabajador.php"><img src="../im/ico-bstra.png" title="Buscar Trabajador" style="width:30px"><span class="letramenu"> Buscar Trabajador</span></a>
+				<a href="listar_trabajo.php"><img src="../im/ico-bu.png" title="Buscar Trabajo" style="width:30px"><span class="letramenu"> Buscar Trabajo </span></a>
 				<a class="btn  btn-xs" data-toggle="modal" data-target="#miventanalogin" >Entrar</a>
 				<a href="registro.php" class="btn  btn-xs">Registrar</a>
 				</nav>

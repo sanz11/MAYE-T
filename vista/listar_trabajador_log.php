@@ -3,21 +3,27 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>MayeOficios</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/fontello.css">
 	<link rel="stylesheet" href="../css/lista.css">
-	<link rel="stylesheet" href="../css/login.css">
-
+	<link rel="stylesheet" href="../css/email.css">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>	
+<script src="../js/mensaje.js"></script>
 </head>
 <body>
 
  <?php include ('menu2.php');?>
  <?php include '../controlador/listartrabajador.php';?>
+ <?php include '../controlador/sendemail.php';?>
 	 <div class="lista">
 	  <div class="filtro">
 	 	<div class="filtrar">
-	 		<h1 class="titulo">Filtros</h1>
+	 		<h1 class="titulo">Buscar Trabajador</h1>
 	 		<form action="?" class="formu" method="get">
 	 			<input type="text" name="rubro" id="quebuscas" placeholder="ej: mecanico">
 	 			<br>
@@ -58,38 +64,37 @@
 	 		</div>
 	 </div>
 	 
-	 
-	 
 	 <div class="section">
 	 	 <?php
          echo @$mensaje;
           if($msmlista=="valido"){
-          foreach($matriztrabajador as $registro){
-	       echo "<section class='secciones'>
-	 	    <H3>. ".$registro["oficio"]."</H3>
-	 	    <div class='div'>
-	 	    	<img src='".$registro["foto"]."'><br>
-                <H5> experiencia: ".$registro["experiencia"]." años</H5>
+          foreach($matriztrabajador as $registro){?>
+	       <section class="secciones">
+	 	    <H3><?php echo " ".$registro["oficio"];?></H3>
+	 	    <div class="div">
+	 	    	<img src="../fotosadmin/<?php echo $registro["foto"];?>"><br>
+                <H5> experiencia: <?php echo $registro["experiencia"];?> años</H5>
 	 	    </div>
-	 	    <div class='div'>
-	 	    	<h5 class='nombre'>".$registro["nombre"]." ".$registro["apellidos"]."</h5>
-	 	    <h5>".$registro["direccion"]."</h5>
-	 	    <h5>".$registro["lugar"]."</h5>
-            <h5>Telefono: -".$registro["telefono"]."</h5>
-            <h5>Celular: -".$registro["celular"]."</h5>
-            <h5>Correo:".$registro["email"]."</h5>
+	 	    <div class="div">
+	 	    	<h5 class="nombre"><?php echo $registro["nombre"];?> <?php echo $registro["apellidos"];?></h5>
+	 	    <h5><?php echo $registro["ciudad"];?></h5>
+	 	    <h5><?php echo $registro["experiencia"];?></h5>
+            <h5>Telefono: <?php echo $registro["telefono"];?></h5>
+            <h5>Celular: <?php echo $registro["celular"];?></h5>
+            <h5>Correo:" <?php echo $registro["email"];?></h5>
 	 	    </div>
+            <br>
 	 			<section>
 	 			
-	 			<input type='submit' value='Ver perfil' id='ver'>
-	 			<input type='submit' value='Ver portafolio' id='ver'>
-                <input type='submit' value='Enviar Email' id='ver'>
+	 			<a href="perfilnew.php?dni=<?php echo $registro["dni"];?>" id="ver">Ver perfil</a>
+                <a href="#" id="ver">Ver portafolio</a>
+                <a href="javascript:ver('<?php echo $registro["email"];?>','<?php echo $registro["nombre"];?>');"class="ver" id="ver">Enviar Email</a>
 	 			<br>
 	 			<br>
 	 			
 	 		</section>
-	 	</section>";
-            }}
+	 	</section>
+          <?php  }}
           else{
               echo "<section class='secciones'>
 	 	    <div class='div'>
@@ -106,7 +111,38 @@
 	 </div>
 	 	
 	 </div>
-	 <script src="../js/jquery.js"></script>
+	 
+	 
+	 <!------------------modalllll----------------------->
+ <div class="modal fade" id="emailmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+  		<div class="modal-content">
+  		<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+  		
+  			<h1>Enviar Un mensaje</h1>
+  			
+  			<div class="modal-body">
+<form action="?" method="post" class="cf">
+  <div class="half left cf">
+    <input type="text" name="nombrems" id="nombrems" placeholder="Nombre" readonly>
+    <input type="email" name="emailms" id="emailms" placeholder="correo" readonly>
+    <input type="text" name="asunto" id="asunto" placeholder="Asunto">
+  </div>
+  <div class="half right cf">
+    <textarea name="mensaje" type="text" id="mensaje" placeholder="mensaje"></textarea>
+  </div>  
+  <input type="submit" value="Submit" name="enviarema" id="input-submit">
+</form>
+  				
+  				
+  			</div>
+  		</div>
+  		
+  	</div>
+  </div>
+	 
+<script src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>	
+<script src="../js/mensaje.js"></script>
 </body>
 </html>
