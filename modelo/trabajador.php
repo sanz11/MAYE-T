@@ -160,7 +160,7 @@
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("delete trabajador where dni=:id");
+		  $sql=("delete from trabajador where dni=:id");
 		 $statement=$conexion->prepare($sql);
          $statement->bindParam(':id',$id);
 
@@ -247,8 +247,8 @@
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("delete oficios where dni=:dni and oficio=:oficio");
-		 $statement=$conexion->pdo->prepare($sql);
+		  $sql=("delete from oficios where dni=:dni and oficio=:oficio");
+		 $statement=$conexion->prepare($sql);
          $statement->bindParam(':dni',$dni);
          $statement->bindParam(':oficio',$oficio);
 		 

@@ -9,7 +9,12 @@ session_start();
 $trabajador= new trabajador();
 
  $oficio=$trabajador->eliminar_oficio($_SESSION['dni'],$oficio);
+		   header('location:../vista/aniadirOficio.php');
+	 
 	  }else{
 		  header('location:../index.php');
+	  
 	  }
+		 
+	  
 ?>

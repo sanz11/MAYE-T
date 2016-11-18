@@ -46,7 +46,7 @@
            <th>Opciones</th> 
            </tr>
            <?php
-		 
+		 if($va=='1'){
 		   foreach($matrizoficios as $aniadirDa){
        echo " <tr>
            <td>".$aniadirDa["oficio"]."</td>
@@ -54,6 +54,12 @@
            <td><a name='elimin' class='btn btn-danger' href='../controlador/eliminarOficio.php?oficio=".$aniadirDa["oficio"]."'><span class='glyphicon glyphicon-trash'></span></a></td>
         </tr>";
 		   }
+			 }else{
+			echo " <tr>
+           <td>no tienes oficios</td>
+          
+        </tr>"; 
+		 }
        ?>
         </table>
 			
