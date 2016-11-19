@@ -11,14 +11,16 @@
         
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
+        $estado="0";
         
-		 $sql="insert into trabajo(nombre,rubro,descripcion,fecha,lugar)values(:nombre,:rubro,:descripcion,:fecha,:lugar)";
+		 $sql="insert into trabajo(nombre,rubro,descripcion,fecha,lugar)values(:nombre,:rubro,:descripcion,:fecha,:lugar,:estadp)";
 		 $statement=$conexion->prepare($sql);
 		 $statement->bindParam(':nombre',$nombre);
            $statement->bindParam(':rubro',$rubro);
            $statement->bindParam(':descripcion',$descripcion);
            $statement->bindParam(':fecha',$fecha);
         $statement->bindParam(':lugar',$lugar);
+        $statement->bindParam(':estado',$estado);
 		  
 		  if(!$statement){
 			  return '<SCRIPT>alert ("OH NO! error publicar");</SCRIPT>';
@@ -38,7 +40,7 @@
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("select * from trabajo");
+		  $sql=("select * from trabajo where estado=0");
 		 $statement=$conexion->prepare($sql);
 		 $statement->execute();
 		 
@@ -54,7 +56,7 @@
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("select * from trabajo where rubro=:rubro and lugar=:lugar");
+		  $sql=("select * from trabajo where rubro=:rubro and lugar=:lugar and estado=1");
 		 $statement=$conexion->prepare($sql);
          $statement->bindParam(':rubro',$rubro);
            $statement->bindParam(':lugar',$lugar);

@@ -209,6 +209,26 @@
 		 }
 		 return $bandeja; 
 	 	}
+     public function update_bandeja($dni){
+		 
+		 $bandeja = null;
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+         $ban=0;
+		 
+		  $sql=("update trabajador set cont_mensaje=:ban where dni=:dni");
+		 $statement=$conexion->prepare($sql);
+          $statement->bindParam(':ban',$ban);
+          $statement->bindParam(':dni',$dni);
+		if(!$statement){
+			  return "error al actualizar";
+		  }
+		  else{
+			 $statement->execute();
+			  return "Sus datos se actualizaron correctamente";
+              
+		  }
+	 	}
 	 
 	 
 	 public function set_oficio($dni,$nombre,$apellidos,$email,$oficio,$ciudad,$direccion,$telefono,$celular,$foto,$experiencia){

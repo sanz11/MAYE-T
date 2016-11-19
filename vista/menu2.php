@@ -2,7 +2,7 @@
 session_start();
 	  if(isset($_SESSION['nombre'])){
 
-    include('../controlador/bandeja.php');     
+    include('../controlador/bandeja.php');  
 ?>
 <script src="../js/jquery.js"></script>
 <header>
@@ -77,6 +77,7 @@ session_start();
                 $(".bandeja").slideDown(); i=1;
             }else{
                 $(".bandeja").slideUp(); i=0;
+                $("#ben").attr("href","?band=1");
             }
      
         });

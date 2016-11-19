@@ -124,10 +124,10 @@
   		<div class="modal-content">
   			
   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-  			<center><h1 style="color:#2E9AFE;">¿QUÉ DESEA HACER?</h1> </center>
+  			<center><h1 >¿QUÉ DESEA HACER?</h1> </center>
   			  			
-  		<div class="modal-body" style="background:#CED8F6;">
-          <center> <span class="edit glyphicon glyphicon-cog" ><a href="vista/perfil.php?dni=<?php echo $_SESSION['dni'];?>">Ir Perfil</a> </span>
+  		<div class="sesion modal-body" style="background:#f3f3f3;">
+          <center> <a href="vista/perfil.php?dni=<?php echo $_SESSION['dni'];?>"><span class="edit glyphicon glyphicon-cog" >Ver.Perfil</a> </span>
             
 
             <a href="index.php?cerrar=session"  title="Editar Perfil">

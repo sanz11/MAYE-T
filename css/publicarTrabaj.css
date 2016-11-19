@@ -31,7 +31,7 @@ select, #otro{
     width: 100%;
     max-width: 150px;
 }
-h1{
+.p{
    color:rgb(200,0,20);
     text-align: center;
     font-size: 25px;

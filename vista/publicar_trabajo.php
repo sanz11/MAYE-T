@@ -20,7 +20,7 @@
 <div class="perfil">
    <div class="percon">
    <br>
-   <h1>Publicar Trabajo</h1>
+   <h1 class="p">Publicar Trabajo</h1>
    <?php echo @$alerta;?>
     <form action="?" method="post">
     <fieldset class="form-group">
