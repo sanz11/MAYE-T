@@ -25,9 +25,9 @@
     <div class="oficio div">
         <form action="?" id="ofi" method="post">
             <h4>Oficios</h4>
-            <input type="text" name="oficio" id="oficio" placeholder="Oficio">
+            <input type="text" name="oficio" id="oficio" placeholder="Oficio" required>
             <h4>Experiencia(años)</h4>
-            <input type="text" name="experiencia" id="experiencia" placeholder="Experiencia">
+            <input type="number" name="experiencia" id="experiencia" placeholder="Experiencia" required>
             <br>
             <br>
             <input type="submit" value="Guardar" name="aniadir" class="guardar btn ">
