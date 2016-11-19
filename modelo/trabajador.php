@@ -95,7 +95,7 @@
 		  }
 		  
 	 	}
-	 public function Exists_trabajador($dnil){
+	 public function Exists_trabajador($dni){
 		 $trabajador = null;
          $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();

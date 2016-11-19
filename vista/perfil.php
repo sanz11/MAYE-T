@@ -44,7 +44,7 @@
          <div class="col-sm-5 col-xs-12">
               <h1 id="ofi">MIS OFICIOS</h1>
                <?php
-            if($val=="1"){
+    if($val=="1"){
           foreach($matrizoficios as $regis){
               $valor=$regis["experiencia"];
               if($valor>=10){
@@ -63,7 +63,8 @@
                    <div class='puntos'>".$regis["experiencia"]." </div>
               </div>
            </div>
-            ";}}else{
+            ";}
+    }else{
                 echo "<div class='alert alert-success'>USTED <STRONG>NO </STRONG>TIENE OFICIOS AÑADIDOS, SI DESEA AÑADIR HAS <A HREF='  aniadirOficio.php'<STRONG>CLIC AQUI<STRONG></A></div>";
             }}
              else{

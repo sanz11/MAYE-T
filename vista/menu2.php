@@ -4,7 +4,7 @@ session_start();
 
     include('../controlador/bandeja.php');     
 ?>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="../js/jquery.js"></script>
 <header>
 		<div class="contenedor">
 			<a href="../indexlog.php"><img src="../im/logo.png"  id="logo"/></a>

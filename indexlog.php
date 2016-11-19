@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/login.css">
 
 <!--fonts--->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 </head>
 
@@ -22,6 +22,7 @@
           include('controlador/bandeja.php');
 ?>
 <body>
+<script src="js/jquery.js"></script>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
 
 <header>
