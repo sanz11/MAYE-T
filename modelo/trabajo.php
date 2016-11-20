@@ -13,7 +13,7 @@
 		 $conexion=$modelo->get_conexion();
         $estado="0";
         
-		 $sql="insert into trabajo(nombre,rubro,descripcion,fecha,lugar)values(:nombre,:rubro,:descripcion,:fecha,:lugar,:estadp)";
+		 $sql="insert into trabajo(nombre,rubro,descripcion,fecha,lugar,estado)values(:nombre,:rubro,:descripcion,:fecha,:lugar,:estado)";
 		 $statement=$conexion->prepare($sql);
 		 $statement->bindParam(':nombre',$nombre);
            $statement->bindParam(':rubro',$rubro);
