@@ -56,36 +56,7 @@
                   <!--MENSAJE DE ERROR--> 	
 
   	
-  	<div class="modal fade" id="miventanalogin" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  	<div class="modal-dialog">
-  		<div class="modal-content">
-  			
-  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
-  			<h1>Iniciar Sesión</h1>
-  			
-  			<div class="modal-body">
-  				<div class="login">
-  				<form action="?" method="post" class="formulog">
-  				
-  					<h4>Usuario</h4>
-  					<input type="text"  class="form-control log" name="usuario" id="usuario" placeholder="DNI">
-  					<h4>Contraseña</h4>
-  					<input type="password"  class="form-control log" name="contraseña" id="contraseña" placeholder="Contraseña">
-  					  <br>
-  					<input type="submit" class="btn entrar" value="Entrar" name="ingresarin">
-  					<input type="submit" class="btn registrar "  name="irregistrarin" value="Registrar">
-  					<br>
-  					<br>
-  					<a href="">Olvidé mi contraseña</a>
-  					</form>
-  				</div>
-  			</div>
-  		</div>
-  		
-  	</div>
-  </div>
-  <!--FIN MENU-->
-
+ 
 <div class="container-fluid">
 		<div class="main row cont">
 			<div class="contgra">

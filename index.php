@@ -71,7 +71,7 @@
   					<input type="submit" class="btn registrar "  name="irregistrarin" value="Registrar">
   					<br>
   					<br>
-  					<a href="">Olvidé mi contraseña</a>
+  					<a href="vista/recuperar.php">Olvidé mi contraseña</a>
   					</form>
   				</div>
   			</div>

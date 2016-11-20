@@ -281,6 +281,39 @@
               
 		  }
 	 	}
-     
+      public function verifica_correo($email){
+		$trabajador = null;
+		$modelo = new Conexion();
+		$conexion = $modelo->get_conexion();
+
+		$sql = ("select * from trabajador where email=:email");
+		$statement=$conexion->prepare($sql);
+		$statement->bindParam(':email',$email);
+		$statement->execute();
+
+		while ($filas=$statement->fetch(PDO::FETCH_ASSOC)) {
+			$trabajador=$filas["email"];
+			break;
+		}
+		return $trabajador;
+	}
+
+	public function recuperar_contraseña($email,$contrasenia){
+	 	$recuperar = null;
+	 	$modelo = new Conexion();
+	 	$conexion = $modelo->get_conexion();
+
+	 	$sql = ("update  trabajador set contrasenia=:contrasenia where email=:email ");
+	 	$statement=$conexion->prepare($sql);
+	 	$statement->bindParam(':email',$email);
+		$statement->bindParam(':contrasenia',$contrasenia);
+		if(!$statement){
+			return "error al actualizar";
+		}
+		else{
+			$statement->execute();
+			return "Sus datos se actualizaron correctamente";      
+		} 	
+	}
 }
 ?>

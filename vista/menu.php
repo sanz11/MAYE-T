@@ -48,7 +48,7 @@
   					<input type="submit" class="btn registrar "  name="irregistrar" value="Registrar">
   					<br>
   					<br>
-  					<a href="">Olvidé mi contraseña</a>
+  					<a href="recuperar.php">Olvidé mi contraseña</a>
   					</form>
   				</div>
   			</div>

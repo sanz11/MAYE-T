@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	background-image: url(../im/fona.jpg);
+	margin-top: 10 px;
+}
+.panel{
+	background-color: #5882FA;
+	margin:auto;
+}
+.form{
+	margin:auto;
+	width: 60%;
+	padding: 40px;
+}
+#correo{
+	width: 100%;
+}
+.botones{
+	text-align: center;
+	justify-content: center;
+}
+.btn{
+	margin: 0 15px;
+}
