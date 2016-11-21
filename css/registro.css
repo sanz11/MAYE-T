@@ -96,6 +96,11 @@ margin-left: 15px;
 .registro:hover{
     background-color: rgba(0,0,0,0.9);
 }
+#ciudad{
+    height: 40px;
+	width: 50%;
+	margin-left: 15px;
+}
 @media(min-width:490px){
 	
 	.formu{
