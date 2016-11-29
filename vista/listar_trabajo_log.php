@@ -12,9 +12,19 @@
 <body>
  
  <?php include ('menu2.php');?>
-     <?php include '../controlador/listartrabajo.php';?>
+     <?php include '../controlador/listartrabajo.php';
+@$m=$_GET['m'];
+@$lu=$_GET['lugar'];
+@$ru=$_GET['rubro'];
+if($m=="1"){
+echo "<script> alert('bien, usted postulo correctamente.');</script>";
+}else if($m=="2"){
+echo "<script> alert('oh! no ,ocurrio un error con su postulacion.');</script>";
+}else{
+echo "";
+}
 
-	
+?>
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filtrar">
@@ -63,7 +73,6 @@
 	 <div class='section'>
 	   <?php
          echo @$mensaje;
-         echo @$enviomsn;
           if($msmlista=="valido"){
           foreach($matriztrabajo as $registro){
 	       echo "<section class='secciones'>
@@ -76,7 +85,7 @@
 	 	    </div>
             <br>
 	 	    <section>
-	 			<a href='../controlador/postular.php?to=".$registro["email"]."&for=".$_SESSION["email"]."' id='ver'>Postular</a>
+	 			<a href='../controlador/postular.php?l=".$lu."&r=".$ru."&to=".$registro["email"]."&for=".$_SESSION["email"]."' id='ver'>Postular</a>
 	 			<br>
 	 			<br>
 	 		</section>

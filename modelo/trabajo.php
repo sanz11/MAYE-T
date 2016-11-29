@@ -6,20 +6,21 @@
      
 
 
-	public function set_trabajo($nombre,$rubro,$descripcion,$lugar,$fecha){
+	public function set_trabajo($nombre,$rubro,$descripcion,$lugar,$fecha,$email){
 		
         
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
         $estado="0";
         
-		 $sql="insert into trabajo(nombre,rubro,descripcion,fecha,lugar,estado)values(:nombre,:rubro,:descripcion,:fecha,:lugar,:estado)";
+		 $sql="insert into trabajo(nombre,rubro,descripcion,fecha,lugar,email,estado)values(:nombre,:rubro,:descripcion,:fecha,:lugar,:email,:estado)";
 		 $statement=$conexion->prepare($sql);
 		 $statement->bindParam(':nombre',$nombre);
            $statement->bindParam(':rubro',$rubro);
            $statement->bindParam(':descripcion',$descripcion);
            $statement->bindParam(':fecha',$fecha);
         $statement->bindParam(':lugar',$lugar);
+        $statement->bindParam(':email',$email);
         $statement->bindParam(':estado',$estado);
 		  
 		  if(!$statement){

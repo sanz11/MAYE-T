@@ -8,7 +8,23 @@
 <link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/fontello.css">
 <link rel="stylesheet" href="../css/perfil2.css">
+<link rel="stylesheet" href="../css/alert.css">
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+
+<style type="text/css">
+   .input-type-file{
+    cursor: pointer;
+    margin-top: 15px;
+    }
+    
+    #fo{
+    background-image:url('../im/editfo.png');
+    background-size: 100%;
+    padding: 10px 20px;
+    }
+    
+</style>
+  
 </head>
 <body>
 <?php include ('menu2.php');?>
@@ -18,10 +34,11 @@
        
         <div class=" red col-sm-5 col-xs-12" >
            <img src="../fotosadmin/<?php echo $_SESSION['foto'];?>" class='fotperf'>
+           <p class="input-type-file"><span id='fo'>  </span>¿cambiar foto?</p>
         </div>
         <div class="col-sm-7 col-xs-12 dat">
           <h1 style="text-align:center;" id="name"><?php echo $_SESSION['nombre']." ".$_SESSION['apellidos'];?></h1>
-            <div id="dni">
+            <div id="dni"> <input type="submit" value="Guardar cambios">
             <h2><strong>Dni: </strong><?php echo $_SESSION['dni'];?></h2>
             <h2><strong>Email: </strong><?php echo $_SESSION['email'];?></h2>
             <?php
@@ -41,6 +58,8 @@
               <h1 id='perfil'>PERFIL</h1>
            <h2 id='descrip'>".$registro["perfil"]."</h2>
         </div>";}?>
+        
+       
          <div class="col-sm-5 col-xs-12">
               <h1 id="ofi">MIS OFICIOS</h1>
                <?php
@@ -80,6 +99,35 @@
 
 
 <script src="../js/jquery.js"></script>
+<script src="../js/alert.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script>
+  /* global $, swal, FileReader */
+  
+
+  $('.input-type-file').on('click', function () {
+    swal({
+      title: 'Select image',
+      input: 'file',
+      inputAttributes: {
+        accept: 'image/*',
+        name:'newfoto', 
+          id:'newfoto'
+      }
+    }).then(function (file) {
+      var reader = new FileReader()
+      reader.onload = function (e) {
+        swal({
+          imageUrl: e.target.result
+        }).catch(swal.noop)
+      }
+      reader.readAsDataURL(file)
+    }).catch(swal.noop)
+  });
+    
+    
+
+  
+</script>
 </body>
 </html>

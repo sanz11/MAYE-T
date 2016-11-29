@@ -8,6 +8,7 @@ $trabajo= new trabajo();
 @$rubro=$_GET['rubro'];
 @$lugar=$_GET['lugar'];
 
+
 if(empty($rubro)){
 $rubro='mecanico';
 $lugar='lima';

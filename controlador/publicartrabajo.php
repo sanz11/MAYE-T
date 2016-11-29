@@ -34,7 +34,7 @@ if(@$_POST['publicar']){
     if(empty($nombre) || empty($rubro)|| empty($descripcion)||$rubro==="---" ){
         $alerta="<script>alert ('llene todos los datos');</script>";
     }else{
-	$alerta=$trabajo->set_trabajo($nombre,$rubro,$descripcion,$lugar,$fe);
+	$alerta=$trabajo->set_trabajo($nombre,$rubro,$descripcion,$lugar,$fe,$_SESSION['email']);
     }
 
 }
