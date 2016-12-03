@@ -70,15 +70,14 @@
 	 	}
 	 
      
-	  public function Update_trabajador($dni,$email,$contrasenia,$ciudad,$direccion,$telefono,$celular,$foto){
+	  public function Update_trabajador($dni,$ciudad,$direccion,$telefono,$celular,$foto,$perfil){
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
         
-		 $sql="update  trabajador set email=:email,contrasenia=:contrasenia,ciudad=:ciudad,direccion=:direccion,telefono=:telefono,celular=:celular,foto=:foto where dni=:dni ";
+		 $sql="update  trabajador set ciudad=:ciudad,direccion=:direccion,telefono=:telefono,perfil=:perfil,celular=:celular,foto=:foto where dni=:dni ";
 		 $statement=$conexion->prepare($sql);
 		 $statement->bindParam(':dni',$dni);
-           $statement->bindParam(':email',$email);
-           $statement->bindParam(':contrasenia',$contrasenia);
+           $statement->bindParam(':perfil',$perfil);
            $statement->bindParam(':ciudad',$ciudad);
            $statement->bindParam(':direccion',$direccion);
            $statement->bindParam(':telefono',$telefono);
@@ -86,11 +85,11 @@
             $statement->bindParam(':foto',$foto);
 		  
 		  if(!$statement){
-			  return "error al actualizar";
+			  return "<script> alert('error al actualizar');</script>";
 		  }
 		  else{
 			 $statement->execute();
-			  return "Sus datos se actualizaron correctamente";
+			  return "<script> alert('Sus datos se actualizaron correctamente');</script>";
               
 		  }
 		  

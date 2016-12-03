@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 
 <style type="text/css">
-   .input-type-file{
+   #lbt{
     cursor: pointer;
     margin-top: 15px;
     }
@@ -22,7 +22,12 @@
     background-size: 100%;
     padding: 10px 20px;
     }
-    
+    #btnfoto{
+        display:none;
+    }
+    #gurada{
+       display:none;
+    }
 </style>
   
 </head>
@@ -31,29 +36,39 @@
 <?php include ('../controlador/perfil.php');?>
 <div class="perfil">
     <div class=" datos" >
-       
+       <?php if($dni==$_SESSION['dni']){
+             if($valor=="1"){
+          foreach($matriztrabajador as $registro){ ?>
         <div class=" red col-sm-5 col-xs-12" >
-           <img src="../fotosadmin/<?php echo $_SESSION['foto'];?>" class='fotperf'>
-           <p class="input-type-file"><span id='fo'>  </span>¿cambiar foto?</p>
+           <img src="../fotosadmin/<?php echo $registro["foto"];?>" class='fotperf'>
+           
         </div>
         <div class="col-sm-7 col-xs-12 dat">
+         
           <h1 style="text-align:center;" id="name"><?php echo $_SESSION['nombre']." ".$_SESSION['apellidos'];?></h1>
-            <div id="dni"> <input type="submit" value="Guardar cambios">
+            <div id="dni">
             <h2><strong>Dni: </strong><?php echo $_SESSION['dni'];?></h2>
-            <h2><strong>Email: </strong><?php echo $_SESSION['email'];?></h2>
+            <h2><strong>Email: </strong><?php echo $registro["email"];?></h2>
             <?php
-                if($dni==$_SESSION['dni']){
-             if($valor=="1"){
-          foreach($matriztrabajador as $registro){
+                
 	       echo "
+            <h2><strong>Telefono:</strong>".$registro["telefono"]."</h2>
             <h2><strong>Ciudad: </strong>".$registro["ciudad"]."</h2>
             <h2><strong>Dirección: </strong>".$registro["direccion"]."</h2>
             <h2><strong>F.N:</strong>".$registro["nacimiento"]."</h2>
             </div>
         
         </div>
+    </div>" ?>
+    <div class="row">
+      <div class="col-sm-7">     </div>
+        <div class="col-sm-5 ">
+          <input type="submit" class="btn btn-success" value="Guardar" name="guardar" id="gurada">
+           <a class="btn  btn-sm btn-info" id="e"data-toggle="modal" data-target="#edited" >Editar datos</a>
+        </div>
     </div>
-    <div class='col-sm-12' >
+    <?php
+    echo "<div class='col-sm-12' >
         <div class='col-sm-7 col-xs-12'>
               <h1 id='perfil'>PERFIL</h1>
            <h2 id='descrip'>".$registro["perfil"]."</h2>
@@ -97,34 +112,95 @@
     </div>
 </div>
 
+<!--MODAL-->
+<div class="modal fade" id="edited" tabindex="-1"role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+  		<div class="modal-content">
+  			
+  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+  			<center><h1>Editar Perfil</h1></center>
+  			<?php echo @$mn;?>
+  			
+  			<div class="modal-body">
+  				
+  				<form action="../controlador/editar_perfil.php" method="post" enctype="multipart/form-data">
+  				 <div class="row">
+                   <div class="col-sm-2"></div>
+                    <div class="col-sm-6">
+                        <label for="btnfoto" id="lbt"><span id='fo'>  </span>¿cambiar foto?</label>
+           <input type="file" accept="image/*" id="btnfoto" name="btnfoto" value="<?php echo $registro["foto"];?>">
+           
+                   <input name="fo" value="<?php echo $registro["foto"];?>" style="display:none;">
+                  </div>
+                    <div class="col-sm-4">
+                         <img src="../fotosadmin/<?php echo $registro["foto"];?>" style="width:50px;">
+                    </div>
+                </div>
+  				<div class="row">
+                     <div class="col-sm-1"></div>
+  				    <div class="col-md-5">
+  				        <h4>Celular:</h4>
+  					    <input type="number"  class="form-control" name="celular" value="<?php echo $registro["celular"];?>" required>
+  				    </div>
+  				    <div class="col-sm-5">
+  				        <h4>Telefono:</h4>
+  					<input type="number"  class="form-control" name="telefono" value="<?php echo $registro["telefono"];?>" required>
+  				    </div>
+  				</div>
+  				<div class="row">
+                     <div class="col-sm-1"></div>
+  				    <div class="col-md-5">
+  				        <h4>Ciudad:</h4>
+  					    <input type="text"  class="form-control" name="ciudad" value="<?php echo $registro["ciudad"];?>" required>
+  				    </div>
+  				    <div class="col-sm-5">
+  				        <h4>Direccion:</h4>
+  					<input type="text"  class="form-control" name="direccion" value="<?php echo $registro["direccion"];?>" required>
+  				    </div>
+  				</div>
+               
+                 <div class="row">
+                     <div class="col-sm-1"></div>
+  				    <div class="col-md-10">
+  				        <h4>Perfil:</h4>
+  					    <textarea class="form-control" name="perfil" rows="6" required>
+  					        <?php echo $registro["perfil"];?>
+  					    </textarea>
+  				    </div>
+  				</div>
+                 <br>
+  		        <div class="row">
+  		            <div class="col-sm-2"></div>
+  		            <div class="col-sm-6">
+  		            <input type="submit" class="btn btn-success" value="Guardar" name="guardar" id="o">
+  					<input type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true" value="cancelar">
+  		                
+  		            </div>
+  		        </div>
+  					
+  				
+  		        </form>
+  				
+  			</div>
+  		</div>
+  		
+  	</div>
+  </div>
+
 
 <script src="../js/jquery.js"></script>
 <script src="../js/alert.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script>
   /* global $, swal, FileReader */
-  
 
-  $('.input-type-file').on('click', function () {
-    swal({
-      title: 'Select image',
-      input: 'file',
-      inputAttributes: {
-        accept: 'image/*',
-        name:'newfoto', 
-          id:'newfoto'
-      }
-    }).then(function (file) {
-      var reader = new FileReader()
-      reader.onload = function (e) {
-        swal({
-          imageUrl: e.target.result
-        }).catch(swal.noop)
-      }
-      reader.readAsDataURL(file)
-    }).catch(swal.noop)
-  });
+$('#e').on('click', function () {
+  $('#gurada').css("display","block");
+});
     
+$('#o').on('click', function () {
+  $('#gurada').css("display","none");
+});
     
 
   

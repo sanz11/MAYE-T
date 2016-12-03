@@ -129,7 +129,7 @@
     <input type="text" name="asunto" id="asunto" placeholder="Asunto">
   </div>
   <div class="half right cf">
-    <textarea name="mensaje" type="text" id="mensaje" placeholder="mensaje"></textarea>
+    <textarea name="mensajemsa" type="text" id="mensaje" placeholder="mensaje"></textarea>
   </div>  
   <input type="submit" value="Submit" name="enviarema" id="input-submit">
 </form>
