@@ -107,6 +107,8 @@
                     echo "<div class='alert alert-warning'> Algunos datos ocultos</div>";
                 }
             ?>
+             <br>
+              <A HREF='aniadirOficio.php'class="btn btn-primary"><STRONG>AÑADIR MAS<STRONG></A>
                 <br><br><br>  
         </div>
     </div>
