@@ -63,7 +63,7 @@
     <div class="row">
       <div class="col-sm-7">     </div>
         <div class="col-sm-5 ">
-          <input type="submit" class="btn btn-success" value="Guardar" name="guardar" id="gurada">
+            <div id="gurada" class="alert alert-warning"><strong>Por favor </strong>guarde los cambios</div>
            <a class="btn  btn-sm btn-info" id="e"data-toggle="modal" data-target="#edited" >Editar datos</a>
         </div>
     </div>
