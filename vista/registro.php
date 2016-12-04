@@ -54,12 +54,8 @@
 	 		  <input type="password" id="confircontraseña" name="confircontraseña" placeholder="Confirmar Contraseña" required>
              <br>
              <br>
-             
-             <br>
-             </div>      
-             <div class="ofertante separ">
-              <h4>Ciudad:</h4>
-	 		   <SELECT NAME="ciudad" id="ciudad"> 
+             <h4>Ciudad:</h4>
+	 		   <SELECT NAME="ciudad" id="ciudad" required> 
                      <OPTION VALUE="Amazonas">Amazonas</OPTION> 
                      <OPTION VALUE="Áncash">Áncash</OPTION> 
                      <OPTION VALUE="Apurímac">Apurímac</OPTION> 
@@ -89,6 +85,9 @@
                </SELECT>
 	 		  <br>
              <br>
+             </div>      
+             <div class="ofertante separ">
+              
 	 		 <h4>Direccion:</h4> 
 	 		  <input type="text" id="direccion" name="direccion" placeholder="Direccion" >
 	 		  
