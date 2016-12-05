@@ -12,6 +12,7 @@
 <body>
  
  <?php include ('menu2.php');?>
+    <?php include ('sugerencia.php');?>
      <?php include '../controlador/listartrabajo.php';
 @$m=$_GET['m'];
 @$lu=$_GET['lugar'];
@@ -24,7 +25,9 @@ echo "<script> alert('oh! no ,ocurrio un error con su postulacion.');</script>";
 echo "";
 }
 
-?>
+?><br>
+ <br>
+ <br>
 	 <div class="lista">
 	 <div class="filtro">
 	 	<div class="filtrar">

@@ -15,6 +15,7 @@
 </head>
 <body>
 <?php include ('menu2.php');?>
+<?php include ('sugerencia.php');?>
 <?php include ('../controlador/publicartrabajo.php');?>
 
 <div class="perfil">

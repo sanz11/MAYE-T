@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/menu.css">
 <link rel="stylesheet" href="css/fontello.css">
 <link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/sugerencia.css">
 
 <!--fonts--->
 
@@ -22,6 +23,9 @@
           include('controlador/bandeja.php');
 ?>
 <body>
+<?php include ('vista/sugerencia.php');
+    
+    ?>
 <script src="js/jquery.js"></script>
 <video src="video/f2.mp4" autoplay loop  poster="im/fondo.jpg"></video><!--muted-->
 

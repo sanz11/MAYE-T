@@ -1,0 +1,82 @@
+.totalsuge{
+    margin: 40px
+}
+
+.totasuge {
+	background: #f29107;
+	color: #fff;
+    width: 500px;
+}
+/* Form CSS*/
+.formsuge {
+   margin: -40px auto;
+    width: 460px;
+    padding-bottom: 10px;
+    
+}
+.grupo{
+	margin-bottom:10px;
+	width:100%;
+}
+.suge{
+	color:#ffffff;
+	padding:30px 15px;
+    border-radius: 10px;
+	width:50px;
+    position: absolute;
+	background-color:#f29107;
+	margin-top: 100px;
+}
+
+.ico{
+	color:#f8ae45; 
+	float:left;
+	padding:10.5px;
+	width:8%;
+	background:#FFFFFF;
+	text-align:center;	
+}
+#titulosuge{
+    margin-top: -20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+.forminputsuge {
+	color:#000000; 
+	background:#FFFFFF;
+	border:none;
+	padding:15.5px;
+	width:91.9%;
+	display:block;
+	font-family: 'Lato',Arial,sans-serif;
+	font-size:14px;
+}
+
+.btnsuge{
+	display:block;
+	border:none;
+	background:#f8ae45;
+	color:#FFFFFF;
+	padding:12px 25px;
+	cursor:pointer;
+	text-decoration:none;
+	font-weight:bold;
+}
+.btnsuge:hover{
+	background:#d8850e;
+}
+.sugeren{
+    position: fixed;
+    right: -490px;
+    bottom: 50px;
+    width: 540px;
+    transition: all 1.5s;
+    z-index: 3;
+}
+.sugeren:hover{
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    width: 540px;
+}

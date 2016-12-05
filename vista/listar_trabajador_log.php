@@ -18,8 +18,12 @@
 <body>
 
  <?php include ('menu2.php');?>
+ <?php include ('sugerencia.php');?>
  <?php include '../controlador/listartrabajador.php';?>
  <?php include '../controlador/sendemail.php';?>
+ <br>
+ <br>
+ <br>
 	 <div class="lista">
 	  <div class="filtro">
 	 	<div class="filtrar">

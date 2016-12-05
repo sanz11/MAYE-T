@@ -15,6 +15,7 @@
 </head>
 <body>
 <?php include ('menu2.php');?>
+<?php include ('sugerencia.php');?>
 <?php include ('../controlador/aniadirOficio.php');?>
 
 <?php 
@@ -23,14 +24,14 @@
 <div class="perfil">
    <div class="percon">
     <div class="oficio div">
-        <form action="?" id="ofi" method="post">
+        <form action="?" id="ofi" class="form"method="post">
             <h4>Oficios</h4>
-            <input type="text" name="oficio" id="oficio" placeholder="Oficio" required>
-            <h4>Experiencia(años)</h4>
-            <input type="number" name="experiencia" id="experiencia" placeholder="Experiencia" required>
+            <input type="text" name="oficio" class="input"id="oficio" placeholder="Oficio" required>
+            <h4 class="h4">Experiencia(años)</h4>
+            <input class="input" type="number" name="experiencia" id="experiencia" placeholder="Experiencia" required>
             <br>
             <br>
-            <input type="submit" value="Guardar" name="aniadir" class="guardar btn ">
+            <input  class="input" type="submit" value="Guardar" name="aniadir" class="guardar btn ">
             <br>
             <br>
         </form>

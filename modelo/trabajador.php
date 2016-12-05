@@ -191,6 +191,27 @@
 		 }
 		 return $trabajador; 
 	 	} 
+     public function set_sugerencia($name,$mensaje){
+		 
+		 $trabajador = null;
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+		 
+		  $sql=("insert into sugerencias(usuario,sugerencias) values(:name,:mensaje)");
+		 $statement=$conexion->prepare($sql);
+          $statement->bindParam(':name',$name);
+         $statement->bindParam(':mensaje',$mensaje);
+		 $statement->execute();
+		 
+		 if(!$statement){
+			  return "<script> alert('No se pudo enviar la queja o sugerencia');</script>";
+		  }
+		  else{
+			 $statement->execute();
+			  return '<SCRIPT>alert ("queja o sugerencia enviada ");</SCRIPT>';
+              
+		  }
+	 	} 
      public function num_bandeja($dni){
 		 
 		 $bandeja = null;
