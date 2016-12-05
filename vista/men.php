@@ -16,6 +16,7 @@
 </head>
 <body>
 <?php include ('menu2.php');?>
+<?php include ('sugerencia.php');?>
 
 <div class="perfil">
    
