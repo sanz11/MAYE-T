@@ -70,7 +70,26 @@
 	 	}
 	 
      
-	  public function Update_trabajador($dni,$ciudad,$direccion,$telefono,$celular,$foto,$perfil){
+	  public function Update_foto($dni,$foto){
+		 $modelo = new Conexion();
+		 $conexion=$modelo->get_conexion();
+        
+		 $sql="update  oficios set foto=:foto where dni=:dni ";
+		 $statement=$conexion->prepare($sql);
+		 $statement->bindParam(':dni',$dni);
+         $statement->bindParam(':foto',$foto);
+		  
+		  if(!$statement){
+			  return "<script> alert('error al actualizar');</script>";
+		  }
+		  else{
+			 $statement->execute();
+			  return "<script> alert('Sus datos se actualizaron correctamente');</script>";
+              
+		  }
+		  
+	 	}
+     public function Update_trabajador($dni,$ciudad,$direccion,$telefono,$celular,$foto,$perfil){
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
         
@@ -193,14 +212,15 @@
 	 	} 
      public function set_sugerencia($name,$mensaje){
 		 
-		 $trabajador = null;
+		 $estado = "0";
 		 $modelo = new Conexion();
 		 $conexion=$modelo->get_conexion();
 		 
-		  $sql=("insert into sugerencias(usuario,sugerencias) values(:name,:mensaje)");
+		  $sql=("insert into sugerencias(usuario,sugerencias,estado) values(:name,:mensaje,:estado)");
 		 $statement=$conexion->prepare($sql);
           $statement->bindParam(':name',$name);
          $statement->bindParam(':mensaje',$mensaje);
+          $statement->bindParam(':estado',$estado);
 		 $statement->execute();
 		 
 		 if(!$statement){

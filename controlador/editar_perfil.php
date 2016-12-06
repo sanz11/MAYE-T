@@ -22,9 +22,11 @@ $destino="../fotosadmin/".$foto;
     
     if($destino=="../fotosadmin/"){
        $mn=$trabajador->Update_trabajador($_SESSION['dni'],$ciudad,$direccion,$telefono,$celular,$fo,$perfil);
+        
 } else{
         
        $mn=$trabajador->Update_trabajador($_SESSION['dni'],$ciudad,$direccion,$telefono,$celular,$foto,$perfil);
+        $trabajador->Update_foto($_SESSION['dni'],$foto);
     copy($ruta,$destino);
         
     } } 
