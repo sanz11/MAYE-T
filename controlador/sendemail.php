@@ -1,10 +1,10 @@
 <?php
 
 if(isset($_POST['enviarema'])){
-$nombre=$_POST['nombrems'];
-$email=$_POST['emailms'];
-$asunto=$_POST['asunto'];
-$mensajemsa=$_POST['mensajemsa'];
+$nombre=addslashes($_POST['nombrems']);
+$email=addslashes($_POST['emailms']);
+$asunto=addslashes($_POST['asunto']);
+$mensajemsa=addslashes($_POST['mensajemsa']);
     
 $nombredemi=$_SESSION['nombre'];
 $contenido="Este es un mensaje desde MAYEOFICIOS.pe.hu \r\n";

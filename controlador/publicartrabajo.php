@@ -8,20 +8,20 @@ require_once('../modelo/date.php');
 
 $trabajo= new trabajo();
 
-@$nombre=$_POST['realname'];
+@$nombre=addslashes($_POST['realname']);
 
-@$lugar=$_POST['lugar'];
+@$lugar=addslashes($_POST['lugar']);
 
-@$raempresa=$_POST['nombre'];
+@$raempresa=addslashes($_POST['nombre']);
 
-@$nomempresa=$_POST['nomempresa'];
+@$nomempresa=addslashes($_POST['nomempresa']);
 //options
-@$rubro=$_POST['rubro'];
+@$rubro=addslashes($_POST['rubro']);
 //radio de otro
-@$otrorubro=$_POST['otrorubro'];
+@$otrorubro=addslashes($_POST['otrorubro']);
 //caja de otro
-@$otro=$_POST['otro'];
-@$descripcion=$_POST['descripcion'];
+@$otro=addslashes($_POST['otro'];
+@$descripcion=addslashes($_POST['descripcion']);
 
 if($raempresa==="empresa"){
     $nombre = $nomempresa;

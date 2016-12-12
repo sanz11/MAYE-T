@@ -4,7 +4,7 @@ require_once("../modelo/trabajador.php");
 
 $trabajador= new trabajador();
 
-$correo=$_POST["correo"];
+$correo=addslashes($_POST["correo"]);
 
 $ejecuta=$trabajador->verifica_correo($correo);
 if($ejecuta){

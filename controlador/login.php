@@ -11,8 +11,8 @@ session_start();
 	}
 	
 	if(@$_POST["ingresarin"]){
-		@$cuenta=$_POST['usuario'];
-		@$password=$_POST['contraseña'];
+		@$cuenta=addslashes($_POST['usuario']);
+		@$password=addslashes($_POST['contraseña']);
 		if(!empty($cuenta)){
 			if(!empty($password)){
                 $md5pass=md5($password);
@@ -49,8 +49,8 @@ session_start();
 
     
 	if(@$_POST["ingresar"]){
-		@$cuenta=$_POST['usuario'];
-		@$password=$_POST['contraseña'];
+		@$cuenta=addslashes($_POST['usuario']);
+		@$password=addslashes($_POST['contraseña']);
 		if(!empty($cuenta)){
 			if(!empty($password)){
                  $md5pass=md5($password);

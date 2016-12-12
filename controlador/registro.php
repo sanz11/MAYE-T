@@ -6,20 +6,20 @@ $trabajo= new trabajador();
 
 
 
-@$nombre=$_POST['nombre'];
-@$apellidos=$_POST['apellidos'];
-@$dni=$_POST['dni'];
-@$email=$_POST['email'];
-@$contra=$_POST['contra'];
-@$contra2=$_POST['confircontraseña'];
-@$ciudad=$_POST['ciudad'];
-@$direccion=$_POST['direccion'];
-@$telefono=$_POST['telefono'];
-@$celular=$_POST['celular'];
-@$dia=$_POST['dia'];
-@$mes=$_POST['mes'];
-@$anio=$_POST['anio'];
-@$check=$_POST['check'];
+@$nombre=addslashes($_POST['nombre']);
+@$apellidos=addslashes($_POST['apellidos']);
+@$dni=addslashes($_POST['dni']);
+@$email=addslashes($_POST['email']);
+@$contra=addslashes($_POST['contra']);
+@$contra2=addslashes($_POST['confircontraseña']);
+@$ciudad=addslashes($_POST['ciudad']);
+@$direccion=addslashes($_POST['direccion']);
+@$telefono=addslashes($_POST['telefono']);
+@$celular=addslashes($_POST['celular']);
+@$dia=addslashes($_POST['dia']);
+@$mes=addslashes($_POST['mes']);
+@$anio=addslashes($_POST['anio']);
+@$check=addslashes($_POST['check']);
 
 
 $mensaje="";

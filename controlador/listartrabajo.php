@@ -5,8 +5,8 @@ $trabajo= new trabajo();
 
 
 
-@$rubro=$_GET['rubro'];
-@$lugar=$_GET['lugar'];
+@$rubro=addslashes($_GET['rubro']);
+@$lugar=addslashes($_GET['lugar']);
 
 
 if(empty($rubro)){

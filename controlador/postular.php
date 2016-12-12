@@ -1,10 +1,10 @@
 <?php
 
 
-@$a=$_GET['to'];
-@$de=$_GET['for'];
-@$l=$_GET['l'];
-@$r=$_GET['r'];
+@$a=addslashes($_GET['to']);
+@$de=addslashes($_GET['for']);
+@$l=addslashes($_GET['l']);
+@$r=addslashes($_GET['r']);
 $contenido="Estes es un mensaje de  postulacion";
 
 $cabeceras = 'From: postulacion@MayeOficios.com' . "\r\n" .

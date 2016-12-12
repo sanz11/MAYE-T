@@ -4,11 +4,11 @@ require_once("../modelo/trabajador.php");
 
 $trabajador= new trabajador();
 
-$correo = $_POST["correo"];
-$pas = $_POST["password"];
+$correo = addslashes($_POST["correo"]);
+$pas = addslashes($_POST["password"]);
+$pass=md5($pas);
 
-
-$actualiza=$trabajador->recuperar_contraseña($correo,$pas);
+$actualiza=$trabajador->recuperar_contraseña($correo,$pass);
 if($actualiza){
 	$mensajes = "El proceso de cambio de contraseña del correo ".$correo;
     echo "
