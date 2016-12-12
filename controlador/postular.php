@@ -7,7 +7,7 @@
 @$r=addslashes($_GET['r']);
 $contenido="Estes es un mensaje de  postulacion";
 
-$cabeceras = 'From: postulacion@MayeOficios.com' . "\r\n" .
+$cabeceras = 'From: MayeOficios' . "\r\n" .
     'Reply-To: abelricrasanchez@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 

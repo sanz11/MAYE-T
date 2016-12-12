@@ -10,7 +10,7 @@ $nombredemi=$_SESSION['nombre'];
 $contenido="Este es un mensaje desde MAYEOFICIOS.pe.hu \r\n";
 $contenido=$contenido . $mensajemsa;
 
-    $cabeceras = 'From: postulacion@MayeOficios.com' . "\r\n" .
+    $cabeceras = 'From: MayeOficios' . "\r\n" .
     'Reply-To: abelricrasanchez@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
