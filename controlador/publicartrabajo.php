@@ -20,7 +20,7 @@ $trabajo= new trabajo();
 //radio de otro
 @$otrorubro=addslashes($_POST['otrorubro']);
 //caja de otro
-@$otro=addslashes($_POST['otro'];
+@$otro=addslashes($_POST['otro']);
 @$descripcion=addslashes($_POST['descripcion']);
 
 if($raempresa==="empresa"){

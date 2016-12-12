@@ -88,7 +88,7 @@ echo "";
 	 	    </div>
             <br>
 	 	    <section>
-	 			<a href='../controlador/postular.php?l=".$lu."&r=".$ru."&to=".$registro["email"]."&for=".$_SESSION["email"]."' id='ver'>Postular</a>
+	 			<a href='../controlador/postular.php?l=".$lu."&r=".$ru."&to=".$registro["email"]."&for=".$_SESSION["email"]."&name=".$_SESSION["nombre"]." ".$_SESSION["nombre"]."' id='ver'>Postular</a>
 	 			<br>
 	 			<br>
 	 		</section>
