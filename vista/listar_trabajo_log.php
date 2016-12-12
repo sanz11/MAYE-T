@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>MayeOficios</title>
+	<title>Buscar Trabajo</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/fontello.css">
@@ -33,7 +33,7 @@ echo "";
 	 	<div class="filtrar">
 	 		<h1 class="titulo">Buscar Trabajo</h1>
 	 		<form action="?" class="formu" method="get">
-	 			<input type="text" name="rubro" id="quebuscas" placeholder="¿Que buscas?">
+	 			<input type="text" name="rubro" id="quebuscas" class="inputd" placeholder="¿Qué buscas?">
 	 			<br>
 	 			<br>
 	 			<SELECT NAME="lugar" class="select"> 
@@ -66,7 +66,7 @@ echo "";
                </SELECT>
                <br>
                <br>
-               <input type="submit" value="Filtrar" id="submit">
+               <input type="submit" value="Filtrar" id="submit" class="inputd">
 	 			
 	 		</form>
 	 		</div>

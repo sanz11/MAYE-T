@@ -96,10 +96,10 @@
 	</div>
 	
 	<div class="form-group">
-		<input name="lugar" type="text" class="input"  placeholder="¿Distrito / Provincia? ¿Departamento?" required>
+		<input name="lugar" type="text" class="input"  placeholder="¿Donde?" required>
 	</div>
 	<div class="form-group">
-	<input type="submit"class="btnbuscar" name="buscarsinlog">
+	<input type="submit"class="btnbuscar" name="buscarsinlog" value="BUSCAR">
 	</div>
 	<div class="radio">
 	    <input type="radio" value="trabajo" class="rado" name="tipodebusqueda" checked><h5 id="tra1">Buscar Trabajo</h5>

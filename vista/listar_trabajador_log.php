@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>MayeOficios</title>
+	<title>Buscar Trabajador</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -29,7 +29,7 @@
 	 	<div class="filtrar">
 	 		<h1 class="titulo">Buscar Trabajador</h1>
 	 		<form action="?" class="formu" method="get">
-	 			<input type="text" name="rubro" id="quebuscas" placeholder="ej: mecanico">
+	 			<input type="text" name="rubro" id="quebuscas" placeholder="¿Qué buscas?" class="inputd">
 	 			<br>
 	 			<br>
 	 			<SELECT name="lugar" class="select"> 
@@ -62,7 +62,7 @@
                </SELECT>
                <br>
                <br>
-               <input type="submit" value="Filtrar" id="submit">
+               <input type="submit" value="Filtrar" id="submit" class= "inputd">
 	 			
 	 		</form>
 	 		</div>
@@ -82,7 +82,6 @@
 	 	    <div class="div">
 	 	    	<h5 class="nombre"><?php echo $registro["nombre"];?> <?php echo $registro["apellidos"];?></h5>
 	 	    <h5><?php echo $registro["ciudad"];?></h5>
-	 	    <h5><?php echo $registro["experiencia"];?></h5>
             <h5>Telefono: <?php echo $registro["telefono"];?></h5>
             <h5>Celular: <?php echo $registro["celular"];?></h5>
             <h5>Correo:" <?php echo $registro["email"];?></h5>
@@ -91,7 +90,6 @@
 	 			<section>
 	 			
 	 			<a href="perfilnew.php?dni=<?php echo $registro["dni"];?>" id="ver">Ver perfil</a>
-                <a href="#" id="ver">Ver portafolio</a>
                 <a href="javascript:ver('<?php echo $registro["email"];?>','<?php echo $registro["nombre"];?>');"class="ver" id="ver">Enviar Email</a>
 	 			<br>
 	 			<br>
@@ -123,7 +121,7 @@
   		<div class="modal-content">
   		<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
   		
-  			<h1>Enviar Un mensaje</h1>
+  			<h1>Enviar un mensaje</h1>
   			
   			<div class="modal-body">
 <form action="?" method="post" class="cf">

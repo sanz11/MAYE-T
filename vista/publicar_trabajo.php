@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>Publicar Trabajo</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -28,14 +28,14 @@
       <div class="form-check col-sm-6 col-xs-12">
         <label class="form-check-label">
             <input type="radio" class="form-check-input" name="nombre" value="nombre" id="nom" checked>
-            Usar Mi nombre para publicar
+            Usar mí nombre para publicar
             <input type="text" name="realname" class="form-control" id="realname" value="<?php echo $_SESSION['nombre'];?>" readonly>
         </label>
       </div>
     <div class="form-check col-sm-6 col-xs-12">
         <label class="form-check-label">
             <input type="radio" class="form-check-input" name="nombre" id="empresa" value="empresa" >
-            Usar nombre de empresa
+            Publicar como una empresa
             <input type="text" class="form-control" name="nomempresa" id="nomempresa"placeholder="nombre de la empresa">
         </label>
     </div>
@@ -53,7 +53,7 @@
       <option>Mecanico</option>
       <option>Plomero</option>
       <option>Chofer</option>
-      <option>l</option>
+      <option>Electricista</option>
     </select>
    
      <input type="text" class="form-control" name="otro" id="otro" placeholder="Escribe otro  rubro">
@@ -95,7 +95,7 @@
     <textarea class="form-control" name="descripcion" rows="4"></textarea>
   </div>
    
-  <input  type="submit" name="publicar" class="btn btn-primary" value="publicar">
+  <input  type="submit" name="publicar" class="btn btn-primary" value="Publicar">
   
 </form>
    <br><br>

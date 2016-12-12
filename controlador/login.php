@@ -15,7 +15,8 @@ session_start();
 		@$password=$_POST['contraseña'];
 		if(!empty($cuenta)){
 			if(!empty($password)){
-				$consulta=$mysqli->query("select * from trabajador where dni='$cuenta' and contrasenia='$password'");
+                $md5pass=md5($password);
+				$consulta=$mysqli->query("select * from trabajador where dni='$cuenta' and contrasenia='$md5pass'");
 				if(mysqli_num_rows($consulta)){
 					$arreglo=mysqli_fetch_array($consulta);
 					$_SESSION["nombre"]=$arreglo["nombre"];
@@ -52,7 +53,8 @@ session_start();
 		@$password=$_POST['contraseña'];
 		if(!empty($cuenta)){
 			if(!empty($password)){
-				$consulta=$mysqli->query("select * from trabajador where dni='$cuenta' and contrasenia='$password'");
+                 $md5pass=md5($password);
+				$consulta=$mysqli->query("select * from trabajador where dni='$cuenta' and contrasenia='$md5pass'");
 				if(mysqli_num_rows($consulta)){
 					$arreglo=mysqli_fetch_array($consulta);
 					$_SESSION["nombre"]=$arreglo["nombre"];

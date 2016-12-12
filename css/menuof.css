@@ -31,7 +31,11 @@ box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
 }
 .menuconte .info-proye h1{
     padding-top: 26px;
-}a:hover{
+}
+a:hover{
+    text-decoration: none;
+}
+H1:hover{
     text-decoration: none;
 }
 

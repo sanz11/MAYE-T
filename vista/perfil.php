@@ -48,12 +48,12 @@
          
           <h1 style="text-align:center;" id="name"><?php echo $_SESSION['nombre']." ".$_SESSION['apellidos'];?></h1>
             <div id="dni">
-            <h2><strong>Dni: </strong><?php echo $_SESSION['dni'];?></h2>
+            <h2><strong>DNI: </strong><?php echo $_SESSION['dni'];?></h2>
             <h2><strong>Email: </strong><?php echo $registro["email"];?></h2>
             <?php
                 
 	       echo "
-            <h2><strong>Telefono:</strong>".$registro["telefono"]."</h2>
+            <h2><strong>Teléfono:</strong>".$registro["telefono"]."</h2>
             <h2><strong>Ciudad: </strong>".$registro["ciudad"]."</h2>
             <h2><strong>Dirección: </strong>".$registro["direccion"]."</h2>
             <h2><strong>F.N:</strong>".$registro["nacimiento"]."</h2>
@@ -100,12 +100,12 @@
            </div>
             ";}
     }else{
-                echo "<div class='alert alert-success'>USTED <STRONG>NO </STRONG>TIENE OFICIOS AÑADIDOS, SI DESEA AÑADIR HAS <A HREF='  aniadirOficio.php'<STRONG>CLIC AQUI<STRONG></A></div>";
+                echo "<div class='alert alert-success'>USTED <STRONG>NO </STRONG>TIENE OFICIOS AÑADIDOS, SI DESEA AÑADIR HAS <A HREF='  aniadirOficio.php'<STRONG>CLIC AQUÍ<STRONG></A></div>";
             }}
              else{
                  header('location:../indexlog.php');
              }}else{
-                    echo "<div class='alert alert-warning'> Algunos datos ocultos</div>";
+                    echo "<div class='alert alert-warning'> Algunos datos estan ocultos</div>";
                 }
             ?>
              <br>
@@ -130,7 +130,7 @@
   				 <div class="row">
                    <div class="col-sm-2"></div>
                     <div class="col-sm-6">
-                        <label for="btnfoto" id="lbt"><span id='fo'>  </span>¿cambiar foto?</label>
+                        <label for="btnfoto" id="lbt"><span id='fo'>  </span>¿Cambiar foto?</label>
            <input type="file" accept="image/*" id="btnfoto" name="btnfoto" value="<?php echo $registro["foto"];?>">
            
                    <input name="fo" value="<?php echo $registro["foto"];?>" style="display:none;">
@@ -146,7 +146,7 @@
   					    <input type="number"  class="form-control" name="celular" value="<?php echo $registro["celular"];?>" required>
   				    </div>
   				    <div class="col-sm-5">
-  				        <h4>Telefono:</h4>
+  				        <h4>Teléfono:</h4>
   					<input type="number"  class="form-control" name="telefono" value="<?php echo $registro["telefono"];?>" required>
   				    </div>
   				</div>
@@ -157,7 +157,7 @@
   					    <input type="text"  class="form-control" name="ciudad" value="<?php echo $registro["ciudad"];?>" required>
   				    </div>
   				    <div class="col-sm-5">
-  				        <h4>Direccion:</h4>
+  				        <h4>Dirección:</h4>
   					<input type="text"  class="form-control" name="direccion" value="<?php echo $registro["direccion"];?>" required>
   				    </div>
   				</div>

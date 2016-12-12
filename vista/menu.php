@@ -7,8 +7,8 @@
 			<input type="checkbox" id="menu-bar"/>
 			<label class="icon-menu1" for="menu-bar"></label>
 				<nav class="menu">
-				<a href="listar_trabajador.php"><img src="../im/ico-bstra.png" title="Buscar Trabajador" style="width:30px"><span class="letramenu"> Buscar Trabajador</span></a>
-				<a href="listar_trabajo.php"><img src="../im/ico-bu.png" title="Buscar Trabajo" style="width:30px"><span class="letramenu"> Buscar Trabajo </span></a>
+				<a href="listar_trabajador.php"><img src="../im/ico-bstra.png" title="Buscar Trabajador" style="width:30px"><span class="letramen"> Buscar Trabajador</span></a>
+				<a href="listar_trabajo.php"><img src="../im/ico-bu.png" title="Buscar Trabajo" style="width:30px"><span class="letramen"> Buscar Trabajo </span></a>
 				<a class="btn  btn-xs" data-toggle="modal" data-target="#miventanalogin" >Entrar</a>
 				<a href="registro.php" class="btn  btn-xs">Registrar</a>
 				</nav>
@@ -39,9 +39,9 @@
   				<div class="login">
   				<form action="?" method="post" class="formulog">
   				
-  					<h4>Usuario</h4>
+  					<h4 style="margin-bottom:0px !important; ">Usuario</h4>
   					<input type="text"  class="form-control log" name="usuario" id="usuario" placeholder="DNI">
-  					<h4>Contraseña</h4>
+  					<h4 style="margin-bottom:0px !important; ">Contraseña</h4>
   					<input type="password"  class="form-control log" name="contraseña" id="contraseña" placeholder="Contraseña">
   					  <br>
   					<input type="submit" class="btn entrar" value="Entrar" name="ingresar">

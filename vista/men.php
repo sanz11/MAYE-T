@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>MENÚ</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -33,7 +33,7 @@
 				
 				<a href="publicar_trabajo.php">
 				<div class="info-proye">
-				    <h1>Publicar trabajo</h1>
+				    <h1>Publicar Trabajo</h1>
 					<div class="imapro">
 						<img src="../im/ico-brtr.png" alt="">
 					</div>
@@ -51,7 +51,7 @@
 				
 				<a href="aniadirOficio.php">
 				<div class="info-proye">
-				    <h1>Añadir Mi oficio</h1>
+				    <h1>Añadir Mi Oficio</h1>
 					<div class="imapro">
 						<img src="../im/ico-list.png" alt="">
 					</div>

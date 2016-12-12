@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	
+	 <title>BUSCAR TRABAJO</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/menu.css">
 	<link rel="stylesheet" href="../css/fontello.css">
@@ -25,7 +25,7 @@
 	 	<div class="filtrar">
 	 		<h1 class="titulo">Buscar Trabajo</h1>
 	 		<form action="?" class="formu" method="get">
-	 			<input type="text" name="rubro" id="quebuscas" placeholder="¿Que buscas?">
+	 			<input type="text" name="rubro" id="quebuscas" class="inputd" placeholder="¿Qué buscas?">
 	 			<br>
 	 			<br>
 	 			<SELECT NAME="lugar" class="select"> 
@@ -58,7 +58,7 @@
                </SELECT>
                <br>
                <br>
-               <input type="submit" value="Filtrar" id="submit">
+               <input type="submit" value="Filtrar" id="submit" class="inputd">
 	 			
 	 		</form>
 	 		</div>
@@ -111,17 +111,17 @@
   		
   		<div class="alert alert-warning alert-danger">
   
-  <strong>Inicia Session para ver datos!!!!! </strong>, Si aun no eres usuario registrate
+  <strong>Inicia Sesión para ver datos!!!!! </strong>, Si aun no eres usuario registrate
 </div>
   			<h1>Iniciar Sesión</h1>
   			
   			<div class="modal-body">
   				<div class="loginlis">
   				<form action="?" method="post">
-  					<h4>Usuario</h4>
+  					<h4 style="margin-bottom:0px !important; ">Usuario</h4>
   					<input type="text"  class="form-control log" name="usuario" id="usuario" placeholder="Usuario">
   					
-  					<h4>Contraseña</h4>
+  					<h4 style="margin-bottom:0px !important; ">Contraseña</h4>
   					<input type="password"  class="form-control log" name="contraseña" id="contraseña" placeholder="Contraseña">
   					  <br>
   					<input type="submit" name="ingresar"class="btn entrar"value="Entrar">

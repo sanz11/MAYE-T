@@ -21,6 +21,6 @@ if($matriztrabajo){
     $msmlista="valido";
 }else{
     $msmlista="novalido";
-    $mensajes="No se encontro ningun resultado";
+    $mensajes="No se encontró ningún resultado";
 }
 ?>

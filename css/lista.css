@@ -41,7 +41,7 @@ body{
 border: black 0.1px solid;
 		 
 }
- input{
+ .inputd{
 	height: 40px;
 	width: 80%;
 	border-radius: 5px;

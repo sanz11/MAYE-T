@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>Añadir Oficio</title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -57,7 +57,7 @@
 		   }
 			 }else{
 			echo " <tr>
-           <td>no tienes oficios</td>
+           <td colspan='3'>No tienes oficios</td>
           
         </tr>"; 
 		 }

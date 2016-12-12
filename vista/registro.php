@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet"href="../css/login.css">
-	<title>Formulario</title>
+	<title>REGISTRO</title>
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 	</head>
 <body>
@@ -16,7 +16,7 @@
 	include '../controlador/registro.php';
 	?>
 	 <div class="formu">
-	 	<form action="?" class="formregistro" method="post">
+	 	<form action="?" class="formregistro" method="post" >
 	 	     <br> 
              <br>
              <div class="aviso">
@@ -37,21 +37,21 @@
 	 		  <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
 	 		  <br>
              <br>
-	 		 <h4>Dni:</h4> 
-	 		  <input type="number" id="dni" name="dni" placeholder="Dni" required>
+	 		 <h4>DNI:</h4> 
+	 		  <input type="number" id="dni" name="dni" placeholder="DNI" required>
 	 		    <br>
                 <br>
-	 		   <h4>E-mail:</h4>
+	 		   <h4>Email:</h4>
 	 		  <input type="email" id="e-mail" name="email" placeholder="@gmail" required>
                 <br>
                <br>
                <h4>Contraseña:</h4>
-	 		  <input type="password" id="contraseña" name="contra" placeholder="Contraseña" required>
+	 		  <input type="password" id="contraseña" name="contra" placeholder="Contraseña" minlength="5"required>
              
              <br>
              <br>
              <h4>Confirmar Contraseña:</h4>
-	 		  <input type="password" id="confircontraseña" name="confircontraseña" placeholder="Confirmar Contraseña" required>
+	 		  <input type="password" id="confircontraseña" name="confircontraseña" placeholder="Confirmar Contraseña" minlength="5"required>
              <br>
              <br>
              <h4>Ciudad:</h4>
@@ -88,22 +88,22 @@
              </div>      
              <div class="ofertante separ">
               
-	 		 <h4>Direccion:</h4> 
-	 		  <input type="text" id="direccion" name="direccion" placeholder="Direccion" >
+	 		 <h4>Dirección:</h4> 
+	 		  <input type="text" id="direccion" name="direccion" placeholder="Dirección" >
 	 		  
 	 		  <br>
              <br>
-	 		   <h4>Telefono:</h4>
-	 		  <input type="number" id="telefono" name="telefono" placeholder="Telefono" >
+	 		   <h4>Teléfono:</h4>
+	 		  <input type="number" id="telefono" name="telefono" placeholder="Teléfono" >
               
                <br>
                <br>
                <h4>Celular:</h4>
-	 		  <input type="number" id="celular" name="celular" placeholder="celular" >
+	 		  <input type="number" id="celular" name="celular" placeholder="Celular" >
                                 
                <br>
                <br>
-               <h4>Nacimiento:</h4>
+               <h4>Fec. Nac.:</h4>
 	 		   <SELECT NAME="dia" class="select" > 
                      <OPTION VALUE="1">1</OPTION> 
                      <OPTION VALUE="2">2</OPTION> 
@@ -152,19 +152,22 @@
                      <OPTION VALUE="12">Diciembre</OPTION>
                      
                </SELECT>
-	 		  <input type="number" id="anio" class="year"name="anio" placeholder="año" >
+	 		  <input type="number" id="anio" class="year"name="anio" placeholder="Año" >
 	       <br>
 	 	       <br>
  	       </div>
 	 	       
 	 	     <div class="boton">
-                 <input type="submit" class="registro" name="registro" value="registrar"/>
+                 <input type="submit" class="registro" name="registro" value="Registrar"/>
 	 	     </div>
 	 	
 	 	</form>
 	 	<br>
 	 
 	 </div>
+	 
+	 
+<script src="../js/validator.js"></script>
 <script src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 </body>

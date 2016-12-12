@@ -37,7 +37,7 @@
 			<label class="icon-menu1" for="menu-bar"></label>
 			<!--FIN MENU-->
 				<nav class="menu">
-				<a href="vista/men.php"><span class="glyphicon glyphicon-th-large"></span>Menu</a>
+				<a href="vista/men.php"><span class="glyphicon glyphicon-th-large"></span>Menú</a>
 				<a id="ben"><span style="background:#FF4000;padding:7px 5px;border-radius:50%;cursor:pointer;"><span class="glyphicon glyphicon-comment"></span><span style="padding:2px 3px;"><?php foreach($numbandeja as $countbandeja){
         echo $countbandeja["cont_mensaje"];}?></span></span></a>
 				<a id="fotodeperfil">
@@ -76,10 +76,10 @@
 	</div>
 	
 	<div class="form-group">
-		<input name="lugar" type="text" class="input"  placeholder="¿Distrito / Provincia? ¿Departamento?" required>
+		<input name="lugar" type="text" class="input"  placeholder="¿Donde?" required>
 	</div>
 	<div class="form-group">
-	<input type="submit"class="btnbuscar" name="buscarlog">
+	<input type="submit"class="btnbuscar" name="buscarlog" value="BUSCAR">
 	</div>
 	<div class="radio">
 	    <input type="radio" value="trabajo" class="rado" name="tipodebusqueda" checked><h5 id="tra1">Buscar Trabajo</h5>

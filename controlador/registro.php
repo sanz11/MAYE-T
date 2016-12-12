@@ -39,7 +39,8 @@ $existe="";
             $perfil="Falta añadir datos en el perfil";
 	 		$bandeja=0;
      		if($contra===$contra2){
-	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil);
+                $md5pass=md5($contra);
+	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$md5pass,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil);
 
      		}else{
         	$mensaje="<script> alert('Las contraseñas no coinciden');</script>";
@@ -62,7 +63,8 @@ $existe="";
              $perfil="si deseas puedes añadir tu perfil";
 	 		$bandeja=0;
      		if($contra===$contra2){
-	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$contra,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil);
+                 $md5pass=md5($contra);
+	   			$mensaje=$trabajo->set_trabajador($dni,$nombre,$apellidos,$email,$md5pass,$ciudad,$direccion,$telefono,$celular,$nacimiento,$foto,$bandeja,$perfil);
 
      		}else{
         	$mensaje="<script> alert('Las contraseñas no coinciden');</script>";
