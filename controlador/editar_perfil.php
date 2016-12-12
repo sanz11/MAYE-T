@@ -9,12 +9,12 @@ session_start();
 	  if(isset($_SESSION['nombre'])){
 
 if(@$_POST["guardar"]){
-    $telefono = $_POST['telefono'];
-     $fo = $_POST['fo'];
-    $ciudad = $_POST['ciudad'];
-    $celular = $_POST['celular'];
-    $direccion = $_POST['direccion'];
-    $perfil = $_POST['perfil'];
+    $telefono = addslashes($_POST['telefono']);
+     $fo = addslashes($_POST['fo']);
+    $ciudad = addslashes($_POST['ciudad']);
+    $celular = addslashes($_POST['celular']);
+    $direccion = addslashes($_POST['direccion']);
+    $perfil = addslashes($_POST['perfil']);
     
     $foto=$_FILES["btnfoto"]["name"];
 $ruta=$_FILES["btnfoto"]["tmp_name"];

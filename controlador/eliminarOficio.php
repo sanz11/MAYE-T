@@ -3,7 +3,7 @@ session_start();
 	  if(isset($_SESSION['nombre'])){
      require_once("../modelo/Conectar.php");
      require_once("../modelo/trabajador.php");
-     @$oficio=$_GET['oficio'];
+     @$oficio=addslashes($_GET['oficio']);
      @$dni=$_SESSION['dni'];
 
 $trabajador= new trabajador();

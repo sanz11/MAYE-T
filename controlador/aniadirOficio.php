@@ -5,8 +5,8 @@ require_once("../modelo/trabajador.php");
 
 $trabajador= new trabajador();
 
-@$oficio=$_POST['oficio'];
-@$experiencia=$_POST['experiencia'];
+@$oficio=addslashes($_POST['oficio']);
+@$experiencia=addslashes($_POST['experiencia']);
 $dni=$_SESSION['dni'];
 
 $datos=$trabajador->get_trabajador($dni);

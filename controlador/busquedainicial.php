@@ -2,9 +2,9 @@
 
 $msbusqueda="";
 
-@$rubro=$_POST['rubro'];
-@$lugar=$_POST['lugar'];
-@$tipodebusqueda=$_POST['tipodebusqueda'];
+@$rubro=addslashes($_POST['rubro']);
+@$lugar=addslashes($_POST['lugar']);
+@$tipodebusqueda=addslashes($_POST['tipodebusqueda']);
 
 if(@$_POST['buscarsinlog']){
 		if($tipodebusqueda=="trabajador"){
