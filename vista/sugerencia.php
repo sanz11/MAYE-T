@@ -26,7 +26,7 @@
         <span class="ico"><i class="fa fa-user fa-2x"></i></span>
         <select name="nombresuge" class="forminputsuge" >
             <option value="<?php echo $_SESSION['nombre']?>"><?php echo $_SESSION['nombre']?></option>
-            <option value="anonimo">Anónimo</option>
+            <option value="Anónimo">Anónimo</option>
         </select>
        
     </div>

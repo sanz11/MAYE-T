@@ -15,17 +15,18 @@
     <?php
 	include '../controlador/registro.php';
 	?>
+	
 	 <div class="formu">
+	 <br>
+	 <center style="color:white;"><h1>REGISTRO</h1></center>
 	 	<form action="?" class="formregistro" method="post" >
-	 	     <br> 
+          
              <br>
-             <div class="aviso">
-             <h4>Para tener privilegios de ofertante activa la casilla y llena tus datos</h4>
+             
               <?php
 				echo @$mensaje;
 				?>
-             </div>
-	 		  <input type="checkbox" id="check" value="1" name="check" >
+	 		  <input type="checkbox" id="check" value="1" name="check" checked style="display:none;">
              <div class="separ">
              
 	 		<h4>Nombre:</h4> 
@@ -89,22 +90,22 @@
              <div class="ofertante separ">
               
 	 		 <h4>Dirección:</h4> 
-	 		  <input type="text" id="direccion" name="direccion" placeholder="Dirección" >
+	 		  <input type="text" id="direccion" name="direccion" placeholder="Dirección" required >
 	 		  
 	 		  <br>
              <br>
 	 		   <h4>Teléfono:</h4>
-	 		  <input type="number" id="telefono" name="telefono" placeholder="Teléfono" >
+	 		  <input type="number" id="telefono" name="telefono" placeholder="Teléfono" required>
               
                <br>
                <br>
                <h4>Celular:</h4>
-	 		  <input type="number" id="celular" name="celular" placeholder="Celular" >
+	 		  <input type="number" id="celular" name="celular" placeholder="Celular" required>
                                 
                <br>
                <br>
                <h4>Fec. Nac.:</h4>
-	 		   <SELECT NAME="dia" class="select" > 
+	 		   <SELECT NAME="dia" class="select" required> 
                      <OPTION VALUE="1">1</OPTION> 
                      <OPTION VALUE="2">2</OPTION> 
                      <OPTION VALUE="3">3</OPTION> 
@@ -152,13 +153,13 @@
                      <OPTION VALUE="12">Diciembre</OPTION>
                      
                </SELECT>
-	 		  <input type="number" id="anio" class="year"name="anio" placeholder="Año" >
+	 		  <input type="number" id="anio" class="year"name="anio" placeholder="Año" required>
 	       <br>
 	 	       <br>
  	       </div>
 	 	       
 	 	     <div class="boton">
-                 <input type="submit" class="registro" name="registro" value="Registrar"/>
+                 <input type="submit" class="registro" name="registro" value="Registrar" required/>
 	 	     </div>
 	 	
 	 	</form>

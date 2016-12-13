@@ -27,7 +27,6 @@
         <div class='col-sm-7 col-xs-12 dat'>
           <h1 style='text-align:center;' id='name'>".$registro["nombre"]." ".$registro["apellidos"]."</h1>
             <div id='dni'>
-            <h2><strong>Dni: </strong>".$registro["dni"]."</h2>
             <h2><strong>Email: </strong>".$registro["email"]."</h2>
             <h2><strong>Ciudad: </strong>".$registro["ciudad"]."</h2>
             <h2><strong>Dirección: </strong>".$registro["direccion"]."</h2>
