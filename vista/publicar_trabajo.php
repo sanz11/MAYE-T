@@ -48,12 +48,21 @@
     
     <select class="form-control" id="rubro" name="rubro">
       <option>---</option>
-      <option>Gasfitero</option>
       <option>Albañil</option>
-      <option>Mecanico</option>
-      <option>Plomero</option>
-      <option>Chofer</option>
+      <option>Artesano</option>
+      <option>Bordador</option>
+      <option>Carpintero</option>
+      <option>Cerrajero</option>
+      <option>Conductor</option>
+      <option>Confeccionista</option>
       <option>Electricista</option>
+      <option>Fotografo</option>
+      <option>Gasfitero</option>
+      <option>Herrero</option>
+      <option>Jardinero</option>
+      <option>Mecánico</option>
+      <option>Pintor</option>
+      <option>Tejedor</option>
     </select>
    
      <input type="text" class="form-control" name="otro" id="otro" placeholder="Escribe otro  rubro">
